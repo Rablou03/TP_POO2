@@ -1,0 +1,98 @@
+Résumé clair et opérationnel du TP — INF11207 (Hiver 2026)
+Objectif général
+Développer une application console C# orientée objet qui :
+• 	charge des données CSV (train/test),
+• 	implémente un classifieur k-NN configurable,
+• 	calcule l’exactitude + matrice de confusion,
+• 	affiche une interface console interactive (Spectre.Console),
+• 	sauvegarde un fichier JSON global contenant paramètres + résultats,
+• 	inclut deux diagrammes UML :
+• 	domaine métier agricole,
+• 	module k-NN.
+
+Les grandes étapes du projet
+1️Analyse du problème
+• 	Jeu de données Seeds : 3 classes (Kama, Rosa, Canadian), 7 attributs numériques.
+• 	Deux fichiers CSV : train.csv et test.csv.
+• 	L’application doit :
+• 	prédire les classes du test,
+• 	calculer exactitude + matrice de confusion,
+• 	sauvegarder tout dans un JSON global.
+
+2️Modélisation UML — Domaine métier
+Tu dois créer un diagramme UML indépendant du k-NN, représentant une mini‑application agricole :
+• 	Entités possibles : Ferme, Fermier, Client, LotDeGrains, Grain, etc.
+• 	Contraintes :
+• 	au moins une interface,
+• 	au moins une classe abstraite,
+• 	héritage obligatoire,
+• 	relations UML (association, composition, multiplicités).
+Objectif : séparer la logique métier de la logique algorithmique.
+
+3️Modélisation UML — Module k-NN
+Tu dois modéliser :
+• 	une interface pour les distances (ex. ),
+• 	deux implémentations : Euclidienne, Manhattan,
+• 	une interface pour le classifieur (ex. ),
+• 	une classe ,
+• 	une structure pour représenter un échantillon (grain),
+• 	une classe pour gérer les voisins + tri.
+Contraintes :
+• 	architecture extensible,
+• 	k configurable,
+• 	distances interchangeables,
+• 	recherche brute force,
+• 	tri implémenté manuellement (pas de ).
+
+4️Structure du fichier JSON global
+Le JSON doit contenir :
+• 	paramètres d’exécution :
+• 	k,
+• 	distance utilisée,
+• 	date/heure,
+• 	informations sur les datasets :
+• 	taille train,
+• 	taille test,
+• 	résultats :
+• 	exactitude,
+• 	matrice de confusion 3×3.
+Il doit être clair, cohérent, extensible.
+
+5️Chargement et validation CSV
+• 	Utiliser CsvHelper.
+• 	Chaque ligne doit être :
+• 	lue,
+• 	validée,
+• 	convertie en objet métier .
+• 	Aucune donnée codée en dur.
+• 	Gestion des erreurs obligatoire.
+
+6️Implémentation du k-NN
+• 	k configurable.
+• 	distance configurable.
+• 	vote majoritaire.
+• 	gestion des égalités.
+• 	gestion du cas où k > nombre d’échantillons.
+• 	architecture orientée interface.
+
+7️Algorithme de tri
+• 	Implémenter un tri vu en cours (ex. insertion sort, selection sort, bubble sort).
+• 	Justifier le choix dans le rapport.
+• 	Interdiction d’utiliser les tris intégrés du langage.
+
+8️Évaluation des performances
+• 	Comparer prédictions vs vraies classes.
+• 	Calculer :
+• 	exactitude,
+• 	matrice de confusion 3×3.
+• 	Afficher dans la console.
+• 	Sauvegarder dans le JSON global.
+
+9️Interface console (Spectre.Console)
+• 	Interface interactive et soignée.
+• 	Permettre :
+• 	choix de k,
+• 	choix de la distance,
+• 	lancement de la classification,
+• 	affichage des résultats.
+• 	Validation des entrées utilisateur.
