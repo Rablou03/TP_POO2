@@ -1,0 +1,87 @@
+<Project>
+  <Name>Travail pratique 1 UML domaine métier</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>UML FERME</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Ferme</Name>
+        <Access>Public</Access>
+        <Location left="67" top="52" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string nom</Member>
+        <Member type="Field">string adresse</Member>
+        <Member type="Method">public LotDeGrain AjouterLot()</Member>
+        <Member type="Method">public Client EnregistrerClient()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Client</Name>
+        <Access>Public</Access>
+        <Location left="67" top="324" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string typeClient</Member>
+        <Member type="Method">public void passerCommande()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Personne</Name>
+        <Access>Public</Access>
+        <Location left="67" top="599" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Liste personne</Member>
+        <Member type="Field">string id</Member>
+        <Member type="Field">string nom</Member>
+        <Member type="Method">public string Id()</Member>
+        <Member type="Method">public string Nom()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IIDentifiable</Name>
+        <Access>Public</Access>
+        <Location left="67" top="874" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void Liste()</Member>
+        <Member type="Property">string Id { get; set; }</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>Fermier</Name>
+        <Access>Public</Access>
+        <Location left="807" top="54" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">tableau certifications</Member>
+        <Member type="Method">public void gererFerme()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>LotDeGrains</Name>
+        <Access>Public</Access>
+        <Location left="475" top="506" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string idLot</Member>
+        <Member type="Field">int dateRecolte</Member>
+        <Member type="Field">int poidsTotalKg</Member>
+        <Member type="Method">public float ajouterGrain()</Member>
+        <Member type="Method">public float poidsTotal()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Grain</Name>
+        <Access>Public</Access>
+        <Location left="477" top="840" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string type</Member>
+        <Member type="Field">private string quantite</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+</Project>
