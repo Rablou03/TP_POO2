@@ -1,0 +1,92 @@
+<Project>
+  <Name>UML Knn</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>UML Knn</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Interface">
+        <Name>Iclassifier</Name>
+        <Access>Default</Access>
+        <Location left="618" top="50" />
+        <Size width="252" height="138" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void Entrainer(EnsembleDonnes data)</Member>
+        <Member type="Method">void Predire(double[] caracteristiques)</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>ClassifierKnn</Name>
+        <Access>Public</Access>
+        <Location left="527" top="244" />
+        <Size width="375" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int k</Member>
+        <Member type="Field">distance IDistance</Member>
+        <Member type="Field">donnesApprentissage Ensembledonnes</Member>
+        <Member type="Method">public int ClassifierKnn(int k, Idistances data)</Member>
+        <Member type="Method">public void Entrainer(Ensembledonnes data)</Member>
+        <Member type="Method">public string Predire(double[] caracteristiques)</Member>
+        <Member type="Method">private List&lt;Voisin&gt; CalculerToutesDistances(double[] caracteristiques)</Member>
+        <Member type="Method">string VoteMajoritaire(List&lt;Voisin&gt; voisins)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IDistance</Name>
+        <Access>Public</Access>
+        <Location left="206" top="511" />
+        <Size width="257" height="78" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">double Calculer(double[] a, double[] b)</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>DistanceEuclidienne</Name>
+        <Access>Public</Access>
+        <Location left="60" top="632" />
+        <Size width="235" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">double Calculer(double[] a, double[] b)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DistanceManhattan</Name>
+        <Access>Public</Access>
+        <Location left="355" top="632" />
+        <Size width="235" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">double Calculer(double[] a, double[] b)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>EnsembleDonnees</Name>
+        <Access>Public</Access>
+        <Location left="601" top="484" />
+        <Size width="226" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">List&lt;Echantillon&gt; echantillons</Member>
+        <Member type="Method">void Ajouter(Echantillon e)</Member>
+        <Member type="Method">List&lt;Echantillon&gt; ObtenirEchantillons()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Voisins</Name>
+        <Access>Public</Access>
+        <Location left="917" top="497" />
+        <Size width="162" height="115" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public echantillon Echantillon()</Member>
+        <Member type="Method">public double distance()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Echantillon</Name>
+        <Access>Public</Access>
+        <Location left="832" top="652" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public string Etiquette()</Member>
+        <Member type="Method">public tab Caracteristiques()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+</Project>
