@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassificationGrainsDeBle
 {
-    internal class DistanceManhattan : Idistance
+    internal class DistanceManhattan : IDistance
     {
         /* Lien 1 : https://codereview.stackexchange.com/questions/120933/calculating-distance-with-euclidean-manhattan-and-chebyshev-in-c
          * Lien 2 : https://www.geeksforgeeks.org/dsa/sum-manhattan-distances-pairs-points/

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassificationGrainsDeBle
 {
-    internal interface Idistance
+    internal interface IDistance
     {
         double Calculer(double[] a, double[] b);
     }

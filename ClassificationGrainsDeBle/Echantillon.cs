@@ -8,13 +8,12 @@ namespace ClassificationGrainsDeBle
 {
     internal class Echantillon
     {
-        // Pour les données
-        public double[] Caracterisques { get; set; }    
+        public double[] Caracteristiques { get; set; }
         public string Etiquette { get; set; }
 
-        public Echantillon(double[] caracterisques, string etiquette)
+        public Echantillon(double[] caracteristiques, string etiquette)
         {
-            Caracterisques = caracterisques;
+            Caracteristiques = caracteristiques;
             Etiquette = etiquette;
         }
     }

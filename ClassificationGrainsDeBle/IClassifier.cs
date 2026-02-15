@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClassificationGrainsDeBle
 {
+    
     internal interface IClassifier
     {
-        void Entrainer(EnsenbleDonnees data);
+        void Entrainer(EnsembleDonnees data);
         string Predire(double[] caracteristiques);
     }
 }
