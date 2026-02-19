@@ -13,3 +13,6 @@ C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP POO AVEC
 C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP POO AVEC TAFITA\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.pdb
 C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP POO AVEC TAFITA\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.genruntimeconfig.cache
 C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP POO AVEC TAFITA\ClassificationGrainsDeBle\obj\Debug\net8.0\ref\ClassificationGrainsDeBle.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP POO AVEC TAFITA\ClassificationGrainsDeBle\bin\Debug\net8.0\Spectre.Console.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP POO AVEC TAFITA\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.csproj.AssemblyReference.cache
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP POO AVEC TAFITA\ClassificationGrainsDeBle\obj\Debug\net8.0\Classifi.ECB69EA3.Up2Date
