@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FAF13U7AVyM=",
+  "dgSpecHash": "VA5fMqzrYdY=",
   "success": true,
   "projectFilePath": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\RASANDIMANANA Tafita\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512",
     "C:\\Users\\RASANDIMANANA Tafita\\.nuget\\packages\\spectre.console\\0.54.0\\spectre.console.0.54.0.nupkg.sha512"
   ],
   "logs": []
