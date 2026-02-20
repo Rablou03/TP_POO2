@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PqweCkkBgNY=",
+  "dgSpecHash": "FAF13U7AVyM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP POO AVEC TAFITA\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
+  "projectFilePath": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Fidele Atta\\.nuget\\packages\\spectre.console\\0.54.0\\spectre.console.0.54.0.nupkg.sha512"
+    "C:\\Users\\RASANDIMANANA Tafita\\.nuget\\packages\\spectre.console\\0.54.0\\spectre.console.0.54.0.nupkg.sha512"
   ],
   "logs": []
 }
