@@ -6,26 +6,33 @@ using System.Threading.Tasks;
 
 namespace ClassificationGrainsDeBle
 {
-    internal class Personne : IClient,IFermier
+    //    internal class Personne : IClient,IFermier
+    //    {
+    //        string nom;
+
+    //        //public string Id()
+    //        //{ }
+
+    //        public string Nom(string nom)
+    //        {
+    //            return nom;
+    //        }
+
+    //        public void PasserComande()
+    //        {
+
+    //        }
+
+    //        public void GererFerme()
+    //        {
+
+    //        }
+    //    }
+    //}
+    internal class Personne : IClient, IFermier
     {
-        string nom;
-
-        //public string Id()
-        //{ }
-
-        public string Nom(string nom)
-        {
-            return nom;
-        }
-
-        public void PasserComande()
-        {
-
-        }
-
-        public void GererFerme()
-        {
-
-        }
+        public void PasserComande() { }
+        public void GererFerme() { }
     }
+
 }

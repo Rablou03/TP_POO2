@@ -13,16 +13,24 @@ namespace ClassificationGrainsDeBle
         float poidsTotalKg;
         List<Grain> lotDeGrains;
 
+        //public LotDeGrain(string idLot, DateTime dateRecolte, float poidsTotalKg, List<Grain> lotDeGrains)
+        //{
+        //    idLot = idLot;
+        //    DateRecolte = dateRecolte;
+        //    PoidsTotalKg = poidsTotalKg;
+        //    LotDeGrains = lotDeGrains;
+        //    IdLot = idLot;
+        //    DateRecolte = dateRecolte;
+        //    PoidsTotalKg = poidsTotalKg;
+        //    LotDeGrains = lotDeGrains;
+        //}
+
         public LotDeGrain(string idLot, DateTime dateRecolte, float poidsTotalKg, List<Grain> lotDeGrains)
         {
-            idLot = idLot;
-            DateRecolte = dateRecolte;
-            PoidsTotalKg = poidsTotalKg;
-            LotDeGrains = lotDeGrains;
-            IdLot = idLot;
-            DateRecolte = dateRecolte;
-            PoidsTotalKg = poidsTotalKg;
-            LotDeGrains = lotDeGrains;
+            this.idLot = idLot;
+            this.dateRecolte = dateRecolte;
+            this.poidsTotalKg = poidsTotalKg;
+            this.lotDeGrains = lotDeGrains;
         }
 
         public string IdLot

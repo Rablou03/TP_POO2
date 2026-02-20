@@ -14,11 +14,13 @@ namespace ClassificationGrainsDeBle
     internal class Data
     {
 
-        string nom_fichier = "seeds_dataset_training.csv";
+        //string nom_fichier = "seeds_dataset_training.csv";
 
         public List<Grain> conversion_liste(string nom_fichier)
+
         {
             List<Grain> grains = new List<Grain>();
+
             string[] lignes = File.ReadAllLines(nom_fichier);
 
 
@@ -40,15 +42,28 @@ namespace ClassificationGrainsDeBle
                 string[] colonnes = lignes[i].Split(';');
 
                 Grain g = new Grain(
-                    colonnes[idxVariety],
-                    double.Parse(colonnes[idxArea]),
-                    double.Parse(colonnes[idxPerimeter]),
-                    double.Parse(colonnes[idxCompactness]),
-                    double.Parse(colonnes[idxKernelLength]),
-                    double.Parse(colonnes[idxKernelWidth]),
-                    double.Parse(colonnes[idxAsymmetry]),
-                    double.Parse(colonnes[idxGroove])
-                );
+                    Enum.Parse<TypeDeGrain>(colonnes[idxVariety]),
+                    double.Parse(colonnes[idxArea], CultureInfo.InvariantCulture),
+                    double.Parse(colonnes[idxPerimeter], CultureInfo.InvariantCulture),
+                    double.Parse(colonnes[idxCompactness], CultureInfo.InvariantCulture),
+                    double.Parse(colonnes[idxKernelLength], CultureInfo.InvariantCulture),
+                    double.Parse(colonnes[idxKernelWidth], CultureInfo.InvariantCulture),
+                    double.Parse(colonnes[idxAsymmetry], CultureInfo.InvariantCulture),
+                    double.Parse(colonnes[idxGroove], CultureInfo.InvariantCulture)
+);
+
+
+
+                //Grain g = new Grain(
+                //    colonnes[idxVariety],
+                //    double.Parse(colonnes[idxArea]),
+                //    double.Parse(colonnes[idxPerimeter]),
+                //    double.Parse(colonnes[idxCompactness]),
+                //    double.Parse(colonnes[idxKernelLength]),
+                //    double.Parse(colonnes[idxKernelWidth]),
+                //    double.Parse(colonnes[idxAsymmetry]),
+                //    double.Parse(colonnes[idxGroove])
+                //);
 
                 grains.Add(g);
             }

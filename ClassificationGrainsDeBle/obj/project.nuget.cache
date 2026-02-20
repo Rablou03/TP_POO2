@@ -1,19 +1,11 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "VA5fMqzrYdY=",
-=======
-  "dgSpecHash": "PqweCkkBgNY=",
->>>>>>> e1aec97 (test)
+  "dgSpecHash": "HhNWuRH2VBc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP POO AVEC TAFITA\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
   "expectedPackageFiles": [
-<<<<<<< HEAD
-    "C:\\Users\\RASANDIMANANA Tafita\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512",
-    "C:\\Users\\RASANDIMANANA Tafita\\.nuget\\packages\\spectre.console\\0.54.0\\spectre.console.0.54.0.nupkg.sha512"
-=======
+    "C:\\Users\\Fidele Atta\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512",
     "C:\\Users\\Fidele Atta\\.nuget\\packages\\spectre.console\\0.54.0\\spectre.console.0.54.0.nupkg.sha512"
->>>>>>> e1aec97 (test)
   ],
   "logs": []
 }
