@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClassificationGrainsDeBle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d29f8cd5be93666c2112e198788558900893f22")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+124298fa836959d1f4396c956450c9df846bed42")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClassificationGrainsDeBle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClassificationGrainsDeBle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spectre.Console;
+using System;
 using System.Collections.Generic;
 
 namespace ClassificationGrainsDeBle
@@ -46,7 +47,6 @@ namespace ClassificationGrainsDeBle
 
             return liste;
         }
-
         private List<Voisin> TrierVoisinsParDistance(List<Voisin> voisins)
         {
             if (voisins.Count <= 1)

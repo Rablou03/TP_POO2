@@ -1,9 +1,30 @@
 ﻿using Spectre.Console;
+using System.IO;
 
 namespace ClassificationGrainsDeBle
 {
     internal class Program
     {
+        static int ClasseToIndex(string classe)
+        {
+            switch (classe.Trim().ToLower())
+            {
+                case "kama":
+                case "1":
+                    return 0;
+
+                case "rosa":
+                case "2":
+                    return 1;
+
+                case "canadian":
+                case "3":
+                    return 2;
+
+                default:
+                    throw new Exception($"Classe inconnue : {classe}");
+            }
+        }
         static void Main(string[] args)
         {
 
@@ -84,33 +105,40 @@ namespace ClassificationGrainsDeBle
             //////////////////////////////////////////////////////////////////
             /// spectre /////////////////////////////////////////
             /// 
+
             Data dataLoader = new Data();
             string fichierTraining = "seeds_dataset_training.csv";
             string fichierTest = "seeds_dataset_test.csv";
 
             EnsembleDonnees ensembleTraining = new EnsembleDonnees();
-            ClassifierKnn knn = new ClassifierKnn(3, new DistanceEuclidienne());
+
+            // Distance par défaut
+            IDistance distanceChoisie = new DistanceEuclidienne();
+
+            // KNN initial
+            ClassifierKnn knn = new ClassifierKnn(3, distanceChoisie);
 
             bool continuer = true;
 
             while (continuer)
             {
                 AnsiConsole.Clear();
-                AnsiConsole.Write(new Rule("[yellow]Menu Principal[/]"));
+                AnsiConsole.Write(new Rule("[yellow]MENU[/]"));
 
                 string choix = AnsiConsole.Prompt(
                     new SelectionPrompt<string>()
-                        .Title("[green]Que veux-tu faire ?[/]")
+                        .Title("[green]FAIRE UN CHOIX[/]")
                         .AddChoices(new[] {
                             "Importer données",
+                            "Choisir la distance",
                             "Entraîner modèle",
                             "Tester modèle",
                             "Quitter"
                         }));
 
-                // ---------------------------------------------------------
-                // IMPORTATION DES DONNÉES
-                // ---------------------------------------------------------
+
+                // Importer données
+
                 if (choix == "Importer données")
                 {
                     AnsiConsole.Markup("[blue]Importation des données d'entraînement...[/]\n");
@@ -133,32 +161,50 @@ namespace ClassificationGrainsDeBle
 
                     AnsiConsole.Markup("[green]Importation terminée ![/]\n");
 
-                    // Affichage tableau
-                    Table table = new Table();
-                    table.AddColumn("Type");
-                    table.AddColumn("Area");
-                    table.AddColumn("Perimeter");
-                    table.AddColumn("Compactness");
+                    AnsiConsole.Markup("[grey]Appuie sur une touche pour continuer...[/]");
+                    Console.ReadKey();
+                }
 
-                    foreach (Grain g in grainsTraining)
+              
+                // Choixz de la distance
+               
+                else if (choix == "Choisir la distance")
+                {
+                    string choixDistance = AnsiConsole.Prompt(
+                        new SelectionPrompt<string>()
+                            .Title("[yellow]Choisir la distance :[/]")
+                            .AddChoices(new[] {
+                                "Euclidienne",
+                                "Manhattan"
+                            }));
+
+                    if (choixDistance == "Euclidienne")
                     {
-                        table.AddRow(
-                            g.TypeDeGrain.ToString(),
-                            g.Area.ToString(),
-                            g.Perimeter.ToString(),
-                            g.Compactness.ToString()
-                        );
+                        distanceChoisie = new DistanceEuclidienne();
+                        AnsiConsole.Markup("[green]Distance Euclidienne sélectionnée ![/]\n");
+                    }
+                    else if (choixDistance == "Manhattan")
+                    {
+                        distanceChoisie = new DistanceManhattan();
+                        AnsiConsole.Markup("[green]Distance Manhattan sélectionnée ![/]\n");
                     }
 
-                    AnsiConsole.Write(table);
+                    // Recréer le KNN avec la nouvelle distance
+                    knn = new ClassifierKnn(3, distanceChoisie);
+
+                    // Réentraîner si les données sont déjà importées
+                    if (ensembleTraining.Taille() > 0)
+                    {
+                        knn.Entrainer(ensembleTraining);
+                    }
 
                     AnsiConsole.Markup("[grey]Appuie sur une touche pour continuer...[/]");
                     Console.ReadKey();
                 }
 
-                // ---------------------------------------------------------
-                // ENTRAÎNEMENT DU MODÈLE
-                // ---------------------------------------------------------
+
+                // Entrainer le modèle 
+
                 else if (choix == "Entraîner modèle")
                 {
                     if (ensembleTraining.Taille() == 0)
@@ -171,14 +217,13 @@ namespace ClassificationGrainsDeBle
 
                         knn.Entrainer(ensembleTraining);
 
-                        // Tableau récapitulatif
                         Table recap = new Table();
                         recap.AddColumn("Paramètre");
                         recap.AddColumn("Valeur");
 
                         recap.AddRow("Nombre d'échantillons", ensembleTraining.Taille().ToString());
                         recap.AddRow("k", "3");
-                        recap.AddRow("Distance", "Euclidienne");
+                        recap.AddRow("Distance", distanceChoisie.GetType().Name);
 
                         AnsiConsole.Write(recap);
 
@@ -189,36 +234,61 @@ namespace ClassificationGrainsDeBle
                     Console.ReadKey();
                 }
 
-
-
-                // ---------------------------------------------------------
-                // TEST DU MODÈLE
-                // ---------------------------------------------------------
+                
+                // Tester le modèle
+                
                 else if (choix == "Tester modèle")
                 {
+                    if (ensembleTraining.Taille() == 0)
+                    {
+                        AnsiConsole.Markup("[red]Erreur : modèle non entraîné ![/]\n");
+                        Console.ReadKey();
+                        continue;
+                    }
+
                     AnsiConsole.Markup("[blue]Chargement des données de test...[/]\n");
 
                     List<Grain> grainsTest = dataLoader.conversion_liste(fichierTest);
 
-                    Table table = new Table();
-                    table.AddColumn("Réel");
-                    table.AddColumn("Prédit");
-                    table.AddColumn("Area");
-                    table.AddColumn("Perimeter");
-                    table.AddColumn("Compactness");
+                    // La matrice de confusion 3x3
+                    int[,] matrice = new int[3, 3];
+                    int correct = 0;
+                    int total = grainsTest.Count;
+
+                    // Tableau de prediction
+                    Table tableauPredictions = new Table();
+                    tableauPredictions.AddColumn("Réel");
+                    tableauPredictions.AddColumn("Prédit");
+                    tableauPredictions.AddColumn("Area");
+                    tableauPredictions.AddColumn("Perimeter");
+                    tableauPredictions.AddColumn("Compactness");
 
                     foreach (Grain g in grainsTest)
                     {
                         double[] carac = new double[]
                         {
-                            g.Area, g.Perimeter, g.Compactness,
-                            g.LongueurNoyau, g.LargeurNoyau,
-                            g.AsymetryCoefficient, g.GrooveLength
+                            g.Area, 
+                            g.Perimeter, 
+                            g.Compactness,
+                            g.LongueurNoyau, 
+                            g.LargeurNoyau,
+                            g.AsymetryCoefficient, 
+                            g.GrooveLength
                         };
 
                         string prediction = knn.Predire(carac);
 
-                        table.AddRow(
+                        // Conversion des classes en indices 0–1–2
+                        int vrai = ClasseToIndex(g.TypeDeGrain.ToString());
+                        int predit = ClasseToIndex(prediction);
+
+                        matrice[vrai, predit]++;
+
+                        if (vrai == predit)
+                            correct++;
+
+                        // Ajouter tableau
+                        tableauPredictions.AddRow(
                             g.TypeDeGrain.ToString(),
                             prediction,
                             g.Area.ToString(),
@@ -227,15 +297,63 @@ namespace ClassificationGrainsDeBle
                         );
                     }
 
-                    AnsiConsole.Write(table);
+                    double exactitude = (double)correct / total;
+
+                    // Afficher le tableau de prediction
+                    AnsiConsole.Write(new Rule("[yellow]Prédictions détaillées[/]"));
+                    AnsiConsole.Write(tableauPredictions);
+
+                    // Afficher la matrice de confusion
+                    Table t = new Table();
+                    t.AddColumn(" ");
+                    t.AddColumn("Prédit 1 (Kama)");
+                    t.AddColumn("Prédit 2 (Rosa)");
+                    t.AddColumn("Prédit 3 (Canadian)");
+
+                    t.AddRow("Réel 1 (Kama)", matrice[0, 0].ToString(), matrice[0, 1].ToString(), matrice[0, 2].ToString());
+                    t.AddRow("Réel 2 (Rosa)", matrice[1, 0].ToString(), matrice[1, 1].ToString(), matrice[1, 2].ToString());
+                    t.AddRow("Réel 3 (Canadian)", matrice[2, 0].ToString(), matrice[2, 1].ToString(), matrice[2, 2].ToString());
+
+                    AnsiConsole.Write(new Rule("[yellow]Matrice de confusion[/]"));
+                    AnsiConsole.Write(t);
+
+                    AnsiConsole.Markup($"\n[green]Exactitude : {exactitude:P2}[/]\n");
+
+                    // Conversion de la matrice en json
+                    int[][] matriceJson = new int[3][];
+                    for (int i = 0; i < 3; i++)
+                    {
+                        matriceJson[i] = new int[3];
+                        for (int j = 0; j < 3; j++)
+                            matriceJson[i][j] = matrice[i, j];
+                    }
+
+                    // Enregistrer fichier json
+                    var resultats = new ResultatsEvaluationPerformances
+                    {
+                        Exactitude = exactitude,
+                        MatriceConfusion = matriceJson,
+                        Distance = distanceChoisie.GetType().Name,
+                        K = 3,
+                        DateEvaluation = DateTime.Now
+                    };
+
+                    string json = System.Text.Json.JsonSerializer.Serialize(
+                        resultats,
+                        new System.Text.Json.JsonSerializerOptions { WriteIndented = true }
+                    );
+
+                    System.IO.File.WriteAllText("resultats_evaluation.json", json);
+
+                    AnsiConsole.Markup("[blue]Résultats sauvegardés dans resultats_evaluation.json[/]\n");
 
                     AnsiConsole.Markup("[grey]Appuie sur une touche pour continuer...[/]");
                     Console.ReadKey();
                 }
 
-                // ---------------------------------------------------------
-                // QUITTER
-                // ---------------------------------------------------------
+                
+                // Quitter le menu
+               
                 else if (choix == "Quitter")
                 {
                     continuer = false;
@@ -244,9 +362,3 @@ namespace ClassificationGrainsDeBle
         }
     }
 }
-
-
-
-
-
-
