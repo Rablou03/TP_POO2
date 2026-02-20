@@ -1,0 +1,22 @@
+Documentation knn
+https://visualstudiomagazine.com/articles/2024/10/01/implementing-k-nn-classification-using-c.aspx?Page=1
+https://visualstudiomagazine.com/articles/2024/10/01/implementing-k-nn-classification-using-c.aspx?Page=2
+
+presente, algorithme et vote knn
+https://learn.microsoft.com/fr-fr/archive/msdn-magazine/2017/december/test-run-understanding-k-nn-classification-using-csharp
+https://medium.com/@kdcodechronicles/understanding-k-nearest-neighbors-algorithm-knn-c-example-d4fce614ea46
+
+Matrice de confusion 
+https://learn.microsoft.com/en-us/dotnet/api/microsoft.ml.data.confusionmatrix?view=ml-dotnet-preview
+
+Json
+serialise, ecrire
+https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/how-to
+https://rupen-anjaria.medium.com/working-with-json-in-c-using-system-text-json-9b61f95b551e
+https://www.newtonsoft.com/json
+https://www.newtonsoft.com/json/help/html/SerializingJSON.htm
+
+spectre.console
+https://spectreconsole.net/console
+tableau
+https://www.luisllamas.es/en/csharp-spectre-console/
