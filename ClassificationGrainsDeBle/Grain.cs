@@ -2,7 +2,7 @@
 {
     internal class Grain
     {
-        string typeDeGrain;
+        TypeDeGrain typeDeGrain;
         double area;
         double perimeter;
         double compactness;
@@ -11,7 +11,7 @@
         double asymetryCoefficient;
         double grooveLength;
 
-        public Grain(string typeDeGrain, double area, double perimeter, double compactness, double longueurNoyau, double largeurNoyau, double asymetryCoefficient, double grooveLength)
+        public Grain(TypeDeGrain typeDeGrain, double area, double perimeter, double compactness, double longueurNoyau, double largeurNoyau, double asymetryCoefficient, double grooveLength)
         {
             this.typeDeGrain = typeDeGrain;
             this.area = area;
@@ -23,7 +23,7 @@
             this.grooveLength = grooveLength;
         }
 
-        public string TypeDeGrain { get { return typeDeGrain; } set { typeDeGrain = value; } }
+        public TypeDeGrain TypeDeGrain { get { return typeDeGrain; } set { typeDeGrain = value; } }
         public double Area { get { return area; } set { area = value; } }
         public double Perimeter { get { return perimeter; } set { perimeter = value; } }
         public double Compactness { get { return compactness; } set { compactness = value; } }
