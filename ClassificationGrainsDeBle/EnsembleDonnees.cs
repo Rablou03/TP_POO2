@@ -15,6 +15,13 @@ namespace ClassificationGrainsDeBle
             echantillons.Add(e);
         }
         public List<Echantillon> ObtenirEchantillon()
-            { return echantillons; }
+        { 
+            return echantillons; 
+        }
+        public int Taille()
+        {
+            return echantillons.Count;
+        }
+
     }
 }
