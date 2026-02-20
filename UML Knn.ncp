@@ -7,8 +7,8 @@
       <Entity type="Interface">
         <Name>Iclassifier</Name>
         <Access>Default</Access>
-        <Location left="601" top="27" />
-        <Size width="252" height="138" />
+        <Location left="601" top="35" />
+        <Size width="252" height="95" />
         <Collapsed>False</Collapsed>
         <Member type="Method">void Entrainer(EnsembleDonnes data)</Member>
         <Member type="Method">void Predire(double[] caracteristiques)</Member>
@@ -16,7 +16,7 @@
       <Entity type="Class">
         <Name>ClassifierKnn</Name>
         <Access>Public</Access>
-        <Location left="527" top="244" />
+        <Location left="533" top="201" />
         <Size width="375" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private int k</Member>
@@ -32,7 +32,7 @@
       <Entity type="Interface">
         <Name>IDistance</Name>
         <Access>Public</Access>
-        <Location left="188" top="582" />
+        <Location left="205" top="526" />
         <Size width="257" height="78" />
         <Collapsed>False</Collapsed>
         <Member type="Method">double Calculer(double[] a, double[] b)</Member>
@@ -40,7 +40,7 @@
       <Entity type="Class">
         <Name>DistanceEuclidienne</Name>
         <Access>Public</Access>
-        <Location left="50" top="841" />
+        <Location left="71" top="700" />
         <Size width="235" height="94" />
         <Collapsed>False</Collapsed>
         <Member type="Method">double Calculer(double[] a, double[] b)</Member>
@@ -49,7 +49,7 @@
       <Entity type="Class">
         <Name>DistanceManhattan</Name>
         <Access>Public</Access>
-        <Location left="372" top="841" />
+        <Location left="390" top="700" />
         <Size width="235" height="94" />
         <Collapsed>False</Collapsed>
         <Member type="Method">double Calculer(double[] a, double[] b)</Member>
@@ -58,7 +58,7 @@
       <Entity type="Class">
         <Name>EnsembleDonnees</Name>
         <Access>Public</Access>
-        <Location left="576" top="582" />
+        <Location left="580" top="526" />
         <Size width="226" height="128" />
         <Collapsed>False</Collapsed>
         <Member type="Field">List&lt;Echantillon&gt; echantillons</Member>
@@ -69,17 +69,17 @@
       <Entity type="Class">
         <Name>Voisins</Name>
         <Access>Public</Access>
-        <Location left="991" top="582" />
+        <Location left="980" top="526" />
         <Size width="162" height="115" />
         <Collapsed>False</Collapsed>
-        <Member type="Method">public echantillon Echantillon()</Member>
+        <Member type="Method">public Echantillon Echantillon()</Member>
         <Member type="Method">public double distance()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Echantillon</Name>
         <Access>Public</Access>
-        <Location left="840" top="841" />
+        <Location left="825" top="700" />
         <Size width="162" height="111" />
         <Collapsed>False</Collapsed>
         <Member type="Method">public string Etiquette()</Member>
@@ -97,15 +97,16 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>580</X>
-          <Y>501</Y>
+          <X>586</X>
+          <Y>458</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>355</X>
-          <Y>557</Y>
+          <X>372</X>
+          <Y>501</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
       </Relationship>
       <Relationship type="Association" first="1" second="5">
         <Label>Utilise</Label>
@@ -119,73 +120,56 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>815</X>
-          <Y>492</Y>
+          <X>821</X>
+          <Y>449</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
       </Relationship>
       <Relationship type="Realization" first="3" second="2">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>215</X>
-          <Y>688</Y>
+          <X>232</X>
+          <Y>632</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Realization" first="4" second="2">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>432</X>
-          <Y>814</Y>
+          <X>450</X>
+          <Y>673</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>432</X>
-          <Y>689</Y>
+          <X>449</X>
+          <Y>633</Y>
         </BendPoint>
-      </Relationship>
-      <Relationship type="Association" first="3" second="2">
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-        <BendPoint relativeToStartShape="True">
-          <X>265</X>
-          <Y>816</Y>
-        </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
-      <Relationship type="Association" first="4" second="2">
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-        <BendPoint relativeToStartShape="True">
-          <X>391</X>
-          <Y>816</Y>
-        </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="5" second="7">
         <Label>Contient</Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>885</X>
-          <Y>816</Y>
+          <X>870</X>
+          <Y>675</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
       </Relationship>
       <Relationship type="Association" first="6" second="7">
         <Label>Référence</Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>961</X>
-          <Y>816</Y>
+          <X>946</X>
+          <Y>675</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
       </Relationship>
     </Relationships>
   </ProjectItem>
