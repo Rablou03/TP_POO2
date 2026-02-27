@@ -1,0 +1,33 @@
+[
+  {
+    "ParametresExecution": {
+      "k": 3,
+      "distance": {},
+      "date": "2026-02-27 02:52:51"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.9154929577464789,
+      "matrice_confusion": [
+        [
+          19,
+          2,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          0,
+          0,
+          24
+        ]
+      ]
+    }
+  }
+]

@@ -7,8 +7,8 @@ namespace ClassificationGrainsDeBle
     {
         static void Main(string[] args)
         {
-            string fichierTrain = "../../../../seeds_dataset_training.csv";
-            string fichierTest = "../../../../seeds_dataset_test.csv";
+            string fichierTrain = "seeds_dataset_training.csv";
+            string fichierTest = "seeds_dataset_test.csv";
 
             EnsembleDonnees training = new EnsembleDonnees();
             EnsembleDonnees testing = new EnsembleDonnees();
