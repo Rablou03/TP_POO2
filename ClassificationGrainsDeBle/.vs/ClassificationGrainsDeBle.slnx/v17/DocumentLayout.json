@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\convert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:convert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\evaluationperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:evaluationperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\iclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:iclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\grain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:grain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\echantillon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:echantillon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\ensembledonnees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:ensembledonnees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\voisin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:voisin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\classifierknn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:classifierknn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\typedegrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,32 +47,28 @@
       "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:classificationgrainsdeble.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\fermegrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:fermegrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\FermeGrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FermeGrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\ferme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:ferme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Ferme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ferme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\personne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:personne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Personne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Personne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\iclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:iclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\IClient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IClient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\ifermier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:ifermier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\IFermier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IFermier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\lotdegrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:lotdegrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\classificationgrainsdeble\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\LotDeGrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LotDeGrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,34 +85,142 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EvaluationPerformance.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\EvaluationPerformance.cs",
+              "RelativeDocumentMoniker": "EvaluationPerformance.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\EvaluationPerformance.cs",
+              "RelativeToolTip": "EvaluationPerformance.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwBkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:27:18.456Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAQwDwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T23:48:14.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Convert.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Convert.cs",
+              "RelativeDocumentMoniker": "Convert.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Convert.cs",
+              "RelativeToolTip": "Convert.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T00:55:35.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IClassifier.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\IClassifier.cs",
+              "RelativeDocumentMoniker": "IClassifier.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\IClassifier.cs",
+              "RelativeToolTip": "IClassifier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:14:52.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Grain.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Grain.cs",
+              "RelativeDocumentMoniker": "Grain.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Grain.cs",
+              "RelativeToolTip": "Grain.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T00:49:45.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EnsembleDonnees.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\EnsembleDonnees.cs",
+              "RelativeDocumentMoniker": "EnsembleDonnees.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\EnsembleDonnees.cs",
+              "RelativeToolTip": "EnsembleDonnees.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T23:53:13.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Echantillon.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Echantillon.cs",
+              "RelativeDocumentMoniker": "Echantillon.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Echantillon.cs",
+              "RelativeToolTip": "Echantillon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T22:47:51.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Voisin.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Voisin.cs",
+              "RelativeDocumentMoniker": "Voisin.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Voisin.cs",
+              "RelativeToolTip": "Voisin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T23:45:20.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClassifierKnn.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassifierKnn.cs",
+              "RelativeDocumentMoniker": "ClassifierKnn.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassifierKnn.cs",
+              "RelativeToolTip": "ClassifierKnn.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowCQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:17:29.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "TypeDeGrain.cs",
               "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\TypeDeGrain.cs",
               "RelativeDocumentMoniker": "TypeDeGrain.cs",
               "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\TypeDeGrain.cs",
               "RelativeToolTip": "TypeDeGrain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-20T02:11:48.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FermeGrain.cs",
-              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\FermeGrain.cs",
-              "RelativeDocumentMoniker": "FermeGrain.cs",
-              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\FermeGrain.cs",
-              "RelativeToolTip": "FermeGrain.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T02:03:52.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Ferme.cs",
               "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Ferme.cs",
               "RelativeDocumentMoniker": "Ferme.cs",
@@ -92,25 +228,23 @@
               "RelativeToolTip": "Ferme.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAowAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T01:53:46.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T01:53:46.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Grain.cs",
-              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Grain.cs",
-              "RelativeDocumentMoniker": "Grain.cs",
-              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Grain.cs",
-              "RelativeToolTip": "Grain.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwAoAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "FermeGrain.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\FermeGrain.cs",
+              "RelativeDocumentMoniker": "FermeGrain.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\FermeGrain.cs",
+              "RelativeToolTip": "FermeGrain.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T00:49:45.983Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T02:03:52.494Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "ClassificationGrainsDeBle.csproj",
               "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
               "RelativeDocumentMoniker": "ClassificationGrainsDeBle.csproj",
@@ -123,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "Personne.cs",
               "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Personne.cs",
               "RelativeDocumentMoniker": "Personne.cs",
@@ -131,12 +265,11 @@
               "RelativeToolTip": "Personne.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAowBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T01:36:24.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T01:36:24.826Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "IClient.cs",
               "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\IClient.cs",
               "RelativeDocumentMoniker": "IClient.cs",
@@ -144,12 +277,11 @@
               "RelativeToolTip": "IClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T01:50:47.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T01:50:47.698Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "IFermier.cs",
               "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\IFermier.cs",
               "RelativeDocumentMoniker": "IFermier.cs",
@@ -157,12 +289,11 @@
               "RelativeToolTip": "IFermier.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T01:50:09.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T01:50:09.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "LotDeGrain.cs",
               "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\LotDeGrain.cs",
               "RelativeDocumentMoniker": "LotDeGrain.cs",
@@ -170,25 +301,7 @@
               "RelativeToolTip": "LotDeGrain.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAAACQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T01:31:49.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Data.cs",
-              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Data.cs",
-              "RelativeDocumentMoniker": "Data.cs",
-              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\ClassificationGrainsDeBle\\Data.cs",
-              "RelativeToolTip": "Data.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T00:55:35.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+              "WhenOpened": "2026-02-20T01:31:49.238Z"
             }
           ]
         }

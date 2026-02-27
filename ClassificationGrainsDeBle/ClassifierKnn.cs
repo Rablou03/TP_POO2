@@ -6,9 +6,9 @@ namespace ClassificationGrainsDeBle
 {
     internal class ClassifierKnn : IClassifier
     {
-        private IDistance distance;
-        private EnsembleDonnees donneesApprentissage;
-        private int k;
+        IDistance distance;
+        EnsembleDonnees training;
+        int k;
 
         public ClassifierKnn(int k, IDistance distance)
         {
@@ -16,30 +16,16 @@ namespace ClassificationGrainsDeBle
             this.distance = distance;
         }
 
-        public void Entrainer(EnsembleDonnees data)
+        public void Entrainer(EnsembleDonnees donnees)
         {
-            donneesApprentissage = data;
+            training = donnees;
         }
 
-        public string Predire(double[] caracteristiques)
-        {
-            List<Voisin> voisins = CalculerToutesDistances(caracteristiques);
-            List<Voisin> voisinsTries = TrierVoisinsParDistance(voisins);
-
-            List<Voisin> kVoisins = new List<Voisin>();
-            for (int i = 0; i < k; i++)
-            {
-                kVoisins.Add(voisinsTries[i]);
-            }
-
-            return VoteMajoritaire(kVoisins);
-        }
-
-        private List<Voisin> CalculerToutesDistances(double[] caracteristiques)
+        public List<Voisin> ListeTousVoisin(double[] caracteristiques)
         {
             List<Voisin> liste = new List<Voisin>();
 
-            foreach (Echantillon e in donneesApprentissage.ObtenirEchantillon())
+            foreach (Echantillon e in training.ObtenirEchantillon())
             {
                 double d = distance.Calculer(caracteristiques, e.Caracteristiques);
                 liste.Add(new Voisin(e, d));
@@ -47,7 +33,8 @@ namespace ClassificationGrainsDeBle
 
             return liste;
         }
-        private List<Voisin> TrierVoisinsParDistance(List<Voisin> voisins)
+
+        public List<Voisin> TrierListVoisinParDistance(List<Voisin> voisins)
         {
             if (voisins.Count <= 1)
                 return voisins;
@@ -67,40 +54,61 @@ namespace ClassificationGrainsDeBle
 
             List<Voisin> resultat = new List<Voisin>();
 
-            resultat.AddRange(TrierVoisinsParDistance(plusPetits));
+            resultat.AddRange(TrierListVoisinParDistance(plusPetits));
             resultat.Add(pivot);
-            resultat.AddRange(TrierVoisinsParDistance(plusGrands));
+            resultat.AddRange(TrierListVoisinParDistance(plusGrands));
 
             return resultat;
         }
 
-        private string VoteMajoritaire(List<Voisin> voisins)
+        public TypeDeGrain VoteMajoritaire(List<Voisin> voisins)
         {
-            Dictionary<string, int> compteur = new Dictionary<string, int>();
+            TypeDeGrain typeDuGrain = new TypeDeGrain();
+            int compteurKama = 0;
+            int compteurRosa = 0;
+            int compteurCanadian = 0;
 
-            foreach (Voisin v in voisins)
+            foreach (var voisin in voisins)
             {
-                string etiquette = v.Echantillon.Etiquette;
-
-                if (!compteur.ContainsKey(etiquette))
-                    compteur[etiquette] = 0;
-
-                compteur[etiquette]++;
-            }
-
-            string meilleur = null;
-            int max = -1;
-
-            foreach (var pair in compteur)
-            {
-                if (pair.Value > max)
+                if (voisin.Echantillon.Etiquette.ToString() == "Kama")
                 {
-                    max = pair.Value;
-                    meilleur = pair.Key;
+                    compteurKama++;
+                }
+                if (voisin.Echantillon.Etiquette.ToString() == "Rosa")
+                {
+                    compteurRosa++;
+                }
+                if (voisin.Echantillon.Etiquette.ToString() == "Canadian")
+                {
+                    compteurCanadian++;
                 }
             }
+            if (compteurKama >= compteurRosa && compteurKama >= compteurCanadian)
+                typeDuGrain = TypeDeGrain.Kama;
 
-            return meilleur;
+            else if (compteurRosa >= compteurKama && compteurRosa >= compteurCanadian)
+                typeDuGrain = TypeDeGrain.Rosa;
+
+            else
+                typeDuGrain = TypeDeGrain.Canadian;
+
+            return typeDuGrain;
+
+        }
+
+        public TypeDeGrain Predire(Echantillon e)
+        {
+            List<Voisin> voisins = ListeTousVoisin(e.Caracteristiques);
+            List<Voisin> voisinsTries = TrierListVoisinParDistance(voisins);
+
+            List<Voisin> kVoisins = new List<Voisin>();
+            for (int i = 0; i < k; i++)
+            {
+                kVoisins.Add(voisinsTries[i]);
+            }
+
+            return VoteMajoritaire(kVoisins);
+
         }
     }
 }

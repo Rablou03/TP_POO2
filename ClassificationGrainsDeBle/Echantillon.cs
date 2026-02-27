@@ -9,9 +9,9 @@ namespace ClassificationGrainsDeBle
     internal class Echantillon
     {
         public double[] Caracteristiques { get; set; }
-        public string Etiquette { get; set; }
+        public TypeDeGrain Etiquette { get; set; }
 
-        public Echantillon(double[] caracteristiques, string etiquette)
+        public Echantillon(double[] caracteristiques, TypeDeGrain etiquette)
         {
             Caracteristiques = caracteristiques;
             Etiquette = etiquette;

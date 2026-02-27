@@ -5,18 +5,19 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-
+using ClassificationGrainsDeBle;
 using CsvHelper;
+using Spectre.Console;
 
 namespace ClassificationGrainsDeBle
 {
 
-    internal class Data
+    internal class Convert
     {
 
         //string nom_fichier = "seeds_dataset_training.csv";
 
-        public List<Grain> conversion_liste(string nom_fichier)
+        public static List<Grain> conversion_liste(string nom_fichier)
 
         {
             List<Grain> grains = new List<Grain>();
@@ -50,26 +51,60 @@ namespace ClassificationGrainsDeBle
                     double.Parse(colonnes[idxKernelWidth], CultureInfo.InvariantCulture),
                     double.Parse(colonnes[idxAsymmetry], CultureInfo.InvariantCulture),
                     double.Parse(colonnes[idxGroove], CultureInfo.InvariantCulture)
-);
-
-
-
-                //Grain g = new Grain(
-                //    colonnes[idxVariety],
-                //    double.Parse(colonnes[idxArea]),
-                //    double.Parse(colonnes[idxPerimeter]),
-                //    double.Parse(colonnes[idxCompactness]),
-                //    double.Parse(colonnes[idxKernelLength]),
-                //    double.Parse(colonnes[idxKernelWidth]),
-                //    double.Parse(colonnes[idxAsymmetry]),
-                //    double.Parse(colonnes[idxGroove])
-                //);
+                );
 
                 grains.Add(g);
             }
 
             return grains;
         }
+
+        public static void ConstuireTableauDeGrain(List<Grain> grains)
+        {
+            var table = new Table();
+
+            table.AddColumn("Type");
+            table.AddColumn("Area");
+            table.AddColumn("Perimeter");
+            table.AddColumn("Compactness");
+            table.AddColumn("Kernel Length");
+            table.AddColumn("Kernel Width");
+            table.AddColumn("Asymmetry");
+            table.AddColumn("Groove Length");
+
+            foreach (var g in grains)
+            {
+                table.AddRow(
+                    g.TypeDeGrain.ToString(),
+                    g.Area.ToString(),
+                    g.Perimeter.ToString(),
+                    g.Compactness.ToString(),
+                    g.LongueurNoyau.ToString(),
+                    g.LargeurNoyau.ToString(),
+                    g.AsymetryCoefficient.ToString(),
+                    g.GrooveLength.ToString()
+                );
+
+            }
+            AnsiConsole.Write(table);
+        }
+
+        public static void saveEchantillon(List<Grain> grains, EnsembleDonnees gainsTraining)
+        {
+            List<Echantillon> echantillons = new List<Echantillon>();
+            foreach (Grain g in grains)
+            {
+                double[] carac = new double[]
+                {
+                    g.Area, g.Perimeter, g.Compactness,
+                            g.LongueurNoyau, g.LargeurNoyau,
+                            g.AsymetryCoefficient, g.GrooveLength
+                };
+                gainsTraining.AjouterUnEchantillon(new Echantillon(carac, g.TypeDeGrain));
+            }
+        }
+
+
         public static void Afficher(List<Grain> grains)
         {
             foreach (Grain g in grains)

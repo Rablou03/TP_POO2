@@ -8,20 +8,26 @@ namespace ClassificationGrainsDeBle
 {
     internal class EnsembleDonnees
     {
-        // Pour les données aussi
-        private List<Echantillon> echantillons = new List<Echantillon>();  
-        public void Ajouter(Echantillon e)
+        private List<Echantillon> echantillons = new List<Echantillon>();
+        public void AjouterUnEchantillon(Echantillon e)
         {
             echantillons.Add(e);
         }
+
+        public void AjouterListEchantillon(List<Echantillon> echantillons)
+        {
+            foreach (Echantillon e in echantillons)
+            {
+                echantillons.Add(e);
+            }
+        }
         public List<Echantillon> ObtenirEchantillon()
-        { 
-            return echantillons; 
+        {
+            return echantillons;
         }
         public int Taille()
         {
             return echantillons.Count;
         }
-
     }
 }

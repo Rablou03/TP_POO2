@@ -10,6 +10,6 @@ namespace ClassificationGrainsDeBle
     internal interface IClassifier
     {
         void Entrainer(EnsembleDonnees data);
-        string Predire(double[] caracteristiques);
+        TypeDeGrain Predire(Echantillon e);
     }
 }
