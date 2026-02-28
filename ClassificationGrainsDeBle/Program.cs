@@ -27,21 +27,21 @@ namespace ClassificationGrainsDeBle
 
                 string choix = AnsiConsole.Prompt(
                     new SelectionPrompt<string>()
-                        .Title("[green]Choisissez une option[/]")
+                        .Title("[green]Choisissez les options dans l'ordre: [/]")
                         .AddChoices(new[]
                         {
-                            "Importer données",
-                            "Choisir k",
-                            "Choisir distance",
-                            "Entraîner modèle",
-                            "Tester modèle",
-                            "Quitter"
+                            "1 - Importer données",
+                            "2 - Choisir k",
+                            "3 - Choisir distance",
+                            "4 - Entraîner modèle",
+                            "5 - Tester modèle",
+                            "6 - Quitter"
                         }));
 
                 switch (choix)
                 {
 
-                    case "Importer données":
+                    case "1 - Importer données":
 
                         //importation de Train
                         List<Grain> grainsTrain = Convert.conversion_liste(fichierTrain);
@@ -67,7 +67,7 @@ namespace ClassificationGrainsDeBle
 
 
                     //choix de cas
-                    case "Choisir k":
+                    case "2 - Choisir k":
 
                         k = AnsiConsole.Ask<int>("[yellow]Entrez la valeur de k :[/]");
                         knn = new ClassifierKnn(k, distanceChoisie);
@@ -77,7 +77,7 @@ namespace ClassificationGrainsDeBle
 
 
                     //choix du méthode de calcul de distance
-                    case "Choisir distance":
+                    case "3 - Choisir distance":
 
                         string choixDistance = AnsiConsole.Prompt(
                             new SelectionPrompt<string>()
@@ -96,7 +96,7 @@ namespace ClassificationGrainsDeBle
 
 
                     //entrainer le modéle
-                    case "Entraîner modèle":
+                    case "4 - Entraîner modèle":
 
                         if (training.Taille() == 0)
                         {
@@ -111,7 +111,7 @@ namespace ClassificationGrainsDeBle
 
 
                     //tester
-                    case "Tester modèle":
+                    case "5 - Tester modèle":
 
                         if (training.Taille() == 0)
                         {
@@ -125,7 +125,7 @@ namespace ClassificationGrainsDeBle
                             eval.Evaluer(k, distanceChoisie, training, testing);
 
                             eval.AfficherTableSpectre();
-                            //eval.AfficherAccuracySpectre();
+                            
                             eval.SauvegarderJsonGlobal("resultats.json", k, distanceChoisie, training, testing);
 
                             AnsiConsole.Markup(
@@ -135,7 +135,7 @@ namespace ClassificationGrainsDeBle
                         break;
 
 
-                    case "Quitter":
+                    case "6 - Quitter":
                         continuer = false;
                         break;
                 }

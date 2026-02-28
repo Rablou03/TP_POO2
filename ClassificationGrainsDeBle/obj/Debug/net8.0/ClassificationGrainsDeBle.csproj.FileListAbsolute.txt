@@ -36,3 +36,41 @@ C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\ClassificationGrainsD
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.pdb
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.genruntimeconfig.cache
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ref\ClassificationGrainsDeBle.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\ClassificationGrainsDeBle.exe
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\ClassificationGrainsDeBle.deps.json
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\ClassificationGrainsDeBle.runtimeconfig.json
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\ClassificationGrainsDeBle.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\ClassificationGrainsDeBle.pdb
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\CsvHelper.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\Spectre.Console.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.csproj.AssemblyReference.cache
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.AssemblyInfoInputs.cache
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.AssemblyInfo.cs
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.csproj.CoreCompileInputs.cache
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.sourcelink.json
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\Classifi.ECB69EA3.Up2Date
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\refint\ClassificationGrainsDeBle.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.pdb
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.genruntimeconfig.cache
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ref\ClassificationGrainsDeBle.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\ClassificationGrainsDeBle.exe
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\ClassificationGrainsDeBle.deps.json
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\ClassificationGrainsDeBle.runtimeconfig.json
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\ClassificationGrainsDeBle.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\ClassificationGrainsDeBle.pdb
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\CsvHelper.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\bin\Debug\net8.0\Spectre.Console.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.csproj.AssemblyReference.cache
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.AssemblyInfoInputs.cache
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.AssemblyInfo.cs
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.csproj.CoreCompileInputs.cache
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.sourcelink.json
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\Classifi.ECB69EA3.Up2Date
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\refint\ClassificationGrainsDeBle.dll
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.pdb
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ClassificationGrainsDeBle.genruntimeconfig.cache
+C:\Users\Fidele Atta\Desktop\UQAR HIVER 2026\POO2\Travail pratique 1\TP1_POO2 BON\TP_POO2\ClassificationGrainsDeBle\obj\Debug\net8.0\ref\ClassificationGrainsDeBle.dll

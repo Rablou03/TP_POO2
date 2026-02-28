@@ -8,9 +8,6 @@ namespace ClassificationGrainsDeBle
 {
     internal class DistanceEuclidienne : IDistance
     {
-        /* Lien 1 : https://stackoverflow.com/questions/34698649/calculate-the-euclidean-distance-between-an-array-in-c-sharp-with-function
-         * Lien 2 : https://learn.microsoft.com/fr-fr/archive/msdn-magazine/2019/may/test-run-weighted-k-nn-classification-using-csharp
-         */
         public double Calculer(double[] a, double[] b)
         {
             double somme = 0;

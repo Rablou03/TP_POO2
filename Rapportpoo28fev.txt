@@ -1,0 +1,337 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{uqar.png}
+\label{fig:placeholder}
+\end{figure}
+
+\title{\textbf{PROGRAMMATION ORIENTÉE OBJET II \\ INF11207 (MS) \\ UNIVERSITÉ DU QUÉBEC À RIMOUSKI \\ DÉPARTEMENT DE MATHÉMATIQUE, D'INFORMATIQUE ET DE GÉNIE \\ RAPPORT \\ CLASSIFICATION AUTOMATIQUE DES GRAINS DE BLÉ}}
+\author{ÉTUDIANT I : ATTA Fidèle \\ ÉTUDIANT II : RASANDIMANANA Tafita \\[1cm] PROFESSEUR : \\ Yacine Yaddaden, Ph. D.}
+\date{Février 2026}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Ce projet a pour but de créer une application capable de classer des grains de céréales en fonction de leurs propriétés géométriques. Pour ce faire, nous avons choisi l'algorithme KNN (k-Nearest Neighbors), un algorithme de classification supervisée à la fois simple et efficace.
+
+\newpage
+\section{Analyse du problème et cahier des charges}
+\subsection{Cahier des charges}
+Le projet répond aux exigences suivantes :
+\begin{itemize}
+\item Importation de données à partir d'un fichier CSV.
+\item Implémentation de l'algorithme KNN avec deux mesures de distance.
+\item Architecture orientée objet respectant les meilleures pratiques.
+\item Interface console pour la présentation des résultats.
+\item Gestion de version avec Git et GitHub.
+\end{itemize}
+
+\subsection{Gestion de projet avec Trello}
+Pour organiser notre travail à distance, nous avons utilisé Trello comme outil de gestion de projet.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{Capture d'écran 2026-02-26 235554.png}
+\caption{Tableau Trello avec les tâches listées et leur répartition}
+\label{fig:trello}
+\end{figure}
+
+Lien du tableau : \url{https://trello.com/b/5Xxc0Lt0/poo2}
+
+\section{Gestion de version avec Git et GitHub}
+\label{sec:github}
+Pour assurer un travail collaboratif efficace et sécurisé, nous avons mis en place un workflow Git structuré.
+
+\subsection{Organisation du dépôt}
+Le dépôt GitHub contient tout le code source, la documentation et les ressources nécessaires au projet.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{image git TP_Poo.png}
+\caption{Capture d'écran du dépôt GitHub montrant la structure du projet}
+\label{fig:github}
+\end{figure}
+
+\subsection{Accès au code source}
+Le code source complet est disponible à l'adresse suivante :
+\begin{center}
+\url{https://github.com/Rablou03/TP_POO2.git}
+\end{center}
+
+\newpage
+\section{Modélisation UML}
+Nous présentons ici les diagrammes UML du projet, incluant toutes les classes de métier.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{UML Domaine de metier.png}
+\caption{Diagramme UML du domaine métier}
+\label{fig:uml_metier}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{UML Knn.png}
+\caption{Diagramme UML de l'architecture KNN}
+\label{fig:uml_knn}
+\end{figure}
+
+\subsection{Classe Grain.cs}
+Cette classe modélise un grain avec ses caractéristiques géométriques.
+\textbf{Attributs :}
+\begin{itemize}[label=\textbullet]
+\item \texttt{TypeDeGrain}
+\item \texttt{Area}
+\item \texttt{Perimeter}
+\item \texttt{Compactness}
+\item \texttt{LongueurNoyau}
+\item \texttt{LargeurNoyau}
+\item \texttt{AsymetryCoefficient}
+\item \texttt{GrooveLength}
+\end{itemize}
+
+\subsection{Énumération TypeDeGrain.cs}
+\begin{verbatim}
+public enum TypeDeGrain
+{
+    Kama,
+    Rosa,
+    Canadian
+}
+\end{verbatim}
+
+\subsection{Diagramme de classes pour l'algorithme KNN}
+L'architecture de l'algorithme KNN suit le pattern Strategy pour la gestion des distances.
+
+\section{Implémentation de la classification KNN}
+\subsection{Architecture générale}
+\subsubsection{Interface IDistance}
+Interface définissant le contrat pour les calculs de distance :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Interface IDistance.png}
+    \caption{Interface IDistance}
+    \label{fig:IDistance}
+\end{figure}
+
+\subsubsection{DistanceEuclidienne.cs}
+Implémentation de la distance euclidienne :
+\[
+d(\mathbf{a}, \mathbf{b}) = \sqrt{\sum_{i=1}^{n} (a_i - b_i)^2}
+\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Classe DistanceEuclidienne.png}
+    \caption{Classe DistanceEuclidienne}
+    \label{fig:DistanceEuclidienne}
+\end{figure}
+
+\subsubsection{DistanceManhattan.cs}
+Implémentation de la distance de Manhattan :
+\[
+d_1(\mathbf{a}, \mathbf{b}) = \sum_{i=1}^{n} |a_i - b_i|
+\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Classe DistanceManhattanpng.png}
+    \caption{Classe DistanceManhattan}
+    \label{fig:DistanceManhattan}
+\end{figure}
+
+\subsection{Classe ClassifierKnn.cs}
+C'est le cœur du système de classification.
+\textbf{Attributs :}
+\begin{itemize}
+\item \texttt{IDistance distance} - Stratégie de calcul de distance
+\item \texttt{EnsembleDonnees donneesApprentissage} - Données d'entraînement
+\item \texttt{int k} - Nombre de voisins à considérer
+\end{itemize}
+\textbf{Méthodes principales :}
+\begin{itemize}
+\item \texttt{public void Entrainer(EnsembleDonnees data)} - Stocke les données d'apprentissage
+\item \texttt{public string Predire(double[] caracteristiques)} - Prédit le type d'un grain
+\item \texttt{public List<Voisin> ListeTousVoisin(double[] caracteristiques)} - Calcule tous les voisins
+\item \texttt{public List<Voisin> TrierListVoisinParDistance(List<Voisin> voisins)} - Tri les voisins (QuickSort)
+\item \texttt{public TypeDeGrain VoteMajoritaire(List<Voisin> voisins)} - Vote majoritaire parmi les k voisins
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Classe knn.png}
+    \caption{Classe ClassifierKnn}
+    \label{fig:ClassifierKnn}
+\end{figure}
+
+\subsection{Classes auxiliaires}
+\subsubsection{Echantillon.cs}
+Représente un échantillon avec ses caractéristiques et son étiquette.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Classe Echantillon.png}
+    \caption{Classe Echantillon}
+    \label{fig:ClasseEchantillon}
+\end{figure}
+
+\subsubsection{Voisin.cs}
+Structure un voisin avec l'échantillon et la distance calculée.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{class Voisin.png}
+    \caption{Classe Voisin}
+    \label{fig:classVoisin}
+\end{figure}
+
+\subsubsection{EnsembleDonnees.cs}
+Gère une collection d'échantillons avec des méthodes d'ajout et de consultation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{class EnsembleDonnees.png}
+    \caption{Classe EnsembleDonnees}
+    \label{fig:EnsembleDonnees}
+\end{figure}
+
+\subsection{Traitement des données CSV}
+La classe \texttt{Convert.cs} centralise toutes les opérations de chargement et conversion :
+\begin{itemize}
+\item \texttt{conversion\_liste(string nom\_fichier)} - Charge et convertit le CSV en liste de grains
+\item \texttt{ConstruireTableauDeGrain(List<Grain> grains)} - Affiche les grains en tableau
+\item \texttt{saveEchantillon(List<Grain> grains, EnsembleDonnees grainsTraining)} - Convertit les grains en échantillons
+\item \texttt{Afficher(List<Grain> grains)} - Affichage debug
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{class Convert.png}
+    \caption{Classe Convert}
+    \label{fig:classConvert}
+\end{figure}
+
+\section{Tests et validation}
+\subsection{Jeu de données}
+Les données proviennent d'un fichier CSV contenant les mesures de plusieurs grains des trois types.
+\subsection{Résultats de classification}
+Les tests effectués montrent une bonne précision de classification avec k=5 et la distance euclidienne.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{Sortie.png}
+    \caption{Sortie écran avec k = 5 et Distance Euclidienne}
+    \label{fig:Ecran}
+\end{figure}
+
+Les résultats sont sauvegardé dans le fichier resulats.json avec l'historique. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.55\linewidth]{resultatEnJson.png}
+    \caption{Le fichier resulats.json avec l'historique}
+    \label{fig:Résultat}
+\end{figure}
+
+\section{Program.cs}
+\subsection{Menu principal}
+C'est le menu de notre application. Il propose les options suivantes :
+\begin{itemize}
+\item \textbf{1 - Importer données}
+\item \textbf{2 - Choisir k}
+\item \textbf{3 - Choisir distance}
+\item \textbf{4 - Entraîner modèle}
+\item \textbf{5 - Tester modèle}
+\item \textbf{6 - Quitter}
+\end{itemize}
+
+\paragraph{Importer données}
+Cette option importe le fichier CSV d'entraînement et génère les échantillons.
+
+\paragraph{Choisir distance}
+Cette option permet de sélectionner la distance à utiliser :
+\begin{itemize}
+\item distance euclidienne,
+\item distance de Manhattan.
+\end{itemize}
+
+\paragraph{Entraîner modèle}
+Cette option appelle la méthode knn.Entrainer() pour entraîner le modèle.
+
+\paragraph{Tester modèle}
+Cette option :
+\begin{itemize}
+\item Charge le fichier test.csv,
+\item Prédit la classe de chaque grain,
+\item Remplit la matrice de confusion,
+\item Calcule l'exactitude,
+\item Affiche un tableau avec Spectre.Console,
+\item Sauvegarde les résultats dans un fichier JSON.
+\end{itemize}
+
+\paragraph{\texttt{ClasseToIndex()}}
+La fonction ClasseToIndex() convertit les classes en indices 0, 1, 2 pour l'utilisation dans la matrice de confusion.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Programme.png}
+    \caption{Programme principal}
+    \label{fig:Program}
+\end{figure}
+
+\newpage
+\section{Conclusion}
+Ce projet nous a permis de :
+\begin{itemize}
+\item Maîtriser l'implémentation de l'algorithme KNN en C\#.
+\item Appliquer les principes POO (encapsulation, héritage, polymorphisme).
+\item Utiliser des outils professionnels (Git, GitHub, Trello).
+\item Structurer un projet de A à Z.
+\end{itemize}
+
+\newpage
+\section{Références}
+\subsection{Documentation KNN}
+\begin{itemize}
+\item Visual Studio Magazine – Implémentation du k-NN en C\# (Partie 1) \url{https://visualstudiomagazine.com/articles/2024/10/01/implementing-k-nn-classification-using-c.aspx?Page=1}
+\item Visual Studio Magazine – Implémentation du k-NN en C\# (Partie 2) \url{https://visualstudiomagazine.com/articles/2024/10/01/implementing-k-nn-classification-using-c.aspx?Page=2}
+\item MSDN Magazine – Comprendre la classification k-NN en C\# \url{https://learn.microsoft.com/fr-fr/archive/msdn-magazine/2017/december/test-run-understanding-k-nn-classification-using-csharp}
+\item Medium – Understanding K-Nearest Neighbors Algorithm (C\# Example) \url{https://medium.com/@kdcodechronicles/understanding-k-nearest-neighbors-algorithm-knn-c-example-d4fce614ea46}
+\end{itemize}
+\subsection{Matrice de confusion}
+\begin{itemize}
+\item Documentation ML.NET – \texttt{ConfusionMatrix} \url{https://learn.microsoft.com/en-us/dotnet/api/microsoft.ml.data.confusionmatrix?view=ml-dotnet-preview}
+\end{itemize}
+\subsection{JSON : Sérialisation et écriture}
+\begin{itemize}
+\item Microsoft – Travailler avec \texttt{System.Text.Json} \url{https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/how-to}
+\item Medium – Working with JSON in C\# using System.Text.Json \url{https://rupen-anjaria.medium.com/working-with-json-in-c-using-system-text-json-9b61f95b551e}
+\item Newtonsoft.Json – Documentation officielle \url{https://www.newtonsoft.com/json}
+\item Newtonsoft.Json – Guide de sérialisation \url{https://www.newtonsoft.com/json/help/html/SerializingJSON.htm}
+\end{itemize}
+\subsection{Spectre.Console}
+\begin{itemize}
+\item Documentation officielle Spectre.Console \url{https://spectreconsole.net/console}
+\item Tutoriel – Création de tableaux avec Spectre.Console \url{https://www.luisllamas.es/en/csharp-spectre-console/}
+\end{itemize}
+
+\end{document}
