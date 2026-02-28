@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\evaluationperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:evaluationperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\idistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:idistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\convert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:convert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\ensembledonnees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:ensembledonnees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\voisin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:voisin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\echantillon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,38 +35,26 @@
       "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:classifierknn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\iclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:iclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\distancemanhattan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:distancemanhattan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\distanceeuclidienne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:distanceeuclidienne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fidele Atta\\AppData\\Local\\SourceServer\\03792114e944cc44026ec7f841481f968912b286099960a36216de4f2be35cd8\\src\\Spectre.Console\\StyleParser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\iclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:iclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\ensembledonnees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:ensembledonnees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\idistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:idistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\distancemanhattan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:distancemanhattan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\voisin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:voisin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP POO AVEC TAFITA\\ClassificationGrainsDeBle\\ResultatsEvaluationPerformances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|c:\\users\\fidele atta\\desktop\\uqar hiver 2026\\poo2\\travail pratique 1\\tp1_poo2 bon\\tp_poo2\\classificationgrainsdeble\\grain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{279E085D-FF74-30A0-06F2-29F535CFF29A}|ClassificationGrainsDeBle.csproj|solutionrelative:grain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP POO AVEC TAFITA\\ClassificationGrainsDeBle\\ResultatsEvaluationPerformances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fidele Atta\\AppData\\Local\\SourceServer\\03792114e944cc44026ec7f841481f968912b286099960a36216de4f2be35cd8\\src\\Spectre.Console\\StyleParser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP POO AVEC TAFITA\\ClassificationGrainsDeBle\\Data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -59,63 +67,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EvaluationPerformance.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\EvaluationPerformance.cs",
+              "RelativeDocumentMoniker": "EvaluationPerformance.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\EvaluationPerformance.cs",
+              "RelativeToolTip": "EvaluationPerformance.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T22:05:17.69Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StyleParser.cs",
-              "DocumentMoniker": "C:\\Users\\Fidele Atta\\AppData\\Local\\SourceServer\\03792114e944cc44026ec7f841481f968912b286099960a36216de4f2be35cd8\\src\\Spectre.Console\\StyleParser.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\03792114e944cc44026ec7f841481f968912b286099960a36216de4f2be35cd8\\src\\Spectre.Console\\StyleParser.cs",
-              "ToolTip": "C:\\Users\\Fidele Atta\\AppData\\Local\\SourceServer\\03792114e944cc44026ec7f841481f968912b286099960a36216de4f2be35cd8\\src\\Spectre.Console\\StyleParser.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\03792114e944cc44026ec7f841481f968912b286099960a36216de4f2be35cd8\\src\\Spectre.Console\\StyleParser.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAMkAAABQAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Convert.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Convert.cs",
+              "RelativeDocumentMoniker": "Convert.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Convert.cs",
+              "RelativeToolTip": "Convert.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T15:07:10.228Z"
+              "WhenOpened": "2026-02-28T06:52:16.921Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "DistanceEuclidienne.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\DistanceEuclidienne.cs",
               "RelativeDocumentMoniker": "DistanceEuclidienne.cs",
               "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\DistanceEuclidienne.cs",
               "RelativeToolTip": "DistanceEuclidienne.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-15T14:25:42.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IClassifier.cs",
-              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\IClassifier.cs",
-              "RelativeDocumentMoniker": "IClassifier.cs",
-              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\IClassifier.cs",
-              "RelativeToolTip": "IClassifier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T14:09:43.294Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ClassifierKnn.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\ClassifierKnn.cs",
               "RelativeDocumentMoniker": "ClassifierKnn.cs",
               "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\ClassifierKnn.cs",
               "RelativeToolTip": "ClassifierKnn.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-15T16:56:18.601Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Echantillon.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Echantillon.cs",
               "RelativeDocumentMoniker": "Echantillon.cs",
@@ -127,32 +136,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Idistance.cs",
-              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Idistance.cs",
-              "RelativeDocumentMoniker": "Idistance.cs",
-              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Idistance.cs",
-              "RelativeToolTip": "Idistance.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T14:13:38.675Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-15T14:06:58.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "EnsembleDonnees.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\EnsembleDonnees.cs",
               "RelativeDocumentMoniker": "EnsembleDonnees.cs",
@@ -161,6 +158,67 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-15T15:11:47.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DistanceManhattan.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\DistanceManhattan.cs",
+              "RelativeDocumentMoniker": "DistanceManhattan.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\DistanceManhattan.cs",
+              "RelativeToolTip": "DistanceManhattan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T14:42:29.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Idistance.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Idistance.cs",
+              "RelativeDocumentMoniker": "Idistance.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Idistance.cs",
+              "RelativeToolTip": "Idistance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T14:13:38.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IClassifier.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\IClassifier.cs",
+              "RelativeDocumentMoniker": "IClassifier.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\IClassifier.cs",
+              "RelativeToolTip": "IClassifier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T14:09:43.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Voisin.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Voisin.cs",
+              "RelativeDocumentMoniker": "Voisin.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Voisin.cs",
+              "RelativeToolTip": "Voisin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T15:19:07.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StyleParser.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\AppData\\Local\\SourceServer\\03792114e944cc44026ec7f841481f968912b286099960a36216de4f2be35cd8\\src\\Spectre.Console\\StyleParser.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\03792114e944cc44026ec7f841481f968912b286099960a36216de4f2be35cd8\\src\\Spectre.Console\\StyleParser.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\AppData\\Local\\SourceServer\\03792114e944cc44026ec7f841481f968912b286099960a36216de4f2be35cd8\\src\\Spectre.Console\\StyleParser.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\03792114e944cc44026ec7f841481f968912b286099960a36216de4f2be35cd8\\src\\Spectre.Console\\StyleParser.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAMkAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T15:07:10.228Z"
             },
             {
               "$type": "Document",
@@ -176,19 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DistanceManhattan.cs",
-              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\DistanceManhattan.cs",
-              "RelativeDocumentMoniker": "DistanceManhattan.cs",
-              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\DistanceManhattan.cs",
-              "RelativeToolTip": "DistanceManhattan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T14:42:29.336Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Grain.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Grain.cs",
               "RelativeDocumentMoniker": "Grain.cs",
@@ -200,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Data.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP POO AVEC TAFITA\\ClassificationGrainsDeBle\\Data.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\TP POO AVEC TAFITA\\ClassificationGrainsDeBle\\Data.cs",
@@ -209,18 +255,6 @@
               "ViewState": "AgIAABIAAAAAAAAAAAAAAC8AAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-20T11:06:05.786Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Voisin.cs",
-              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Voisin.cs",
-              "RelativeDocumentMoniker": "Voisin.cs",
-              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\Voisin.cs",
-              "RelativeToolTip": "Voisin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T15:19:07.333Z"
             }
           ]
         }

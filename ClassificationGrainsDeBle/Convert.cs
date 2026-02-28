@@ -15,8 +15,6 @@ namespace ClassificationGrainsDeBle
     internal class Convert
     {
 
-        //string nom_fichier = "seeds_dataset_training.csv";
-
         public static List<Grain> conversion_liste(string nom_fichier)
 
         {

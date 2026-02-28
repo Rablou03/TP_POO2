@@ -29,5 +29,129 @@
         ]
       ]
     }
+  },
+  {
+    "ParametresExecution": {
+      "k": 7,
+      "distance": {},
+      "date": "2026-02-27 03:00:25"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.8873239436619719,
+      "matrice_confusion": [
+        [
+          17,
+          4,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          0,
+          0,
+          24
+        ]
+      ]
+    }
+  },
+  {
+    "ParametresExecution": {
+      "k": 5,
+      "distance": {},
+      "date": "2026-02-27 14:53:23"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.9154929577464789,
+      "matrice_confusion": [
+        [
+          19,
+          2,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          0,
+          0,
+          24
+        ]
+      ]
+    }
+  },
+  {
+    "ParametresExecution": {
+      "k": 4,
+      "distance": {},
+      "date": "2026-02-28 00:33:32"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.9577464788732394,
+      "matrice_confusion": [
+        [
+          22,
+          0,
+          2
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          0,
+          0,
+          24
+        ]
+      ]
+    }
+  },
+  {
+    "ParametresExecution": {
+      "k": 5,
+      "distance": {},
+      "date": "2026-02-28 02:18:31"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.9154929577464789,
+      "matrice_confusion": [
+        [
+          19,
+          2,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          0,
+          0,
+          24
+        ]
+      ]
+    }
   }
 ]
