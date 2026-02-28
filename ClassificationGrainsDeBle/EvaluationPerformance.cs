@@ -110,7 +110,7 @@ namespace ClassificationGrainsDeBle
                 ParametresExecution = new
                 {
                     k = k,
-                    distance = typeDistance,
+                    distance = typeDistance.ToString(),
                     date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
                 },
                 JeuxDeDonnees = new
@@ -146,7 +146,7 @@ namespace ClassificationGrainsDeBle
                 listeResultats = new List<object>();
             }
 
-            // On ajoute le nouveau résultat
+            
             listeResultats.Add(nouveauResultat);
 
             // On réécrit le fichier
