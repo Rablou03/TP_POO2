@@ -1,17 +1,22 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
+using System.IO;
+using System.Text.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
     internal class EvaluationPerformance
     {
-        int[,] matrice;
-        int total;
-        int correct;
+        private readonly int[,] matrice;
+        private int total;
+        private int correct;
 
         public EvaluationPerformance()
         {
@@ -23,14 +28,11 @@ namespace WPFClassificationGrainsDeBles.Models
         public void Evaluer(int k, IDistance distance, EnsembleDonnees train, EnsembleDonnees test)
         {
             ClassifierKnn classifier = new ClassifierKnn(k, distance);
-
             classifier.Entrainer(train);
 
             foreach (var e in test.ObtenirEchantillon())
             {
                 TypeDeGrain reel = e.Etiquette;
-
-
                 TypeDeGrain predit = classifier.Predire(e);
 
                 if (reel == predit)
@@ -40,19 +42,18 @@ namespace WPFClassificationGrainsDeBles.Models
                 int colonne = GetIndex(predit);
 
                 matrice[ligne, colonne]++;
-
                 total++;
             }
-
-
-
         }
 
         public int GetIndex(TypeDeGrain type)
         {
-            if (type == TypeDeGrain.Kama) return 0;
-            if (type == TypeDeGrain.Rosa) return 1;
-            return 2; // Canadian
+            return type switch
+            {
+                TypeDeGrain.Kama => 0,
+                TypeDeGrain.Rosa => 1,
+                _ => 2 // Canadian
+            };
         }
 
         public double CalculerAccuracy()
@@ -61,49 +62,43 @@ namespace WPFClassificationGrainsDeBles.Models
             return (double)correct / total;
         }
 
-        public void AfficherTableSpectre()
+        // Version WPF : retourne un DataTable pour affichage dans un DataGrid
+        public DataTable ConstruireTableauWpf()
         {
-            var table = new Table();
+            DataTable table = new DataTable();
 
-            table.Border(TableBorder.Rounded);
-            table.AddColumn("[yellow]Réel \\ Prédit[/]");
-            table.AddColumn("[blue]Kama[/]");
-            table.AddColumn("[green]Rosa[/]");
-            table.AddColumn("[red]Canadian[/]");
+            table.Columns.Add("Réel \\ Prédit");
+            table.Columns.Add("Kama");
+            table.Columns.Add("Rosa");
+            table.Columns.Add("Canadian");
 
             string[] labels = { "Kama", "Rosa", "Canadian" };
 
             for (int i = 0; i < 3; i++)
             {
-                table.AddRow(
-                    $"[bold]{labels[i]}[/]",
-                    matrice[i, 0].ToString(),
-                    matrice[i, 1].ToString(),
-                    matrice[i, 2].ToString()
+                table.Rows.Add(
+                    labels[i],
+                    matrice[i, 0],
+                    matrice[i, 1],
+                    matrice[i, 2]
                 );
             }
 
-            AnsiConsole.Write(table);
-            double accuracy = (double)correct / total;
-
-            AnsiConsole.MarkupLine($"\n[bold green]Accuracy : {accuracy:P2}[/]");
+            return table;
         }
 
         public void SauvegarderJsonGlobal(string chemin, int k, IDistance typeDistance, EnsembleDonnees train, EnsembleDonnees test)
         {
-            // Conversion matrice 2D -> liste de listes
             var matriceListe = new List<List<int>>();
-            for (int i = 0; i < matrice.GetLength(0); i++)
+            for (int i = 0; i < 3; i++)
             {
                 var ligne = new List<int>();
-                for (int j = 0; j < matrice.GetLength(1); j++)
-                {
+                for (int j = 0; j < 3; j++)
                     ligne.Add(matrice[i, j]);
-                }
+
                 matriceListe.Add(ligne);
             }
 
-            // Crée l'objet résultat
             var nouveauResultat = new
             {
                 ParametresExecution = new
@@ -119,14 +114,13 @@ namespace WPFClassificationGrainsDeBles.Models
                 },
                 Evaluation = new
                 {
-                    accuracy = (double)correct / total,
+                    accuracy = CalculerAccuracy(),
                     matrice_confusion = matriceListe
                 }
             };
 
             List<object> listeResultats;
 
-            // Si le fichier existe déjà, on le lit et on désérialise
             if (File.Exists(chemin))
             {
                 string ancienJson = File.ReadAllText(chemin);
@@ -136,7 +130,6 @@ namespace WPFClassificationGrainsDeBles.Models
                 }
                 catch
                 {
-                    // Si le fichier existant n'est pas un tableau, on recrée une liste
                     listeResultats = new List<object>();
                 }
             }
@@ -145,10 +138,8 @@ namespace WPFClassificationGrainsDeBles.Models
                 listeResultats = new List<object>();
             }
 
-
             listeResultats.Add(nouveauResultat);
 
-            // On réécrit le fichier
             string jsonFinal = JsonSerializer.Serialize(listeResultats,
                 new JsonSerializerOptions { WriteIndented = true });
 
@@ -156,6 +147,5 @@ namespace WPFClassificationGrainsDeBles.Models
 
             Console.WriteLine($"Fichier JSON mis à jour ici : {Path.GetFullPath(chemin)}");
         }
-
     }
 }

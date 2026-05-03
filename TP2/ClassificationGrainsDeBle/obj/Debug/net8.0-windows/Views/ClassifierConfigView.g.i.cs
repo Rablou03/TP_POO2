@@ -52,7 +52,7 @@ namespace ClassificationGrainsDeBle_WPF.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClassificationGrainsDeBle;component/views/classifierconfigview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClassificationGrainsDeBle;V1.0.0.0;component/views/classifierconfigview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ClassifierConfigView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
