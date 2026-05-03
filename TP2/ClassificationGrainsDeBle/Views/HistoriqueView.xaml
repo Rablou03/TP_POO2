@@ -1,0 +1,70 @@
+<!-- Views/HistoriqueView.xaml -->
+<UserControl x:Class="ClassificationGrainsDeBle_WPF.Views.HistoriqueView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Header -->
+        <Border Grid.Row="0" Background="#673AB7" CornerRadius="10" Padding="15" Margin="0,0,0,15">
+            <DockPanel>
+                <TextBlock Text="📜 Historique des expériences" 
+                           FontSize="18" 
+                           FontWeight="Bold"
+                           Foreground="White"
+                           DockPanel.Dock="Left"/>
+                <Button Command="{Binding ClearHistoryCommand}"
+                        Content="🗑️ Effacer l'historique"
+                        Background="#FF5722"
+                        Foreground="White"
+                        Padding="10,5"
+                        DockPanel.Dock="Right"
+                        Cursor="Hand"/>
+            </DockPanel>
+        </Border>
+        
+        <!-- ListView for Experiences -->
+        <ListView Grid.Row="1" 
+                  ItemsSource="{Binding Experiences}"
+                  SelectedItem="{Binding SelectedExperience}"
+                  SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Date" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Date, StringFormat=dd/MM/yyyy HH:mm:ss}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="k" Width="50" DisplayMemberBinding="{Binding K}"/>
+                    <GridViewColumn Header="Distance" Width="100" DisplayMemberBinding="{Binding Distance}"/>
+                    <GridViewColumn Header="Accuracy" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Accuracy, StringFormat=P2}" 
+                                           Foreground="Green"
+                                           FontWeight="Bold"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Train" Width="80" DisplayMemberBinding="{Binding TrainingSize}"/>
+                    <GridViewColumn Header="Test" Width="80" DisplayMemberBinding="{Binding TestSize}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        <!-- Empty State -->
+        <TextBlock Grid.Row="1" 
+                   Text="Aucune expérience enregistrée. Lancez une classification pour voir les résultats."
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontStyle="Italic"
+                   Foreground="Gray"
+                   Visibility="{Binding Experiences.Count, Converter={StaticResource ZeroToVisibilityConverter}}"/>
+    </Grid>
+</UserControl>

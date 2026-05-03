@@ -1,0 +1,63 @@
+<!-- Views/MainWindow.xaml -->
+<Window x:Class="ClassificationGrainsDeBle_WPF.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClassificationGrainsDeBle_WPF.ViewModels"
+        mc:Ignorable="d"
+        Title="Classification de Grains de Blé - k-NN" 
+        Height="700" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Resources/icon.ico">
+    
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:ImportDataViewModel}">
+            <local:ImportDataView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:ClassifierConfigViewModel}">
+            <local:ClassifierConfigView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:ClassificationViewModel}">
+            <local:ClassificationView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:HistoriqueViewModel}">
+            <local:HistoriqueView/>
+        </DataTemplate>
+    </Window.Resources>
+    
+    <DockPanel>
+        <!-- Menu -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="📁 Fichier">
+                <MenuItem Header="Charger les données" Command="{Binding NavigateToImportCommand}"/>
+                <Separator/>
+                <MenuItem Header="Quitter" Command="{Binding QuitCommand}"/>
+            </MenuItem>
+            <MenuItem Header="⚙️ Configuration">
+                <MenuItem Header="Paramètres du classifieur" Command="{Binding NavigateToConfigCommand}"/>
+            </MenuItem>
+            <MenuItem Header="🏷️ Classification">
+                <MenuItem Header="Exécuter la classification" Command="{Binding NavigateToClassificationCommand}"/>
+            </MenuItem>
+            <MenuItem Header="📜 Historique">
+                <MenuItem Header="Voir les expériences" Command="{Binding NavigateToHistoriqueCommand}"/>
+            </MenuItem>
+            <MenuItem Header="❓ Aide">
+                <MenuItem Header="À propos" Click="ShowAboutDialog"/>
+            </MenuItem>
+        </Menu>
+        
+        <!-- Status Bar -->
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="{Binding CurrentViewTitle}" FontWeight="Bold"/>
+            </StatusBarItem>
+        </StatusBar>
+        
+        <!-- Content Area -->
+        <Border Background="#F5F5F5" Padding="10">
+            <ContentControl Content="{Binding CurrentView}"/>
+        </Border>
+    </DockPanel>
+</Window>

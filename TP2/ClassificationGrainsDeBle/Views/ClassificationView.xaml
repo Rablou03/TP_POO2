@@ -1,0 +1,94 @@
+<!-- Views/ClassificationView.xaml -->
+<UserControl x:Class="ClassificationGrainsDeBle_WPF.Views.ClassificationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Status -->
+        <Border Grid.Row="0" Background="#FFF3CD" CornerRadius="5" Padding="10" Margin="0,0,0,15">
+            <StackPanel>
+                <TextBlock Text="ℹ️ Configuration actuelle" FontWeight="Bold"/>
+                <TextBlock Text="{Binding Source={x:Static local:ClassifierConfig.K}, StringFormat='k = {0}'}"/>
+                <TextBlock Text="{Binding Source={x:Static local:ClassifierConfig.DistanceName}, StringFormat='Distance = {0}'}"/>
+            </StackPanel>
+        </Border>
+        
+        <!-- Action Buttons -->
+        <WrapPanel Grid.Row="1" Margin="0,0,0,15" HorizontalAlignment="Center">
+            <Button Command="{Binding RunClassificationCommand}"
+                    Content="🚀 Lancer la classification"
+                    Width="200"
+                    Height="40"
+                    Margin="0,0,10,0"
+                    FontWeight="Bold"
+                    Background="#2196F3"
+                    Foreground="White"/>
+            <Button Command="{Binding ResetCommand}"
+                    Content="🔄 Réinitialiser"
+                    Width="150"
+                    Height="40"
+                    FontWeight="Bold"
+                    Background="#FF9800"
+                    Foreground="White"/>
+        </WrapPanel>
+        
+        <!-- Status Message -->
+        <Border Grid.Row="2" Background="#E8F5E9" CornerRadius="5" Padding="10" Margin="0,0,0,15">
+            <TextBlock Text="{Binding StatusMessage}" 
+                       FontWeight="Bold"
+                       TextWrapping="Wrap"/>
+        </Border>
+        
+        <!-- Results -->
+        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <!-- Accuracy Display -->
+                <Border Background="#4CAF50" CornerRadius="10" Padding="20" Margin="0,0,0,15" HorizontalAlignment="Center">
+                    <TextBlock FontSize="24" 
+                               FontWeight="Bold"
+                               Foreground="White">
+                        <Run Text="Accuracy : "/>
+                        <Run Text="{Binding Accuracy, StringFormat={}{0:P2}}"/>
+                    </TextBlock>
+                </Border>
+                
+                <!-- Confusion Matrix -->
+                <GroupBox Header="📊 Matrice de confusion" Margin="0,0,0,15">
+                    <DataGrid ItemsSource="{Binding ConfusionMatrix}"
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="False"
+                              IsReadOnly="True"
+                              HorizontalAlignment="Center">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Réel \\ Prédit" 
+                                                Binding="{Binding ActualLabel}"
+                                                FontWeight="Bold"
+                                                Width="100"/>
+                            <DataGridTextColumn Header="Kama" 
+                                                Binding="{Binding PredictedKama}"
+                                                Width="80"/>
+                            <DataGridTextColumn Header="Rosa" 
+                                                Binding="{Binding PredictedRosa}"
+                                                Width="80"/>
+                            <DataGridTextColumn Header="Canadian" 
+                                                Binding="{Binding PredictedCanadian}"
+                                                Width="80"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </GroupBox>
+                
+                <!-- Progress Indicator -->
+                <ProgressBar IsIndeterminate="{Binding IsClassificationRunning}"
+                             Height="10"
+                             Visibility="{Binding IsClassificationRunning, Converter={StaticResource BoolToVisibilityConverter}}"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
