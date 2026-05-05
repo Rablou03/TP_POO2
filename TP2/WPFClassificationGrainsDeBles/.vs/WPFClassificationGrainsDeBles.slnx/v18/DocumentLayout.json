@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\fidele atta\\desktop\\tp2 poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,7 +11,11 @@
       "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\fidele atta\\desktop\\tp2 poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\converters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\fidele atta\\desktop\\tp2 poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\converters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:converters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -98,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,28 +110,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RelayCommand.cs",
-              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\RelayCommand.cs",
-              "RelativeToolTip": "ViewModels\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T22:00:37.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Converters.cs",
-              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Converters.cs",
-              "RelativeDocumentMoniker": "Converters.cs",
-              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Converters.cs",
-              "RelativeToolTip": "Converters.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAiwDUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T21:51:15.964Z",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-05T20:00:39.971Z",
               "EditorCaption": ""
             },
             {
@@ -160,6 +146,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Converters.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Converters.cs",
+              "RelativeDocumentMoniker": "Converters.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Converters.cs",
+              "RelativeToolTip": "Converters.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T21:51:15.964Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "IDistance.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\IDistance.cs",
@@ -172,13 +170,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
               "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\MainWindowViewModel.cs",
               "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAUwIoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-05T05:37:22.256Z",
               "EditorCaption": ""
@@ -186,13 +184,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-05T20:00:39.971Z",
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\RelayCommand.cs",
+              "RelativeToolTip": "ViewModels\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T22:00:37.152Z",
               "EditorCaption": ""
             },
             {

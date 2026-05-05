@@ -13,28 +13,28 @@ namespace WPFClassificationGrainsDeBles.ViewModels
     {
         private readonly SharedModel _sharedModel = new SharedModel();
 
-        // ========== AFFICHAGE ==========
-        private string _currentTitle = "Bienvenue";
+        // Affichage de notre programme
+        private string _currentTitle = "Bienvenue dans notre programme";
         private bool _showImport = true;
         private bool _showKConfig = false;
         private bool _showDistanceConfig = false;
         private bool _showTrainTest = false;
         private string _importStatus = "Aucun fichier importé";
-        private string _resultText = "Les résultats apparaîtront ici...";
+        private string _resultText = "Les résultats s’afficheront dans cette section.";
 
-        // ========== FICHIERS ==========
+        // Déclaration des fichiers
         private string _trainPath = "";
         private string _testPath = "";
 
-        // ========== CONFIGURATION ==========
+        // Configuation distance avec k par defaut = 3
         private int _kValue = 3;
         private bool _isEuclidienne = true;
         private bool _isManhattan = false;
 
-        // ========== HISTORIQUE ==========
+        // Historique
         public ObservableCollection<string> HistoriqueList { get; set; } = new ObservableCollection<string>();
 
-        // ========== PROPRIETES ==========
+        // proprietes
         public string CurrentTitle
         {
             get => _currentTitle;
@@ -123,7 +123,7 @@ namespace WPFClassificationGrainsDeBles.ViewModels
             }
         }
 
-        // ========== COMMANDES ==========
+        // Les Icommand
         public ICommand BrowseTrainCommand { get; }
         public ICommand BrowseTestCommand { get; }
         public ICommand ImportCommand { get; }
@@ -135,7 +135,7 @@ namespace WPFClassificationGrainsDeBles.ViewModels
         public ICommand TestCommand { get; }
         public ICommand QuitCommand { get; }
 
-        // ========== CONSTRUCTEUR ==========
+        // Constructeurs
         public MainWindowViewModel()
         {
             // Initialisation des commandes
@@ -151,7 +151,7 @@ namespace WPFClassificationGrainsDeBles.ViewModels
             QuitCommand = new RelayCommand(() => System.Windows.Application.Current.Shutdown());
         }
 
-        // ========== METHODES ==========
+        // Les methodes que nous avons utilisées 
         private void ShowOnly(string section)
         {
             ShowImport = (section == "import");
@@ -203,13 +203,13 @@ namespace WPFClassificationGrainsDeBles.ViewModels
                 _sharedModel.IsDataLoaded = true;
                 _sharedModel.InitializeClassifier();
 
-                ImportStatus = $"✅ Succès: {_sharedModel.TrainingData.Taille()} train, {_sharedModel.TestData.Taille()} test";
+                ImportStatus = $"Succès: {_sharedModel.TrainingData.Taille()} train, {_sharedModel.TestData.Taille()} test";
                 ShowOnly("traintest");
-                CurrentTitle = "📊 Données chargées - Configurez k et distance";
+                CurrentTitle = "Données chargées - Configurez k et distance";
             }
             catch (Exception ex)
             {
-                ImportStatus = $"❌ Erreur: {ex.Message}";
+                ImportStatus = $"Erreur: {ex.Message}";
                 _sharedModel.IsDataLoaded = false;
             }
         }
@@ -217,21 +217,21 @@ namespace WPFClassificationGrainsDeBles.ViewModels
         private void ShowKConfigSection()
         {
             ShowOnly("k");
-            CurrentTitle = "🔢 2. Choisir la valeur de k (1 à 30)";
+            CurrentTitle = "2. Choisir la valeur de k (1 à 30)";
         }
 
         private void ShowDistanceConfigSection()
         {
             ShowOnly("distance");
-            CurrentTitle = "📏 3. Choisir la distance";
+            CurrentTitle = "3. Choisir la distance";
         }
 
         private void ValidateK()
         {
             _sharedModel.K = KValue;
             ShowOnly("distance");
-            CurrentTitle = "📏 3. Choisir la distance";
-            ResultText = $"✅ k = {KValue} validé. Choisissez maintenant la distance.";
+            CurrentTitle = "3. Choisir la distance";
+            ResultText = $"k = {KValue} validé. Choisissez maintenant la distance.";
         }
 
         private void ValidateDistance()
@@ -239,36 +239,36 @@ namespace WPFClassificationGrainsDeBles.ViewModels
             string distance = IsEuclidienne ? "Euclidienne" : "Manhattan";
             _sharedModel.SetDistance(distance);
             ShowOnly("traintest");
-            ResultText = $"✅ Distance {distance} validée. Vous pouvez maintenant entraîner et tester.";
-            CurrentTitle = "🚂 4. Entraîner et 5. Tester le modèle";
+            ResultText = $"Distance {distance} validée. Vous pouvez maintenant entraîner et tester.";
+            CurrentTitle = "4. Entraîner et 5. Tester le modèle";
         }
 
         private void Train()
         {
             if (!_sharedModel.IsDataLoaded)
             {
-                ResultText = "❌ Erreur: Veuillez d'abord importer les données!";
+                ResultText = "Erreur: Veuillez d'abord importer les données!";
                 return;
             }
 
             _sharedModel.InitializeClassifier();
-            ResultText = $"✅ Modèle entraîné avec succès!\n" +
-                        $"   📊 k = {_sharedModel.K}\n" +
-                        $"   📏 Distance = {_sharedModel.GetDistanceName()}\n" +
-                        $"   📈 Données d'entraînement = {_sharedModel.TrainingData.Taille()} échantillons";
+            ResultText = $"Modèle entraîné avec succès!\n" +
+                        $"   k = {_sharedModel.K}\n" +
+                        $"   Distance = {_sharedModel.GetDistanceName()}\n" +
+                        $"   Données d'entraînement = {_sharedModel.TrainingData.Taille()} échantillons";
         }
 
         private void Test()
         {
             if (!_sharedModel.IsDataLoaded)
             {
-                ResultText = "❌ Erreur: Veuillez d'abord importer les données!";
+                ResultText = "Erreur: Veuillez d'abord importer les données .csv";
                 return;
             }
 
             if (_sharedModel.Classifier == null)
             {
-                ResultText = "❌ Erreur: Veuillez d'abord entraîner le modèle!";
+                ResultText = "Erreur: Veuillez d'abord entraîner le modèle";
                 return;
             }
 
@@ -281,14 +281,12 @@ namespace WPFClassificationGrainsDeBles.ViewModels
                 double accuracy = evaluation.CalculerAccuracy() * 100;
                 string distanceName = _sharedModel.GetDistanceName();
 
-                string resultat = $"╔════════════════════════════════════════════════════╗\n" +
-                                 $"║                 RÉSULTAT DU TEST                   ║\n" +
-                                 $"╚════════════════════════════════════════════════════╝\n\n" +
-                                 $"📊 Paramètres du classifieur :\n" +
-                                 $"   • k = {_sharedModel.K}\n" +
-                                 $"   • Distance = {distanceName}\n" +
-                                 $"   • Données test = {_sharedModel.TestData.Taille()} échantillons\n\n" +
-                                 $"🎯 Précision (Accuracy) = {accuracy:F2}%\n";
+                string resultat = $"RÉSULTAT DU TEST\n" +                   
+                                 $"Paramètres du classifieur :\n" +
+                                 $"   - k = {_sharedModel.K}\n" +
+                                 $"   - Distance = {distanceName}\n" +
+                                 $"   - Données test = {_sharedModel.TestData.Taille()} échantillons\n\n" +
+                                 $"Précision (Accuracy) = {accuracy:F2}%\n";
 
                 ResultText = resultat;
 
@@ -304,11 +302,11 @@ namespace WPFClassificationGrainsDeBles.ViewModels
             }
             catch (Exception ex)
             {
-                ResultText = $"❌ Erreur lors du test: {ex.Message}";
+                ResultText = $"Erreur lors du test: {ex.Message}";
             }
         }
 
-        // ========== INotifyPropertyChanged ==========
+        // INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)

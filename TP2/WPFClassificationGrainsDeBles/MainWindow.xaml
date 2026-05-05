@@ -12,77 +12,52 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <!-- MENU LATERAL -->
-        <Border Background="#2C3E50" Grid.Column="0">
-            <StackPanel Margin="10,20,10,20">
-
-                <TextBlock Text="📊 k-NN CLASSIFIER" 
-                           Foreground="White" 
+        <Border BorderBrush="#CCCCCC" BorderThickness="0,0,1,0" Grid.Column="0">
+            <StackPanel Margin="10">
+                <TextBlock Text="MENU" 
                            FontSize="16" 
                            FontWeight="Bold"
-                           HorizontalAlignment="Center"
-                           Margin="0 0 0 30"/>
+                           Margin="0 0 0 20"/>
 
                 <Button Content="1 - Importer données" 
                         Command="{Binding ImportCommand}"
-                        Background="#3498DB"
-                        Foreground="White"
-                        FontWeight="Bold"
-                        Height="40"
-                        Margin="0 5"/>
+                        Height="35"
+                        Margin="0 3"/>
 
                 <Button Content="2 - Choisir k" 
                         Command="{Binding ShowKConfigCommand}"
-                        Background="#3498DB"
-                        Foreground="White"
-                        FontWeight="Bold"
-                        Height="40"
-                        Margin="0 5"/>
+                        Height="35"
+                        Margin="0 3"/>
 
                 <Button Content="3 - Choisir distance" 
                         Command="{Binding ShowDistanceConfigCommand}"
-                        Background="#3498DB"
-                        Foreground="White"
-                        FontWeight="Bold"
-                        Height="40"
-                        Margin="0 5"/>
+                        Height="35"
+                        Margin="0 3"/>
 
                 <Button Content="4 - Entraîner modèle" 
                         Command="{Binding TrainCommand}"
-                        Background="#E67E22"
-                        Foreground="White"
-                        FontWeight="Bold"
-                        Height="40"
-                        Margin="0 5"/>
+                        Height="35"
+                        Margin="0 3"/>
 
                 <Button Content="5 - Tester modèle" 
                         Command="{Binding TestCommand}"
-                        Background="#E67E22"
-                        Foreground="White"
-                        FontWeight="Bold"
-                        Height="40"
-                        Margin="0 5"/>
+                        Height="35"
+                        Margin="0 3"/>
 
-                <Separator Background="#7F8C8D" Margin="0 15"/>
+                <Separator Margin="0 10"/>
 
                 <Button Content="6 - Quitter" 
                         Command="{Binding QuitCommand}"
-                        Background="#E74C3C"
-                        Foreground="White"
-                        FontWeight="Bold"
-                        Height="40"
-                        Margin="0 5"/>
+                        Height="35"
+                        Margin="0 3"/>
 
-                <Border Background="#34495E" 
-                        CornerRadius="5" 
-                        Margin="0 20 0 0" 
-                        Padding="8">
+                <Border BorderBrush="#DDDDDD" BorderThickness="1" Margin="0 20 0 0" Padding="5">
                     <TextBlock Text="{Binding ImportStatus}" 
-                               Foreground="#ECF0F1" 
                                FontSize="11"
                                TextWrapping="Wrap"/>
                 </Border>
@@ -91,17 +66,16 @@
 
         <!-- CONTENU PRINCIPAL -->
         <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
-            <StackPanel Margin="20">
+            <StackPanel Margin="15">
 
                 <TextBlock Text="{Binding CurrentTitle}"
-                           FontSize="22"
+                           FontSize="18"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"
-                           Foreground="#2C3E50"
-                           Margin="0 0 0 20"/>
+                           Margin="0 0 0 15"/>
 
                 <!-- 1. IMPORTATION -->
-                <GroupBox Header="📁 1. Importer les données" 
+                <GroupBox Header="1. Importer les données" 
                           Visibility="{Binding ShowImport}">
                     <StackPanel Margin="10">
                         <TextBlock Text="Fichier d'entraînement (train.csv):" FontWeight="Bold"/>
@@ -110,8 +84,8 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <TextBox Text="{Binding TrainPath}" IsReadOnly="True" Background="#F5F5F5"/>
-                            <Button Content="Parcourir" Command="{Binding BrowseTrainCommand}" Grid.Column="1" Margin="5,0,0,0"/>
+                            <TextBox Text="{Binding TrainPath}" IsReadOnly="True"/>
+                            <Button Content="Parcourir" Command="{Binding BrowseTrainCommand}" Grid.Column="1" Margin="5,0,0,0" Width="80"/>
                         </Grid>
 
                         <TextBlock Text="Fichier de test (test.csv):" FontWeight="Bold"/>
@@ -120,95 +94,75 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <TextBox Text="{Binding TestPath}" IsReadOnly="True" Background="#F5F5F5"/>
-                            <Button Content="Parcourir" Command="{Binding BrowseTestCommand}" Grid.Column="1" Margin="5,0,0,0"/>
+                            <TextBox Text="{Binding TestPath}" IsReadOnly="True"/>
+                            <Button Content="Parcourir" Command="{Binding BrowseTestCommand}" Grid.Column="1" Margin="5,0,0,0" Width="80"/>
                         </Grid>
 
-                        <Button Content="🚀 Importer les données" 
+                        <Button Content="Importer les données" 
                                 Command="{Binding ImportCommand}"
                                 Height="35"
-                                Background="#28A745"
-                                Foreground="White"
-                                FontWeight="Bold"
                                 Margin="0 10"/>
                     </StackPanel>
                 </GroupBox>
 
                 <!-- 2. CONFIGURATION K -->
-                <GroupBox Header="🔢 2. Choisir la valeur de k" 
+                <GroupBox Header="2. Choisir la valeur de k" 
                           Visibility="{Binding ShowKConfig}">
                     <StackPanel Margin="10">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            <TextBlock Text="k = " FontSize="18" VerticalAlignment="Center"/>
+                            <TextBlock Text="k = " FontSize="16" VerticalAlignment="Center"/>
                             <TextBox Text="{Binding KValue, UpdateSourceTrigger=PropertyChanged}" 
-                                     Width="80" 
-                                     Height="40"
+                                     Width="60" 
+                                     Height="30"
                                      TextAlignment="Center"
-                                     FontSize="18"
-                                     FontWeight="Bold"
                                      Margin="10 0"/>
                         </StackPanel>
                         <TextBlock Text="(valeur entre 1 et 30)" 
-                                   FontSize="12" 
+                                   FontSize="11" 
                                    Foreground="Gray"
                                    HorizontalAlignment="Center"
-                                   Margin="0 10"/>
-                        <Slider Minimum="1" Maximum="30" 
-                                Value="{Binding KValue}"
-                                TickFrequency="1"
-                                IsSnapToTickEnabled="True"
-                                Margin="0 10"/>
-                        <Button Content="✅ Valider k" 
+                                   Margin="0 5"/>
+                        <Button Content="Valider k" 
                                 Command="{Binding ValidateKCommand}"
-                                Height="35"
-                                Background="#3498DB"
-                                Foreground="White"
+                                Height="30"
                                 Margin="0 10"/>
                     </StackPanel>
                 </GroupBox>
 
                 <!-- 3. CONFIGURATION DISTANCE -->
-                <GroupBox Header="📏 3. Choisir la distance" 
+                <GroupBox Header="3. Choisir la distance" 
                           Visibility="{Binding ShowDistanceConfig}">
                     <StackPanel Margin="10">
-                        <RadioButton Content="📐 Euclidienne (√∑(xi-yi)²)"
+                        <RadioButton Content="Euclidienne"
                                      IsChecked="{Binding IsEuclidienne}"
                                      Margin="0 5"/>
-                        <RadioButton Content="📏 Manhattan (∑|xi-yi|)"
+                        <RadioButton Content="Manhattan"
                                      IsChecked="{Binding IsManhattan}"
                                      Margin="0 5"/>
-                        <Button Content="✅ Valider la distance" 
+                        <Button Content="Valider la distance" 
                                 Command="{Binding ValidateDistanceCommand}"
-                                Height="35"
-                                Background="#3498DB"
-                                Foreground="White"
+                                Height="30"
                                 Margin="0 15 0 0"/>
                     </StackPanel>
                 </GroupBox>
 
                 <!-- 4 & 5. ENTRAINER ET TESTER -->
-                <GroupBox Header="🎯 4. Entraîner et 5. Tester le modèle" 
+                <GroupBox Header="4. Entraîner et 5. Tester le modèle" 
                           Visibility="{Binding ShowTrainTest}">
                     <StackPanel Margin="10">
-                        <Button Content="🚂 Entraîner le modèle" 
+                        <Button Content="Entraîner le modèle" 
                                 Command="{Binding TrainCommand}"
-                                Height="40"
-                                Background="#E67E22"
-                                Foreground="White"
-                                FontWeight="Bold"
+                                Height="35"
                                 Margin="0 5"/>
-                        <Button Content="🧪 Tester le modèle" 
+                        <Button Content="Tester le modèle" 
                                 Command="{Binding TestCommand}"
-                                Height="40"
-                                Background="#E67E22"
-                                Foreground="White"
-                                FontWeight="Bold"
+                                Height="35"
                                 Margin="0 5"/>
                     </StackPanel>
                 </GroupBox>
 
                 <!-- RÉSULTATS -->
-                <GroupBox Header="📊 Résultats" Margin="0 15 0 0">
+                <GroupBox Header="Résultats" Margin="0 15 0 0">
                     <TextBox Text="{Binding ResultText}"
                              TextWrapping="Wrap"
                              FontFamily="Consolas"
@@ -216,12 +170,11 @@
                              MaxHeight="300"
                              VerticalScrollBarVisibility="Auto"
                              IsReadOnly="True"
-                             Background="#F9F9F9"
                              Padding="10"/>
                 </GroupBox>
 
                 <!-- HISTORIQUE -->
-                <GroupBox Header="📜 Historique des expériences" Margin="0 15 0 0">
+                <GroupBox Header="Historique des expériences" Margin="0 15 0 0">
                     <ListBox ItemsSource="{Binding HistoriqueList}"
                              MinHeight="150"
                              MaxHeight="200"
