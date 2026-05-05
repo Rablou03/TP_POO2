@@ -105,17 +105,8 @@
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RelayCommand.cs",
-              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\RelayCommand.cs",
-              "RelativeToolTip": "ViewModels\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T22:00:37.152Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
@@ -183,16 +174,25 @@
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\MainWindowViewModel.cs*",
-              "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs*",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAUwDQBAAALAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAUwIoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-05T05:37:22.256Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\RelayCommand.cs",
+              "RelativeToolTip": "ViewModels\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T22:00:37.152Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
