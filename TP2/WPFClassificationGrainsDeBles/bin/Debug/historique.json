@@ -1,0 +1,64 @@
+[
+  {
+    "ParametresExecution": {
+      "k": 6,
+      "distance": "WPFClassificationGrainsDeBles.Models.DistanceManhattan",
+      "date": "2026-05-05 18:02:23"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.90140845070422537,
+      "matrice_confusion": [
+        [
+          19,
+          2,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          1,
+          0,
+          23
+        ]
+      ]
+    }
+  },
+  {
+    "ParametresExecution": {
+      "k": 3,
+      "distance": "WPFClassificationGrainsDeBles.Models.DistanceEuclidienne",
+      "date": "2026-05-05 18:03:18"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.91549295774647887,
+      "matrice_confusion": [
+        [
+          19,
+          2,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          0,
+          0,
+          24
+        ]
+      ]
+    }
+  }
+]

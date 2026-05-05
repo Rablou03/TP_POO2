@@ -2,33 +2,9 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WPFClassificationGrainsDeBles"
-             xmlns:views="clr-namespace:WPFClassificationGrainsDeBles.Views"
-             xmlns:viewmodels="clr-namespace:WPFClassificationGrainsDeBles.ViewModels"
              StartupUri="MainWindow.xaml">
 
     <Application.Resources>
-
-        <!-- Converters -->
         <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
-        <local:StringToBoolConverter x:Key="StringToBoolConverter"/>
-        <local:ZeroToVisibilityConverter x:Key="ZeroToVisibilityConverter"/>
-
-        <!-- DataTemplates : ViewModel → View -->
-        <DataTemplate DataType="{x:Type viewmodels:ImportDataViewModel}">
-            <views:ImportDataView/>
-        </DataTemplate>
-
-        <DataTemplate DataType="{x:Type viewmodels:ClassifierConfigViewModel}">
-            <views:ClassifierConfigView/>
-        </DataTemplate>
-
-        <DataTemplate DataType="{x:Type viewmodels:ClassificationViewModel}">
-            <views:ClassificationView/>
-        </DataTemplate>
-
-        <DataTemplate DataType="{x:Type viewmodels:HistoriqueViewModel}">
-            <views:HistoriqueView/>
-        </DataTemplate>
-
     </Application.Resources>
 </Application>

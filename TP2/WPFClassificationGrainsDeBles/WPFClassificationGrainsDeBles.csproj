@@ -102,40 +102,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ClassificationView.xaml" />
-    <Page Include="Views\ClassifierConfigView.xaml" />
-    <Page Include="Views\HistoriqueView.xaml" />
-    <Page Include="Views\ImportDataView.xaml" />
   </ItemGroup>
   <!-- Code-behind -->
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converter.cs" />
+    <Compile Include="Converters.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\ShareModel.cs" />
-    <Compile Include="ViewModels\ClassificationViewModel.cs" />
-    <Compile Include="ViewModels\ClassifierConfigViewModel.cs" />
-    <Compile Include="ViewModels\HistoriqueViewModel.cs" />
-    <Compile Include="ViewModels\ImportDataViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\ClassificationView.xaml.cs">
-      <DependentUpon>ClassificationView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ClassifierConfigView.xaml.cs">
-      <DependentUpon>ClassifierConfigView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\HistoriqueView.xaml.cs">
-      <DependentUpon>HistoriqueView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ImportDataView.xaml.cs">
-      <DependentUpon>ImportDataView.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <!-- Models -->
   <ItemGroup>
