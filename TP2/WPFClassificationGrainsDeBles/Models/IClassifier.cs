@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
-    internal interface IClassifier
+    public interface IClassifier
     {
         void Entrainer(EnsembleDonnees data);
         TypeDeGrain Predire(Echantillon e);

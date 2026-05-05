@@ -1,25 +1,53 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace WPFClassificationGrainsDeBles.ViewModels
 {
     public class ClassificationViewModel : ViewModelBase
     {
-        public ObservableCollection<string> Resultats { get; set; }
+        private readonly MainWindowViewModel _mainVM;
+        private string _resultats;
+        private bool _isTraining;
 
-        public ICommand ClassifyCommand { get; }
-
-        public ClassificationViewModel()
+        public string Resultats
         {
-            Resultats = new ObservableCollection<string>();
-            ClassifyCommand = new RelayCommand(Classify);
+            get => _resultats;
+            set { _resultats = value; OnPropertyChanged(); }
         }
 
-        private void Classify()
+        public bool IsTraining
         {
-            Resultats.Clear();
-            Resultats.Add("Exemple : Classe A");
-            Resultats.Add("Exemple : Classe B");
+            get => _isTraining;
+            set { _isTraining = value; OnPropertyChanged(); }
+        }
+
+        public ICommand TrainAndTestCommand { get; }
+
+        // Constructeur avec paramètre
+        public ClassificationViewModel(MainWindowViewModel mainVM)
+        {
+            _mainVM = mainVM;
+            TrainAndTestCommand = new RelayCommand(async () => await ExecuteTrainAndTestAsync());
+            Resultats = "Prêt à entraîner et tester...";
+        }
+
+        private async Task ExecuteTrainAndTestAsync()
+        {
+            IsTraining = true;
+            Resultats = "🔄 Entraînement en cours...";
+
+            await Task.Delay(100);
+
+            string result = _mainVM.TrainAndTest();
+            Resultats = result;
+
+            IsTraining = false;
         }
     }
 }

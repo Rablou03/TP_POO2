@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
-    internal class EnsembleDonnees
+    public class EnsembleDonnees
     {
         private List<Echantillon> echantillons = new List<Echantillon>();
         public void AjouterUnEchantillon(Echantillon e)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
-    internal class Voisin
+    public class Voisin
     {
         public Echantillon Echantillon { get; set; }
         public double Distance { get; set; }

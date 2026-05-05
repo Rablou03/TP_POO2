@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
-    internal interface IDistance
+    public interface IDistance
     {
         double Calculer(double[] a, double[] b);
     }

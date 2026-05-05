@@ -1,11 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "+sp07ojyKoI=",
+  "dgSpecHash": "z5X9ygF+dzg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
+  "projectFilePath": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fidele Atta\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512",
     "C:\\Users\\Fidele Atta\\.nuget\\packages\\spectre.console\\0.54.0\\spectre.console.0.54.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Une erreur s’est produite lors de l’obtention des données de vulnérabilité du package\u00A0: Impossible de charger l'index de service pour la source https://api.nuget.org/v3/index.json.",
+      "projectPath": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

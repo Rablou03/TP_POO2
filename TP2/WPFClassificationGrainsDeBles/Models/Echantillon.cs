@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
-    internal class Echantillon
+    public class Echantillon
     {
         public double[] Caracteristiques { get; set; }
         public TypeDeGrain Etiquette { get; set; }

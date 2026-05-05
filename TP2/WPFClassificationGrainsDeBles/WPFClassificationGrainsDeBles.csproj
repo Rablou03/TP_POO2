@@ -116,6 +116,7 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ShareModel.cs" />
     <Compile Include="ViewModels\ClassificationViewModel.cs" />
     <Compile Include="ViewModels\ClassifierConfigViewModel.cs" />
     <Compile Include="ViewModels\HistoriqueViewModel.cs" />
@@ -139,7 +140,7 @@
   <!-- Models -->
   <ItemGroup>
     <Compile Include="Models\ClassifierKnn.cs" />
-    <Compile Include="Models\Convert.cs" />
+    <Compile Include="Models\DataConverter.cs" />
     <Compile Include="Models\DistanceEuclidienne.cs" />
     <Compile Include="Models\DistanceManhattan.cs" />
     <Compile Include="Models\Echantillon.cs" />

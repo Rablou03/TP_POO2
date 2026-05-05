@@ -12,7 +12,7 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
-    internal class EvaluationPerformance
+    public class EvaluationPerformance
     {
         private readonly int[,] matrice;
         private int total;

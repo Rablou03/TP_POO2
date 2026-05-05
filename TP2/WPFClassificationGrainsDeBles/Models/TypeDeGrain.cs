@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
-    internal enum TypeDeGrain
+    public enum TypeDeGrain
     {
         Kama,
         Rosa,

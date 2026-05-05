@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj": {}
+    "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj": {
+    "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
+        "projectUniqueName": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
         "projectName": "ClassificationGrainsDeBle",
-        "projectPath": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
+        "projectPath": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\ClassificationGrainsDeBle\\ClassificationGrainsDeBle.csproj",
         "packagesPath": "C:\\Users\\Fidele Atta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fidele Atta\\Desktop\\UQAR HIVER 2026\\POO2\\Travail pratique 1\\TP1_POO2 BON\\TP_POO2\\ClassificationGrainsDeBle\\obj\\",
+        "outputPath": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\ClassificationGrainsDeBle\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -44,10 +45,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "CsvHelper": {
@@ -75,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

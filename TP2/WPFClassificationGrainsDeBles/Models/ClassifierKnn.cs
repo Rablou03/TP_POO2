@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
-    internal class ClassifierKnn : IClassifier
+    public class ClassifierKnn : IClassifier
     {
         IDistance distance;
         EnsembleDonnees training;

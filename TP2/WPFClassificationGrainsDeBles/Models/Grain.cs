@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
-    internal class Grain
+    public class Grain
     {
         TypeDeGrain typeDeGrain;
         double area;

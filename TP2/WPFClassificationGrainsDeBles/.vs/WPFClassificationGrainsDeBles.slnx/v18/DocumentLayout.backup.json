@@ -3,6 +3,82 @@
   "WorkspaceRootPath": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\fidele atta\\desktop\\tp2 poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\viewmodels\\historiqueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:viewmodels\\historiqueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\fidele atta\\desktop\\tp2 poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\fidele atta\\desktop\\tp2 poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\models\\dataconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\dataconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\viewmodels\\importdataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:viewmodels\\importdataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\viewmodels\\classifierconfigviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:viewmodels\\classifierconfigviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\viewmodels\\classificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:viewmodels\\classificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\voisin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\voisin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\typedegrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\typedegrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\sharemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\sharemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\idistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\idistance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\iclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\iclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\grain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\grain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\evaluationperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\evaluationperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\ensembledonnees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\ensembledonnees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\echantillon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\echantillon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\distancemanhattan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\distancemanhattan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\distanceeuclidienne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\distanceeuclidienne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\classifierknn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\classifierknn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\SharedModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\SharedModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\views\\classifierconfigview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:views\\classifierconfigview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,8 +110,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HistoriqueViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\HistoriqueViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\HistoriqueViewModel.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\HistoriqueViewModel.cs*",
+              "RelativeToolTip": "ViewModels\\HistoriqueViewModel.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:19:55.192Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -46,7 +135,225 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAcwMwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:37:22.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClassifierConfigViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\ClassifierConfigViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ClassifierConfigViewModel.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\ClassifierConfigViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ClassifierConfigViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:51:26.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\DataConverter.cs",
+              "RelativeDocumentMoniker": "Models\\DataConverter.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\DataConverter.cs",
+              "RelativeToolTip": "Models\\DataConverter.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAcwFMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:54:47.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ImportDataViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\ImportDataViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ImportDataViewModel.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\ImportDataViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ImportDataViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:53:48.515Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ClassificationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\ClassificationViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ClassificationViewModel.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\ClassificationViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ClassificationViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:50:26.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Voisin.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Voisin.cs",
+              "RelativeDocumentMoniker": "Models\\Voisin.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Voisin.cs",
+              "RelativeToolTip": "Models\\Voisin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:04:47.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TypeDeGrain.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\TypeDeGrain.cs",
+              "RelativeDocumentMoniker": "Models\\TypeDeGrain.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\TypeDeGrain.cs",
+              "RelativeToolTip": "Models\\TypeDeGrain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:04:39.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IClassifier.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\IClassifier.cs",
+              "RelativeDocumentMoniker": "Models\\IClassifier.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\IClassifier.cs",
+              "RelativeToolTip": "Models\\IClassifier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:04:23.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Grain.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Grain.cs",
+              "RelativeDocumentMoniker": "Models\\Grain.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Grain.cs",
+              "RelativeToolTip": "Models\\Grain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:04:15.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnsembleDonnees.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\EnsembleDonnees.cs",
+              "RelativeDocumentMoniker": "Models\\EnsembleDonnees.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\EnsembleDonnees.cs",
+              "RelativeToolTip": "Models\\EnsembleDonnees.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:57:30.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IDistance.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\IDistance.cs",
+              "RelativeDocumentMoniker": "Models\\IDistance.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\IDistance.cs",
+              "RelativeToolTip": "Models\\IDistance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:56:41.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ShareModel.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\ShareModel.cs",
+              "RelativeDocumentMoniker": "Models\\ShareModel.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\ShareModel.cs",
+              "RelativeToolTip": "Models\\ShareModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:44:05.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Echantillon.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Echantillon.cs",
+              "RelativeDocumentMoniker": "Models\\Echantillon.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Echantillon.cs",
+              "RelativeToolTip": "Models\\Echantillon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:03:46.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DistanceEuclidienne.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\DistanceEuclidienne.cs",
+              "RelativeDocumentMoniker": "Models\\DistanceEuclidienne.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\DistanceEuclidienne.cs",
+              "RelativeToolTip": "Models\\DistanceEuclidienne.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:55:59.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EvaluationPerformance.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\EvaluationPerformance.cs",
+              "RelativeDocumentMoniker": "Models\\EvaluationPerformance.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\EvaluationPerformance.cs",
+              "RelativeToolTip": "Models\\EvaluationPerformance.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:02:36.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ClassifierKnn.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\ClassifierKnn.cs",
+              "RelativeDocumentMoniker": "Models\\ClassifierKnn.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\ClassifierKnn.cs",
+              "RelativeToolTip": "Models\\ClassifierKnn.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAswAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:02:52.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DistanceManhattan.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\DistanceManhattan.cs",
+              "RelativeDocumentMoniker": "Models\\DistanceManhattan.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\DistanceManhattan.cs",
+              "RelativeToolTip": "Models\\DistanceManhattan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:55:33.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SharedModel.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\SharedModel.cs",
+              "RelativeDocumentMoniker": "Models\\SharedModel.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\SharedModel.cs",
+              "RelativeToolTip": "Models\\SharedModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwCQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T05:41:03.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "ClassifierConfigView.g.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\obj\\Debug\\Views\\ClassifierConfigView.g.cs",
               "RelativeDocumentMoniker": "obj\\Debug\\Views\\ClassifierConfigView.g.cs",
@@ -58,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 19,
               "Title": "ClassifierConfigView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Views\\ClassifierConfigView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ClassifierConfigView.xaml.cs",
@@ -66,12 +373,11 @@
               "RelativeToolTip": "Views\\ClassifierConfigView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-03T12:57:18.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-03T12:57:18.543Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 21,
               "Title": "ImportDataView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Views\\ImportDataView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ImportDataView.xaml.cs",
@@ -83,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 22,
               "Title": "HistoriqueView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Views\\HistoriqueView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\HistoriqueView.xaml.cs",
@@ -95,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 20,
               "Title": "ClassificationView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Views\\ClassificationView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ClassificationView.xaml.cs",
@@ -107,14 +413,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 23,
               "Title": "HistoriqueView.xaml",
               "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Views\\HistoriqueView.xaml",
               "RelativeDocumentMoniker": "Views\\HistoriqueView.xaml",
               "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Views\\HistoriqueView.xaml",
               "RelativeToolTip": "Views\\HistoriqueView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-03T12:56:27.422Z"
+              "WhenOpened": "2026-05-03T12:56:27.422Z",
+              "EditorCaption": ""
             }
           ]
         }

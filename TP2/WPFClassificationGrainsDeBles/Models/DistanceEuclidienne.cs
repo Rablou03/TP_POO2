@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFClassificationGrainsDeBles.Models
 {
-    internal class DistanceEuclidienne : IDistance
+    public class DistanceEuclidienne : IDistance
     {
         public double Calculer(double[] a, double[] b)
         {
