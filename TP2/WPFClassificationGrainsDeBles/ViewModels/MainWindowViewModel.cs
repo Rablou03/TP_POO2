@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Microsoft.Win32;
 using WPFClassificationGrainsDeBles.Models;
+using System.Windows;
 
 namespace WPFClassificationGrainsDeBles.ViewModels
 {
@@ -14,13 +15,18 @@ namespace WPFClassificationGrainsDeBles.ViewModels
         private readonly SharedModel _sharedModel = new SharedModel();
 
         // Affichage de notre programme
-        private string _currentTitle = "Bienvenue dans notre programme";
-        private bool _showImport = true;
-        private bool _showKConfig = false;
-        private bool _showDistanceConfig = false;
-        private bool _showTrainTest = false;
+        private string _currentTitle = "Bienvenue sur l'application de Classification des grains de blé - k-NN";
+        private Visibility _showWelcome = Visibility.Visible;
+        private Visibility _showImport = Visibility.Collapsed;
+        private Visibility _showKConfig = Visibility.Collapsed;
+        private Visibility _showDistanceConfig = Visibility.Collapsed;
+        private Visibility _showTrain = Visibility.Collapsed;
+        private Visibility _showTest = Visibility.Collapsed;
+        private Visibility _showResults = Visibility.Collapsed;
+        private Visibility _showHistory = Visibility.Collapsed;
         private string _importStatus = "Aucun fichier importé";
-        private string _resultText = "Les résultats s’afficheront dans cette section.";
+        private string _resultText = "Les résultats s'afficheront dans cette section.";
+        private string _currentConfigText = "Aucune configuration";
 
         // Déclaration des fichiers
         private string _trainPath = "";
@@ -30,39 +36,65 @@ namespace WPFClassificationGrainsDeBles.ViewModels
         private int _kValue = 3;
         private bool _isEuclidienne = true;
         private bool _isManhattan = false;
+        private bool _kValidated = false;
+        private bool _distanceValidated = false;
 
         // Historique
         public ObservableCollection<string> HistoriqueList { get; set; } = new ObservableCollection<string>();
 
-        // proprietes
+        // Propriétés
         public string CurrentTitle
         {
             get => _currentTitle;
             set { _currentTitle = value; OnPropertyChanged(); }
         }
 
-        public bool ShowImport
+        public Visibility ShowWelcome
+        {
+            get => _showWelcome;
+            set { _showWelcome = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowImport
         {
             get => _showImport;
             set { _showImport = value; OnPropertyChanged(); }
         }
 
-        public bool ShowKConfig
+        public Visibility ShowKConfig
         {
             get => _showKConfig;
             set { _showKConfig = value; OnPropertyChanged(); }
         }
 
-        public bool ShowDistanceConfig
+        public Visibility ShowDistanceConfig
         {
             get => _showDistanceConfig;
             set { _showDistanceConfig = value; OnPropertyChanged(); }
         }
 
-        public bool ShowTrainTest
+        public Visibility ShowTrain
         {
-            get => _showTrainTest;
-            set { _showTrainTest = value; OnPropertyChanged(); }
+            get => _showTrain;
+            set { _showTrain = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowTest
+        {
+            get => _showTest;
+            set { _showTest = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowResults
+        {
+            get => _showResults;
+            set { _showResults = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowHistory
+        {
+            get => _showHistory;
+            set { _showHistory = value; OnPropertyChanged(); }
         }
 
         public string ImportStatus
@@ -75,6 +107,12 @@ namespace WPFClassificationGrainsDeBles.ViewModels
         {
             get => _resultText;
             set { _resultText = value; OnPropertyChanged(); }
+        }
+
+        public string CurrentConfigText
+        {
+            get => _currentConfigText;
+            set { _currentConfigText = value; OnPropertyChanged(); }
         }
 
         public string TrainPath
@@ -123,41 +161,154 @@ namespace WPFClassificationGrainsDeBles.ViewModels
             }
         }
 
-        // Les Icommand
+        // Commandes
         public ICommand BrowseTrainCommand { get; }
         public ICommand BrowseTestCommand { get; }
         public ICommand ImportCommand { get; }
-        public ICommand ShowKConfigCommand { get; }
-        public ICommand ShowDistanceConfigCommand { get; }
-        public ICommand ValidateKCommand { get; }
-        public ICommand ValidateDistanceCommand { get; }
+        public ICommand ValidateKAndContinueCommand { get; }
+        public ICommand ValidateDistanceAndContinueCommand { get; }
         public ICommand TrainCommand { get; }
         public ICommand TestCommand { get; }
         public ICommand QuitCommand { get; }
 
-        // Constructeurs
+        // Commandes de navigation
+        public ICommand NavigateHomeCommand { get; }
+        public ICommand NavigateImportCommand { get; }
+        public ICommand NavigateKConfigCommand { get; }
+        public ICommand NavigateDistanceConfigCommand { get; }
+        public ICommand NavigateResultsCommand { get; }
+        public ICommand NavigateHistoryCommand { get; }
+
+        // Constructeur
         public MainWindowViewModel()
         {
             // Initialisation des commandes
-            BrowseTrainCommand = new RelayCommand(BrowseTrain);
-            BrowseTestCommand = new RelayCommand(BrowseTest);
+            BrowseTrainCommand = new RelayCommand(() => BrowseTrain());
+            BrowseTestCommand = new RelayCommand(() => BrowseTest());
             ImportCommand = new RelayCommand(async () => await ImportData());
-            ShowKConfigCommand = new RelayCommand(ShowKConfigSection);
-            ShowDistanceConfigCommand = new RelayCommand(ShowDistanceConfigSection);
-            ValidateKCommand = new RelayCommand(ValidateK);
-            ValidateDistanceCommand = new RelayCommand(ValidateDistance);
-            TrainCommand = new RelayCommand(Train);
-            TestCommand = new RelayCommand(Test);
-            QuitCommand = new RelayCommand(() => System.Windows.Application.Current.Shutdown());
+            ValidateKAndContinueCommand = new RelayCommand(() => ValidateKAndContinue());
+            ValidateDistanceAndContinueCommand = new RelayCommand(() => ValidateDistanceAndContinue());
+            TrainCommand = new RelayCommand(() => Train());
+            TestCommand = new RelayCommand(() => Test());
+            QuitCommand = new RelayCommand(() => Application.Current.Shutdown());
+
+            // Commandes de navigation
+            NavigateHomeCommand = new RelayCommand(() => ShowHome());
+            NavigateImportCommand = new RelayCommand(() => ShowImportSection());
+            NavigateKConfigCommand = new RelayCommand(() => ShowKConfigSection());
+            NavigateDistanceConfigCommand = new RelayCommand(() => ShowDistanceConfigSection());
+            NavigateResultsCommand = new RelayCommand(() => ShowResultsSection());
+            NavigateHistoryCommand = new RelayCommand(() => ShowHistorySection());
         }
 
-        // Les methodes que nous avons utilisées 
-        private void ShowOnly(string section)
+        // Méthodes de navigation
+        private void ShowHome()
         {
-            ShowImport = (section == "import");
-            ShowKConfig = (section == "k");
-            ShowDistanceConfig = (section == "distance");
-            ShowTrainTest = (section == "traintest");
+            ShowWelcome = Visibility.Visible;
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "Bienvenue sur l'application de Classification des grains de blé - k-NN";
+        }
+
+        private void ShowImportSection()
+        {
+            ShowWelcome = Visibility.Collapsed;
+            ShowImport = Visibility.Visible;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "1. Importer les données";
+        }
+
+        private void ShowKConfigSection()
+        {
+            ShowWelcome = Visibility.Collapsed;
+
+            if (!_sharedModel.IsDataLoaded)
+            {
+                MessageBox.Show("Veuillez d'abord importer les données.", "Information",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                ShowImportSection();
+                return;
+            }
+
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Visible;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "2. Configurer la valeur de k";
+        }
+
+        private void ShowDistanceConfigSection()
+        {
+            ShowWelcome = Visibility.Collapsed;
+
+            if (!_kValidated)
+            {
+                MessageBox.Show("Veuillez d'abord valider la valeur de k.", "Information",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                ShowKConfigSection();
+                return;
+            }
+
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Visible;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "3. Choisir la distance";
+        }
+
+        private void ShowTrainTestSections()
+        {
+            ShowWelcome = Visibility.Collapsed;
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Visible;
+            ShowTest = Visibility.Visible;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "4. Entraîner et 5. Tester le modèle";
+        }
+
+        private void ShowResultsSection()
+        {
+            ShowWelcome = Visibility.Collapsed;
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Visible;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "Résultats de classification";
+        }
+
+        private void ShowHistorySection()
+        {
+            ShowWelcome = Visibility.Collapsed;
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Visible;
+            CurrentTitle = "Historique des expériences";
         }
 
         private void BrowseTrain()
@@ -186,7 +337,7 @@ namespace WPFClassificationGrainsDeBles.ViewModels
         {
             if (string.IsNullOrEmpty(TrainPath) || string.IsNullOrEmpty(TestPath))
             {
-                ImportStatus = "❌ Veuillez sélectionner les deux fichiers!";
+                ImportStatus = "Veuillez sélectionner les deux fichiers!";
                 return;
             }
 
@@ -204,8 +355,13 @@ namespace WPFClassificationGrainsDeBles.ViewModels
                 _sharedModel.InitializeClassifier();
 
                 ImportStatus = $"Succès: {_sharedModel.TrainingData.Taille()} train, {_sharedModel.TestData.Taille()} test";
-                ShowOnly("traintest");
-                CurrentTitle = "Données chargées - Configurez k et distance";
+
+                // Réinitialiser les validations
+                _kValidated = false;
+                _distanceValidated = false;
+
+                // Aller à la configuration de k
+                ShowKConfigSection();
             }
             catch (Exception ex)
             {
@@ -214,61 +370,102 @@ namespace WPFClassificationGrainsDeBles.ViewModels
             }
         }
 
-        private void ShowKConfigSection()
+        private void ValidateKAndContinue()
         {
-            ShowOnly("k");
-            CurrentTitle = "2. Choisir la valeur de k (1 à 30)";
-        }
+            if (!_sharedModel.IsDataLoaded)
+            {
+                MessageBox.Show("Veuillez d'abord importer les données!", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowImportSection();
+                return;
+            }
 
-        private void ShowDistanceConfigSection()
-        {
-            ShowOnly("distance");
-            CurrentTitle = "3. Choisir la distance";
-        }
-
-        private void ValidateK()
-        {
             _sharedModel.K = KValue;
-            ShowOnly("distance");
-            CurrentTitle = "3. Choisir la distance";
+            _kValidated = true;
             ResultText = $"k = {KValue} validé. Choisissez maintenant la distance.";
+            ShowDistanceConfigSection();
         }
 
-        private void ValidateDistance()
+        private void ValidateDistanceAndContinue()
         {
+            if (!_sharedModel.IsDataLoaded)
+            {
+                MessageBox.Show("Veuillez d'abord importer les données!", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowImportSection();
+                return;
+            }
+
+            if (!_kValidated)
+            {
+                MessageBox.Show("Veuillez d'abord valider la valeur de k!", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowKConfigSection();
+                return;
+            }
+
             string distance = IsEuclidienne ? "Euclidienne" : "Manhattan";
             _sharedModel.SetDistance(distance);
-            ShowOnly("traintest");
+            _distanceValidated = true;
+
+            UpdateCurrentConfigText();
+            ShowTrainTestSections();
             ResultText = $"Distance {distance} validée. Vous pouvez maintenant entraîner et tester.";
-            CurrentTitle = "4. Entraîner et 5. Tester le modèle";
+        }
+
+        private void UpdateCurrentConfigText()
+        {
+            string distance = IsEuclidienne ? "Euclidienne" : "Manhattan";
+            CurrentConfigText = $"Configuration actuelle :\n" +
+                               $"   - k = {_sharedModel.K}\n" +
+                               $"   - Distance = {distance}\n" +
+                               $"   - Données d'entraînement = {_sharedModel.TrainingData?.Taille() ?? 0} échantillons\n" +
+                               $"   - Données de test = {_sharedModel.TestData?.Taille() ?? 0} échantillons";
         }
 
         private void Train()
         {
             if (!_sharedModel.IsDataLoaded)
             {
-                ResultText = "Erreur: Veuillez d'abord importer les données!";
+                MessageBox.Show("Veuillez d'abord importer les données!", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowImportSection();
+                return;
+            }
+
+            if (!_kValidated || !_distanceValidated)
+            {
+                MessageBox.Show("Veuillez d'abord configurer k et la distance!", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowKConfigSection();
                 return;
             }
 
             _sharedModel.InitializeClassifier();
-            ResultText = $"Modèle entraîné avec succès!\n" +
-                        $"   k = {_sharedModel.K}\n" +
-                        $"   Distance = {_sharedModel.GetDistanceName()}\n" +
-                        $"   Données d'entraînement = {_sharedModel.TrainingData.Taille()} échantillons";
+            ResultText = $"Modèle entraîné avec succès\n\n" +
+                        $"   - k = {_sharedModel.K}\n" +
+                        $"   - Distance = {_sharedModel.GetDistanceName()}\n" +
+                        $"   - Données d'entraînement = {_sharedModel.TrainingData.Taille()} échantillons\n\n" +
+                        $"Vous pouvez maintenant tester le modèle.";
+
+            MessageBox.Show("Entraînement terminé avec succès.", "Succès",
+                MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Test()
         {
             if (!_sharedModel.IsDataLoaded)
             {
-                ResultText = "Erreur: Veuillez d'abord importer les données .csv";
+                MessageBox.Show("Veuillez d'abord importer les données.", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowImportSection();
                 return;
             }
 
             if (_sharedModel.Classifier == null)
             {
-                ResultText = "Erreur: Veuillez d'abord entraîner le modèle";
+                MessageBox.Show("Veuillez d'abord entraîner le modèle.", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -281,12 +478,14 @@ namespace WPFClassificationGrainsDeBles.ViewModels
                 double accuracy = evaluation.CalculerAccuracy() * 100;
                 string distanceName = _sharedModel.GetDistanceName();
 
-                string resultat = $"RÉSULTAT DU TEST\n" +                   
+                string resultat = $"RÉSULTAT DU TEST\n" +
+                                 $"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                                  $"Paramètres du classifieur :\n" +
-                                 $"   - k = {_sharedModel.K}\n" +
-                                 $"   - Distance = {distanceName}\n" +
-                                 $"   - Données test = {_sharedModel.TestData.Taille()} échantillons\n\n" +
-                                 $"Précision (Accuracy) = {accuracy:F2}%\n";
+                                 $"   • k = {_sharedModel.K}\n" +
+                                 $"   • Distance = {distanceName}\n" +
+                                 $"   • Données test = {_sharedModel.TestData.Taille()} échantillons\n\n" +
+                                 $"Précision (Accuracy) = {accuracy:F2}%\n" +
+                                 $"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
 
                 ResultText = resultat;
 
@@ -299,10 +498,17 @@ namespace WPFClassificationGrainsDeBles.ViewModels
                 string jsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "historique.json");
                 evaluation.SauvegarderJsonGlobal(jsonPath, _sharedModel.K, _sharedModel.DistanceStrategy,
                                                   _sharedModel.TrainingData, _sharedModel.TestData);
+
+                ShowResultsSection();
+
+                MessageBox.Show($"Test terminé! Précision: {accuracy:F2}%", "Résultats",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
                 ResultText = $"Erreur lors du test: {ex.Message}";
+                MessageBox.Show($"Erreur lors du test: {ex.Message}", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

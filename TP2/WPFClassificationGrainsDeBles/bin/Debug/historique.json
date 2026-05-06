@@ -277,5 +277,160 @@
         ]
       ]
     }
+  },
+  {
+    "ParametresExecution": {
+      "k": 4,
+      "distance": "WPFClassificationGrainsDeBles.Models.DistanceManhattan",
+      "date": "2026-05-06 01:35:40"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.95774647887323938,
+      "matrice_confusion": [
+        [
+          22,
+          0,
+          2
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          0,
+          0,
+          24
+        ]
+      ]
+    }
+  },
+  {
+    "ParametresExecution": {
+      "k": 6,
+      "distance": "WPFClassificationGrainsDeBles.Models.DistanceManhattan",
+      "date": "2026-05-06 01:44:40"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.90140845070422537,
+      "matrice_confusion": [
+        [
+          19,
+          2,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          1,
+          0,
+          23
+        ]
+      ]
+    }
+  },
+  {
+    "ParametresExecution": {
+      "k": 6,
+      "distance": "WPFClassificationGrainsDeBles.Models.DistanceManhattan",
+      "date": "2026-05-06 01:44:55"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.90140845070422537,
+      "matrice_confusion": [
+        [
+          19,
+          2,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          1,
+          0,
+          23
+        ]
+      ]
+    }
+  },
+  {
+    "ParametresExecution": {
+      "k": 6,
+      "distance": "WPFClassificationGrainsDeBles.Models.DistanceManhattan",
+      "date": "2026-05-06 01:47:57"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.90140845070422537,
+      "matrice_confusion": [
+        [
+          19,
+          2,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          1,
+          0,
+          23
+        ]
+      ]
+    }
+  },
+  {
+    "ParametresExecution": {
+      "k": 7,
+      "distance": "WPFClassificationGrainsDeBles.Models.DistanceManhattan",
+      "date": "2026-05-06 02:22:45"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.88732394366197187,
+      "matrice_confusion": [
+        [
+          17,
+          4,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          0,
+          0,
+          24
+        ]
+      ]
+    }
   }
 ]
