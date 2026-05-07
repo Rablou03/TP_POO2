@@ -478,6 +478,8 @@ namespace WPFClassificationGrainsDeBles.ViewModels
                 double accuracy = evaluation.CalculerAccuracy() * 100;
                 string distanceName = _sharedModel.GetDistanceName();
 
+                SauvegarderDonnee(accuracy, distanceName);
+
                 string resultat = $"RÉSULTAT DU TEST\n" +
                                  $"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                                  $"Paramètres du classifieur :\n" +
@@ -485,6 +487,7 @@ namespace WPFClassificationGrainsDeBles.ViewModels
                                  $"   • Distance = {distanceName}\n" +
                                  $"   • Données test = {_sharedModel.TestData.Taille()} échantillons\n\n" +
                                  $"Précision (Accuracy) = {accuracy:F2}%\n" +
+                                 $"Données sauvegarder dans la base" +
                                  $"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
 
                 ResultText = resultat;
@@ -518,6 +521,24 @@ namespace WPFClassificationGrainsDeBles.ViewModels
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
+        private void SauvegarderDonnee(double accuracy, string distanceName)
+        {
+            using (var context = new ClassificationGrainDeBlesContext())
+            {
+                var donnee = new Models.Donnee
+                {
+                    k = _sharedModel.K,
+                    Distance = accuracy,
+                    donnee_Tester = Path.GetFileName(TestPath),
+                    precision = $"{accuracy:F2}%"
+                };
+
+                context.donnees.Add(donnee);
+                context.SaveChanges();
+            }
         }
     }
 }

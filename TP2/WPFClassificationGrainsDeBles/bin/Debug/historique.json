@@ -60,5 +60,67 @@
         ]
       ]
     }
+  },
+  {
+    "ParametresExecution": {
+      "k": 3,
+      "distance": "WPFClassificationGrainsDeBles.Models.DistanceEuclidienne",
+      "date": "2026-05-07 02:35:29"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 71,
+      "taille_test": 139
+    },
+    "Evaluation": {
+      "accuracy": 0.8848920863309353,
+      "matrice_confusion": [
+        [
+          40,
+          0,
+          6
+        ],
+        [
+          6,
+          41,
+          0
+        ],
+        [
+          4,
+          0,
+          42
+        ]
+      ]
+    }
+  },
+  {
+    "ParametresExecution": {
+      "k": 3,
+      "distance": "WPFClassificationGrainsDeBles.Models.DistanceEuclidienne",
+      "date": "2026-05-07 03:28:35"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.91549295774647887,
+      "matrice_confusion": [
+        [
+          19,
+          2,
+          3
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          0,
+          0,
+          24
+        ]
+      ]
+    }
   }
 ]
