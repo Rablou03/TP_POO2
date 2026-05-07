@@ -143,6 +143,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Image\3844439-gear-setting-settings-wheel_110294.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\4213459-common-door-exit-logout-out-signout_115411.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\archive_120061.ico" />
+    <Resource Include="Image\calculate_equals_icon_194844.ico" />
+    <Resource Include="Image\findings_icon-icons.com_67772.ico" />
+    <Resource Include="Image\home-button_icon-icons.com_72700.ico" />
+    <Resource Include="Image\import_120260.ico" />
+    <Resource Include="Image\PixelKit_0034_Waiting-for-Validation_37731.ico" />
+    <Resource Include="Image\run_icon-icons.com_61189.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

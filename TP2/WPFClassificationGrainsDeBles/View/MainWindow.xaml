@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:viewmodels="clr-namespace:WPFClassificationGrainsDeBles.ViewModels"
         Title="Classification des grains de blé - k-NN"
-        Height="700" Width="900"
+        Height="800"
+        Width="1400"
         WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
@@ -11,105 +12,240 @@
     </Window.DataContext>
 
     <Grid>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!-- MENU HORIZONTAL EN HAUT -->
-        <Border BorderBrush="#CCCCCC" BorderThickness="0,0,0,1" Background="#F5F5F5">
-            <StackPanel Orientation="Horizontal" Margin="10,5">
-                <Button Content="Accueil" 
-                        Command="{Binding NavigateHomeCommand}"
-                        Height="35"
-                        Width="100"
-                        Margin="5,0"
-                        ToolTip="Retour à l'accueil"/>
+        <Border BorderBrush="#CCCCCC"
+                BorderThickness="0,0,0,1"
+                Background="#F5F5F5">
 
-                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" 
-                          Width="1" 
-                          Background="Gray" 
-                          Margin="5,0"/>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                          VerticalScrollBarVisibility="Disabled">
 
-                <Button Content="Importer" 
-                        Command="{Binding NavigateImportCommand}"
-                        Height="35"
-                        Width="100"
-                        Margin="5,0"
-                        ToolTip="Importer les données"/>
+                <StackPanel Orientation="Horizontal" Margin="10,5">
 
-                <Button Content="Configurer k" 
-                        Command="{Binding NavigateKConfigCommand}"
-                        Height="35"
-                        Width="100"
-                        Margin="5,0"
-                        ToolTip="Choisir la valeur de k"/>
+                    <!-- ACCUEIL -->
+                    <Button Command="{Binding NavigateHomeCommand}"
+                            Height="40"
+                            Width="130"
+                            Margin="5,0"
+                            ToolTip="Accueil">
 
-                <Button Content="Distance" 
-                        Command="{Binding NavigateDistanceConfigCommand}"
-                        Height="35"
-                        Width="100"
-                        Margin="5,0"
-                        ToolTip="Choisir la distance"/>
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
 
-                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" 
-                          Width="1" 
-                          Background="Gray" 
-                          Margin="5,0"/>
+                            <Image Source="/Image/home-button_icon-icons.com_72700.ico"
+                                   Width="20"
+                                   Height="20"
+                                   Margin="0,0,5,0"/>
 
-                <Button Content="Entraîner" 
-                        Command="{Binding TrainCommand}"
-                        Height="35"
-                        Width="100"
-                        Margin="5,0"
-                        ToolTip="Entraîner le modèle"/>
+                            <TextBlock Text="Accueil"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
 
-                <Button Content="Tester" 
-                        Command="{Binding TestCommand}"
-                        Height="35"
-                        Width="100"
-                        Margin="5,0"
-                        ToolTip="Tester le modèle"/>
+                    <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                               Width="1"
+                               Background="Gray"
+                               Margin="5,0"/>
 
-                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" 
-                          Width="1" 
-                          Background="Gray" 
-                          Margin="5,0"/>
+                    <!-- IMPORTER -->
+                    <Button Command="{Binding NavigateImportCommand}"
+                            Height="40"
+                            Width="130"
+                            Margin="5,0"
+                            ToolTip="Importer les données">
 
-                <Button Content="Résultats" 
-                        Command="{Binding NavigateResultsCommand}"
-                        Height="35"
-                        Width="100"
-                        Margin="5,0"
-                        ToolTip="Voir les résultats"/>
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
 
-                <Button Content="Historique" 
-                        Command="{Binding NavigateHistoryCommand}"
-                        Height="35"
-                        Width="100"
-                        Margin="5,0"
-                        ToolTip="Voir l'historique"/>
+                            <Image Source="/Image/import_120260.ico"
+                                   Width="20"
+                                   Height="20"
+                                   Margin="0,0,5,0"/>
 
-                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" 
-                          Width="1" 
-                          Background="Gray" 
-                          Margin="5,0"/>
+                            <TextBlock Text="Importer"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
 
-                <Button Content="Quitter" 
-                        Command="{Binding QuitCommand}"
-                        Height="35"
-                        Width="100"
-                        Margin="5,0"
-                        ToolTip="Quitter l'application"/>
-            </StackPanel>
+                    <!-- CONFIGURER K -->
+                    <Button Command="{Binding NavigateKConfigCommand}"
+                            Height="40"
+                            Width="130"
+                            Margin="5,0"
+                            ToolTip="Choisir la valeur de k">
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+
+                            <Image Source="/Image/3844439-gear-setting-settings-wheel_110294.ico"
+                                   Width="20"
+                                   Height="20"
+                                   Margin="0,0,5,0"/>
+
+                            <TextBlock Text="Configurer k"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- DISTANCE -->
+                    <Button Command="{Binding NavigateDistanceConfigCommand}"
+                            Height="40"
+                            Width="130"
+                            Margin="5,0"
+                            ToolTip="Choisir la distance">
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+
+                            <Image Source="/Image/calculate_equals_icon_194844.ico"
+                                   Width="20"
+                                   Height="20"
+                                   Margin="0,0,5,0"/>
+
+                            <TextBlock Text="Distance"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                               Width="1"
+                               Background="Gray"
+                               Margin="5,0"/>
+
+                    <!-- ENTRAINER -->
+                    <Button Command="{Binding TrainCommand}"
+                            Height="40"
+                            Width="130"
+                            Margin="5,0"
+                            ToolTip="Entraîner le modèle">
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+
+                            <Image Source="/Image/run_icon-icons.com_61189.ico"
+                                   Width="20"
+                                   Height="20"
+                                   Margin="0,0,5,0"/>
+
+                            <TextBlock Text="Entraîner"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- TESTER -->
+                    <Button Command="{Binding TestCommand}"
+                            Height="40"
+                            Width="130"
+                            Margin="5,0"
+                            ToolTip="Tester le modèle">
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+
+                            <Image Source="/Image/PixelKit_0034_Waiting-for-Validation_37731.ico"
+                                   Width="20"
+                                   Height="20"
+                                   Margin="0,0,5,0"/>
+
+                            <TextBlock Text="Tester"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                               Width="1"
+                               Background="Gray"
+                               Margin="5,0"/>
+
+                    <!-- RESULTATS -->
+                    <Button Command="{Binding NavigateResultsCommand}"
+                            Height="40"
+                            Width="130"
+                            Margin="5,0"
+                            ToolTip="Voir les résultats">
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+
+                            <Image Source="/Image/findings_icon-icons.com_67772.ico"
+                                   Width="20"
+                                   Height="20"
+                                   Margin="0,0,5,0"/>
+
+                            <TextBlock Text="Résultats"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- HISTORIQUE -->
+                    <Button Command="{Binding NavigateHistoryCommand}"
+                            Height="40"
+                            Width="130"
+                            Margin="5,0"
+                            ToolTip="Voir l'historique">
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+
+                            <Image Source="/Image/archive_120061.ico"
+                                   Width="20"
+                                   Height="20"
+                                   Margin="0,0,5,0"/>
+
+                            <TextBlock Text="Historique"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                               Width="1"
+                               Background="Gray"
+                               Margin="5,0"/>
+
+                    <!-- QUITTER -->
+                    <Button Command="{Binding QuitCommand}"
+                            Height="40"
+                            Width="130"
+                            Margin="5,0"
+                            ToolTip="Quitter l'application">
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+
+                            <Image Source="/Image/4213459-common-door-exit-logout-out-signout_115411.ico"
+                                   Width="20"
+                                   Height="20"
+                                   Margin="0,0,5,0"/>
+
+                            <TextBlock Text="Quitter"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+
+            </ScrollViewer>
+
         </Border>
 
         <!-- CONTENU PRINCIPAL -->
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto">
+
             <StackPanel Margin="15">
 
-                <!-- EN-TÊTE DE SECTION -->
-                <Border Background="#E3F2FD" Padding="10" CornerRadius="5" Margin="0,0,0,15">
+                <!-- EN-TÊTE -->
+                <Border Background="#E3F2FD"
+                        Padding="10"
+                        CornerRadius="5"
+                        Margin="0,0,0,15">
+
                     <TextBlock Text="{Binding CurrentTitle}"
                                FontSize="20"
                                FontWeight="Bold"
@@ -117,60 +253,82 @@
                                Foreground="#1565C0"/>
                 </Border>
 
-                <!-- PAGE D'ACCUEIL (MESSAGE DE BIENVENUE) -->
-                <Border Background="#E8F5E9" 
-                        Padding="30" 
-                        CornerRadius="10" 
+                <!-- PAGE D'ACCUEIL -->
+                <Border Background="#E8F5E9"
+                        Padding="30"
+                        CornerRadius="10"
                         Margin="0,0,0,15"
                         Visibility="{Binding ShowWelcome}">
+
                     <StackPanel HorizontalAlignment="Center">
-                        <TextBlock Text="Classification des grains de blé avec k-NN" 
-                                   FontSize="18" 
+
+                        <TextBlock Text="Classification des grains de blé avec k-NN"
+                                   FontSize="18"
                                    HorizontalAlignment="Center"
                                    Margin="0,10,0,0"
                                    Foreground="#1565C0"/>
-                        <TextBlock Text="Utilisez le menu ci-dessus pour naviguer dans l'application" 
-                                   FontSize="14" 
+
+                        <TextBlock Text="Utilisez le menu ci-dessus pour naviguer dans l'application"
+                                   FontSize="14"
                                    HorizontalAlignment="Center"
                                    Margin="0,20,0,0"
                                    Foreground="Gray"/>
-                        <StackPanel Orientation="Horizontal" 
-                                    HorizontalAlignment="Center" 
-                                    Margin="0,30,0,0">
-                        </StackPanel>
+
                     </StackPanel>
                 </Border>
 
-                <!-- 1. IMPORTATION -->
-                <GroupBox Header="1. Importer les données" 
+                <!-- IMPORTATION -->
+                <GroupBox Header="1. Importer les données"
                           Visibility="{Binding ShowImport}">
+
                     <StackPanel Margin="10">
-                        <TextBlock Text="Fichier d'entraînement (train.csv):" FontWeight="Bold"/>
+
+                        <TextBlock Text="Fichier d'entraînement (train.csv):"
+                                   FontWeight="Bold"/>
+
                         <Grid Margin="0,5,0,10">
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <TextBox Text="{Binding TrainPath}" IsReadOnly="True" 
+
+                            <TextBox Text="{Binding TrainPath}"
+                                     IsReadOnly="True"
                                      Background="#F9F9F9"/>
-                            <Button Content="Parcourir" Command="{Binding BrowseTrainCommand}" 
-                                    Grid.Column="1" Margin="5,0,0,0" Width="80" Height="30"/>
+
+                            <Button Content="Parcourir"
+                                    Command="{Binding BrowseTrainCommand}"
+                                    Grid.Column="1"
+                                    Margin="5,0,0,0"
+                                    Width="80"
+                                    Height="30"/>
                         </Grid>
 
-                        <TextBlock Text="Fichier de test (test.csv):" FontWeight="Bold" 
+                        <TextBlock Text="Fichier de test (test.csv):"
+                                   FontWeight="Bold"
                                    Margin="0,10,0,0"/>
+
                         <Grid Margin="0,5,0,10">
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <TextBox Text="{Binding TestPath}" IsReadOnly="True" 
+
+                            <TextBox Text="{Binding TestPath}"
+                                     IsReadOnly="True"
                                      Background="#F9F9F9"/>
-                            <Button Content="Parcourir" Command="{Binding BrowseTestCommand}" 
-                                    Grid.Column="1" Margin="5,0,0,0" Width="80" Height="30"/>
+
+                            <Button Content="Parcourir"
+                                    Command="{Binding BrowseTestCommand}"
+                                    Grid.Column="1"
+                                    Margin="5,0,0,0"
+                                    Width="80"
+                                    Height="30"/>
                         </Grid>
 
-                        <Button Content="Importer les données" 
+                        <Button Content="Importer les données"
                                 Command="{Binding ImportCommand}"
                                 Height="40"
                                 Margin="0,10"
@@ -178,39 +336,58 @@
                                 Background="#4CAF50"
                                 Foreground="White"/>
 
-                        <TextBlock Text="Statut:" FontWeight="Bold" Margin="0,10,0,0"/>
-                        <Border Background="#F0F0F0" Padding="5" CornerRadius="3">
-                            <TextBlock Text="{Binding ImportStatus}" 
+                        <TextBlock Text="Statut:"
+                                   FontWeight="Bold"
+                                   Margin="0,10,0,0"/>
+
+                        <Border Background="#F0F0F0"
+                                Padding="5"
+                                CornerRadius="3">
+
+                            <TextBlock Text="{Binding ImportStatus}"
                                        TextWrapping="Wrap"
                                        FontSize="11"/>
                         </Border>
+
                     </StackPanel>
                 </GroupBox>
 
-                <!-- 2. CONFIGURATION K -->
-                <GroupBox Header="2. Choisir la valeur de k" 
-                          Visibility="{Binding ShowKConfig}">
+                <!-- CONFIGURATION K -->
+                <GroupBox Header="2. Choisir la valeur de k"
+                          Visibility="{Binding ShowKConfig}"
+                          Margin="0,15,0,0">
+
                     <StackPanel Margin="10">
+
                         <TextBlock Text="Veuillez configurer k avant de choisir la distance"
                                    FontWeight="Bold"
                                    Foreground="#1565C0"
                                    HorizontalAlignment="Center"
                                    Margin="0,0,0,15"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            <TextBlock Text="k = " FontSize="20" VerticalAlignment="Center" FontWeight="Bold"/>
-                            <TextBox Text="{Binding KValue, UpdateSourceTrigger=PropertyChanged}" 
-                                     Width="80" 
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+
+                            <TextBlock Text="k = "
+                                       FontSize="20"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold"/>
+
+                            <TextBox Text="{Binding KValue, UpdateSourceTrigger=PropertyChanged}"
+                                     Width="80"
                                      Height="40"
                                      TextAlignment="Center"
                                      FontSize="16"
                                      Margin="10,0"/>
                         </StackPanel>
-                        <TextBlock Text="(valeur entre 1 et 30)" 
-                                   FontSize="12" 
+
+                        <TextBlock Text="(valeur entre 1 et 30)"
+                                   FontSize="12"
                                    Foreground="Gray"
                                    HorizontalAlignment="Center"
                                    Margin="0,5"/>
-                        <Button Content="Valider k et continuer" 
+
+                        <Button Content="Valider k et continuer"
                                 Command="{Binding ValidateKAndContinueCommand}"
                                 Height="40"
                                 Width="200"
@@ -219,29 +396,36 @@
                                 Background="#2196F3"
                                 Foreground="White"
                                 FontWeight="Bold"/>
+
                     </StackPanel>
                 </GroupBox>
 
-                <!-- 3. CONFIGURATION DISTANCE -->
-                <GroupBox Header="3. Choisir la distance" 
-                          Visibility="{Binding ShowDistanceConfig}">
+                <!-- DISTANCE -->
+                <GroupBox Header="3. Choisir la distance"
+                          Visibility="{Binding ShowDistanceConfig}"
+                          Margin="0,15,0,0">
+
                     <StackPanel Margin="10">
+
                         <TextBlock Text="Choisissez la distance pour la classification"
                                    FontWeight="Bold"
                                    Foreground="#1565C0"
                                    HorizontalAlignment="Center"
                                    Margin="0,0,0,15"/>
+
                         <RadioButton Content="Euclidienne"
                                      IsChecked="{Binding IsEuclidienne}"
                                      Margin="0,10"
                                      FontSize="14"
                                      GroupName="Distance"/>
+
                         <RadioButton Content="Manhattan"
                                      IsChecked="{Binding IsManhattan}"
                                      Margin="0,10"
                                      FontSize="14"
                                      GroupName="Distance"/>
-                        <Button Content="Valider la distance et continuer" 
+
+                        <Button Content="Valider la distance et continuer"
                                 Command="{Binding ValidateDistanceAndContinueCommand}"
                                 Height="40"
                                 Width="250"
@@ -250,24 +434,35 @@
                                 Background="#FF9800"
                                 Foreground="White"
                                 FontWeight="Bold"/>
+
                     </StackPanel>
                 </GroupBox>
 
-                <!-- 4. ENTRAINEMENT -->
-                <GroupBox Header="4. Entraîner le modèle" 
-                          Visibility="{Binding ShowTrain}">
+                <!-- ENTRAINEMENT -->
+                <GroupBox Header="4. Entraîner le modèle"
+                          Visibility="{Binding ShowTrain}"
+                          Margin="0,15,0,0">
+
                     <StackPanel Margin="10">
+
                         <TextBlock Text="Configuration actuelle :"
                                    FontWeight="Bold"
                                    Margin="0,0,0,10"/>
-                        <Border Background="#F0F0F0" Padding="10" CornerRadius="5" Margin="0,0,0,15">
+
+                        <Border Background="#F0F0F0"
+                                Padding="10"
+                                CornerRadius="5"
+                                Margin="0,0,0,15">
+
                             <StackPanel>
-                                <TextBlock Text="{Binding CurrentConfigText}" 
+
+                                <TextBlock Text="{Binding CurrentConfigText}"
                                            FontFamily="Consolas"
                                            FontSize="12"/>
                             </StackPanel>
                         </Border>
-                        <Button Content="Entraîner le modèle" 
+
+                        <Button Content="Entraîner le modèle"
                                 Command="{Binding TrainCommand}"
                                 Height="45"
                                 Margin="0,5"
@@ -275,14 +470,18 @@
                                 Foreground="White"
                                 FontWeight="Bold"
                                 FontSize="14"/>
+
                     </StackPanel>
                 </GroupBox>
 
-                <!-- 5. TEST -->
-                <GroupBox Header="5. Tester le modèle" 
-                          Visibility="{Binding ShowTest}">
+                <!-- TEST -->
+                <GroupBox Header="5. Tester le modèle"
+                          Visibility="{Binding ShowTest}"
+                          Margin="0,15,0,0">
+
                     <StackPanel Margin="10">
-                        <Button Content="Tester le modèle" 
+
+                        <Button Content="Tester le modèle"
                                 Command="{Binding TestCommand}"
                                 Height="45"
                                 Margin="0,5"
@@ -290,12 +489,15 @@
                                 Foreground="White"
                                 FontWeight="Bold"
                                 FontSize="14"/>
+
                     </StackPanel>
                 </GroupBox>
 
-                <!-- RÉSULTATS -->
-                <GroupBox Header="Résultats" Margin="0,15,0,0"
+                <!-- RESULTATS -->
+                <GroupBox Header="Résultats"
+                          Margin="0,15,0,0"
                           Visibility="{Binding ShowResults}">
+
                     <TextBox Text="{Binding ResultText}"
                              TextWrapping="Wrap"
                              FontFamily="Consolas"
@@ -308,8 +510,10 @@
                 </GroupBox>
 
                 <!-- HISTORIQUE -->
-                <GroupBox Header="Historique des expériences" Margin="0,15,0,0"
+                <GroupBox Header="Historique des expériences"
+                          Margin="0,15,0,15"
                           Visibility="{Binding ShowHistory}">
+
                     <ListBox ItemsSource="{Binding HistoriqueList}"
                              MinHeight="150"
                              MaxHeight="200"
@@ -318,6 +522,8 @@
                 </GroupBox>
 
             </StackPanel>
+
         </ScrollViewer>
+
     </Grid>
 </Window>

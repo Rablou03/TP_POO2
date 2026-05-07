@@ -29,5 +29,36 @@
         ]
       ]
     }
+  },
+  {
+    "ParametresExecution": {
+      "k": 12,
+      "distance": "WPFClassificationGrainsDeBles.Models.DistanceEuclidienne",
+      "date": "2026-05-07 02:17:38"
+    },
+    "JeuxDeDonnees": {
+      "taille_train": 139,
+      "taille_test": 71
+    },
+    "Evaluation": {
+      "accuracy": 0.90140845070422537,
+      "matrice_confusion": [
+        [
+          19,
+          3,
+          2
+        ],
+        [
+          1,
+          22,
+          0
+        ],
+        [
+          1,
+          0,
+          23
+        ]
+      ]
+    }
   }
 ]
