@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Fidele Atta\\Desktop\\TP2 POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Fidele Atta\\Desktop\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\fidele atta\\desktop\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Fidele Atta\\Desktop\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\Fidele Atta\\Desktop\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T15:19:13.668Z",
+              "EditorCaption": ""
             }
           ]
         }
