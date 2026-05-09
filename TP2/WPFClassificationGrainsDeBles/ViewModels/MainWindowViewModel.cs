@@ -3,16 +3,28 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using Microsoft.Win32;
 using WPFClassificationGrainsDeBles.Models;
-using System.Windows;
+using WPFClassificationGrainsDeBles.Services;
 
 namespace WPFClassificationGrainsDeBles.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
         private readonly SharedModel _sharedModel = new SharedModel();
+        private readonly UtilisateurService _utilisateurService = new UtilisateurService();
+        private Utilisateur _utilisateurSelectionne;
+
+        public ObservableCollection<Utilisateur> Utilisateurs { get; set; } = new ObservableCollection<Utilisateur>();
+
+        public Utilisateur UtilisateurSelectionne
+        {
+            get => _utilisateurSelectionne;
+            set { _utilisateurSelectionne = value; OnPropertyChanged(); }
+        }
 
         // Affichage de notre programme
         private string _currentTitle = "Bienvenue sur l'application de Classification des grains de blé - k-NN";
@@ -32,7 +44,7 @@ namespace WPFClassificationGrainsDeBles.ViewModels
         private string _trainPath = "";
         private string _testPath = "";
 
-        // Configuation distance avec k par defaut = 3
+        // Configuration distance avec k par defaut = 3
         private int _kValue = 3;
         private bool _isEuclidienne = true;
         private bool _isManhattan = false;
@@ -170,6 +182,7 @@ namespace WPFClassificationGrainsDeBles.ViewModels
         public ICommand TrainCommand { get; }
         public ICommand TestCommand { get; }
         public ICommand QuitCommand { get; }
+        public ICommand ChargerUtilisateursCommand { get; }
 
         // Commandes de navigation
         public ICommand NavigateHomeCommand { get; }
@@ -191,6 +204,7 @@ namespace WPFClassificationGrainsDeBles.ViewModels
             TrainCommand = new RelayCommand(() => Train());
             TestCommand = new RelayCommand(() => Test());
             QuitCommand = new RelayCommand(() => Application.Current.Shutdown());
+            ChargerUtilisateursCommand = new RelayCommand(async () => await ChargerUtilisateurs());
 
             // Commandes de navigation
             NavigateHomeCommand = new RelayCommand(() => ShowHome());
@@ -199,6 +213,23 @@ namespace WPFClassificationGrainsDeBles.ViewModels
             NavigateDistanceConfigCommand = new RelayCommand(() => ShowDistanceConfigSection());
             NavigateResultsCommand = new RelayCommand(() => ShowResultsSection());
             NavigateHistoryCommand = new RelayCommand(() => ShowHistorySection());
+        }
+
+        // Méthode chargement utilisateurs API
+        private async Task ChargerUtilisateurs()
+        {
+            try
+            {
+                var liste = await _utilisateurService.GetUtilisateursAsync();
+                Utilisateurs.Clear();
+                foreach (var u in liste)
+                    Utilisateurs.Add(u);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur chargement utilisateurs: {ex.Message}", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         // Méthodes de navigation
@@ -356,11 +387,9 @@ namespace WPFClassificationGrainsDeBles.ViewModels
 
                 ImportStatus = $"Succès: {_sharedModel.TrainingData.Taille()} train, {_sharedModel.TestData.Taille()} test";
 
-                // Réinitialiser les validations
                 _kValidated = false;
                 _distanceValidated = false;
 
-                // Aller à la configuration de k
                 ShowKConfigSection();
             }
             catch (Exception ex)
@@ -469,6 +498,13 @@ namespace WPFClassificationGrainsDeBles.ViewModels
                 return;
             }
 
+            if (UtilisateurSelectionne == null)
+            {
+                MessageBox.Show("Veuillez sélectionner un auteur avant de tester.", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             try
             {
                 var evaluation = new EvaluationPerformance();
@@ -487,17 +523,16 @@ namespace WPFClassificationGrainsDeBles.ViewModels
                                  $"   • Distance = {distanceName}\n" +
                                  $"   • Données test = {_sharedModel.TestData.Taille()} échantillons\n\n" +
                                  $"Précision (Accuracy) = {accuracy:F2}%\n" +
-                                 $"Données sauvegarder dans la base" +
+                                 $"Auteur = {UtilisateurSelectionne.NomComplet}\n" +
+                                 $"Données sauvegardées dans la base\n" +
                                  $"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
 
                 ResultText = resultat;
 
-                // Sauvegarde dans l'historique
                 string dateStr = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                string historiqueEntry = $"{dateStr} | k={_sharedModel.K} | {distanceName} | Accuracy={accuracy:F2}%";
+                string historiqueEntry = $"{dateStr} | k={_sharedModel.K} | {distanceName} | Accuracy={accuracy:F2}% | Auteur={UtilisateurSelectionne.NomComplet}";
                 HistoriqueList.Insert(0, historiqueEntry);
 
-                // Sauvegarde dans le fichier JSON
                 string jsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "historique.json");
                 evaluation.SauvegarderJsonGlobal(jsonPath, _sharedModel.K, _sharedModel.DistanceStrategy,
                                                   _sharedModel.TrainingData, _sharedModel.TestData);
@@ -515,15 +550,6 @@ namespace WPFClassificationGrainsDeBles.ViewModels
             }
         }
 
-        // INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-
         private void SauvegarderDonnee(double accuracy, string distanceName)
         {
             using (var context = new ClassificationGrainDeBlesContext())
@@ -533,12 +559,21 @@ namespace WPFClassificationGrainsDeBles.ViewModels
                     k = _sharedModel.K,
                     Distance = accuracy,
                     donnee_Tester = Path.GetFileName(TestPath),
-                    precision = $"{accuracy:F2}%"
+                    precision = $"{accuracy:F2}%",
+                    AuteurNom = UtilisateurSelectionne?.NomComplet ?? "Anonyme"
                 };
 
                 context.donnees.Add(donnee);
                 context.SaveChanges();
             }
+        }
+
+        // INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

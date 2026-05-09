@@ -69,7 +69,6 @@ C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassification
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\System.Text.Json.xml
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\obj\Debug\WPFClassificationGrainsDeBles.csproj.AssemblyReference.cache
-C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\obj\Debug\WPFClassificationGrainsDeBles.csproj.SuggestedBindingRedirects.cache
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\obj\Debug\WPFClassificationGrainsDeBles.exe.config
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\obj\Debug\View\MainWindow.g.cs
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\obj\Debug\App.g.cs
@@ -111,7 +110,6 @@ C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassification
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\System.Diagnostics.DiagnosticSource.dll
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.Data.SqlClient.pdb
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.Data.SqlClient.xml
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.EntityFrameworkCore.xml
 C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
@@ -269,3 +267,20 @@ C:\Users\Fidele Atta\Desktop\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug
 C:\Users\Fidele Atta\Desktop\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\cs\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Fidele Atta\Desktop\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\pl\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Fidele Atta\Desktop\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.Bcl.Cryptography.dll
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.Bcl.TimeProvider.dll
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.Data.SqlClient.Extensions.Abstractions.dll
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.Data.SqlClient.Internal.Logging.dll
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\System.Security.Cryptography.Pkcs.dll
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\System.Threading.Channels.dll
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.Bcl.Cryptography.xml
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.Bcl.TimeProvider.xml
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.Data.SqlClient.Extensions.Abstractions.xml
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.Data.SqlClient.Internal.Logging.xml
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\System.Security.Cryptography.Pkcs.xml
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\System.Threading.Channels.xml
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\RASANDIMANANA Tafita\Desktop\T2-Uqar\POO2\TP_POO2\TP2\WPFClassificationGrainsDeBles\bin\Debug\tr\Microsoft.Data.SqlClient.resources.dll

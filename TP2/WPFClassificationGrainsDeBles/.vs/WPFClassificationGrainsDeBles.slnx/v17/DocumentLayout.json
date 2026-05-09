@@ -3,28 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\models\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\models\\classificationgraindeblescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\classificationgraindeblescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/GrainsDB/True/SqlTable/dbo.donnees.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\migrations\\classificationgraindeblescontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:migrations\\classificationgraindeblescontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Donnee/True/SqlTable/dbo.donnees.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\models\\donnee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\migrations\\20260509100140_ajoutauteur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:migrations\\20260509100140_ajoutauteur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\donnee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\donnee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\migrations\\20260507065730_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:migrations\\20260507065730_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\service\\utilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:service\\utilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|c:\\users\\rasandimanana tafita\\desktop\\t2-uqar\\poo2\\tp_poo2\\tp2\\wpfclassificationgrainsdebles\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\models\\classificationgraindeblescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:models\\classificationgraindeblescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\migrations\\classificationgraindeblescontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:migrations\\classificationgraindeblescontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\migrations\\20260507065730_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256BA1F4-5D98-4A2A-80F4-B2B277B36368}|WPFClassificationGrainsDeBles.csproj|solutionrelative:migrations\\20260507065730_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,60 +56,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClassificationGrainDeBlesContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Migrations\\ClassificationGrainDeBlesContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Migrations\\ClassificationGrainDeBlesContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Migrations\\ClassificationGrainDeBlesContextModelSnapshot.cs",
-              "RelativeToolTip": "Migrations\\ClassificationGrainDeBlesContextModelSnapshot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T07:17:09.643Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClassificationGrainDeBlesContext.cs",
-              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\ClassificationGrainDeBlesContext.cs",
-              "RelativeDocumentMoniker": "Models\\ClassificationGrainDeBlesContext.cs",
-              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\ClassificationGrainDeBlesContext.cs",
-              "RelativeToolTip": "Models\\ClassificationGrainDeBlesContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T06:42:26.396Z",
+              "DocumentIndex": 2,
+              "Title": "dbo.donnees [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/GrainsDB/True/SqlTable/dbo.donnees.sql",
+              "ToolTip": "dbo.donnees [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-05-09T06:26:15.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Donnee.cs",
-              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Donnee.cs",
-              "RelativeDocumentMoniker": "Models\\Donnee.cs",
-              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Donnee.cs",
-              "RelativeToolTip": "Models\\Donnee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T06:39:24.305Z",
+              "Title": "dbo.donnees [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Donnee/True/SqlTable/dbo.donnees.sql",
+              "ToolTip": "dbo.donnees [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-05-09T06:26:00.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\MainWindowViewModel.cs*",
-              "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs*",
-              "ViewState": "AgIAAM8BAAAAAAAAAIAwwNsBAAAPAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAACUCAAAAAAAAAAAqwDACAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-07T05:58:30.081Z",
               "EditorCaption": ""
@@ -95,19 +98,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "20260507065730_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Migrations\\20260507065730_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260507065730_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Migrations\\20260507065730_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20260507065730_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T06:57:32.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\View\\MainWindow.xaml",
               "RelativeDocumentMoniker": "View\\MainWindow.xaml",
@@ -115,6 +105,128 @@
               "RelativeToolTip": "View\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-05-07T05:58:32.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Utilisateur.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Utilisateur.cs",
+              "RelativeDocumentMoniker": "Models\\Utilisateur.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Utilisateur.cs",
+              "RelativeToolTip": "Models\\Utilisateur.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T09:45:24.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "View\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T10:02:29.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UtilisateurService.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Service\\UtilisateurService.cs",
+              "RelativeDocumentMoniker": "Service\\UtilisateurService.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Service\\UtilisateurService.cs",
+              "RelativeToolTip": "Service\\UtilisateurService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T09:52:23.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ClassificationGrainDeBlesContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Migrations\\ClassificationGrainDeBlesContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\ClassificationGrainDeBlesContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Migrations\\ClassificationGrainDeBlesContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\ClassificationGrainDeBlesContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T07:17:09.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Donnee.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Donnee.cs",
+              "RelativeDocumentMoniker": "Models\\Donnee.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\Donnee.cs",
+              "RelativeToolTip": "Models\\Donnee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T06:39:24.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClassificationGrainDeBlesContext.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\ClassificationGrainDeBlesContext.cs",
+              "RelativeDocumentMoniker": "Models\\ClassificationGrainDeBlesContext.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Models\\ClassificationGrainDeBlesContext.cs",
+              "RelativeToolTip": "Models\\ClassificationGrainDeBlesContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T06:42:26.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20260507065730_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Migrations\\20260507065730_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260507065730_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Migrations\\20260507065730_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20260507065730_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T06:57:32.041Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "e9857ac3-1440-4a6b-a57a-2fcbd9b8ad97",
+        "Display": 0,
+        "X": 94,
+        "Y": -28,
+        "Width": 885,
+        "Height": 766,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20260509100140_AjoutAuteur.cs",
+              "DocumentMoniker": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Migrations\\20260509100140_AjoutAuteur.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260509100140_AjoutAuteur.cs",
+              "ToolTip": "C:\\Users\\RASANDIMANANA Tafita\\Desktop\\T2-Uqar\\POO2\\TP_POO2\\TP2\\WPFClassificationGrainsDeBles\\Migrations\\20260509100140_AjoutAuteur.cs",
+              "RelativeToolTip": "Migrations\\20260509100140_AjoutAuteur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T10:01:41.375Z",
               "EditorCaption": ""
             }
           ]

@@ -17,5 +17,7 @@ namespace WPFClassificationGrainsDeBles.Models
 
         public string precision {  get; set; }
 
+        public string AuteurNom { get; set; }  
+
     }
 }

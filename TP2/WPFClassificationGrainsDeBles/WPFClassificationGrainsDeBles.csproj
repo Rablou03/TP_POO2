@@ -231,9 +231,15 @@
     <Compile Include="Migrations\20260507065730_InitialCreate.Designer.cs">
       <DependentUpon>20260507065730_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20260509100140_AjoutAuteur.cs" />
+    <Compile Include="Migrations\20260509100140_AjoutAuteur.Designer.cs">
+      <DependentUpon>20260509100140_AjoutAuteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ClassificationGrainDeBlesContextModelSnapshot.cs" />
     <Compile Include="Models\ClassificationGrainDeBlesContext.cs" />
     <Compile Include="Models\Donnee.cs" />
+    <Compile Include="Models\Utilisateur.cs" />
+    <Compile Include="Service\UtilisateurService.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>View\MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

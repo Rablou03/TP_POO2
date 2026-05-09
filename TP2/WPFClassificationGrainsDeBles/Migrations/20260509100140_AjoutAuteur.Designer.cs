@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WPFClassificationGrainsDeBles.Models;
 
 namespace WPFClassificationGrainsDeBles.Migrations
 {
     [DbContext(typeof(ClassificationGrainDeBlesContext))]
-    partial class ClassificationGrainDeBlesContextModelSnapshot : ModelSnapshot
+    [Migration("20260509100140_AjoutAuteur")]
+    partial class AjoutAuteur
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
