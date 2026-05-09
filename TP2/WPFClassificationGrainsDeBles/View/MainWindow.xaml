@@ -18,7 +18,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- MENU HORIZONTAL EN HAUT -->
+        <!--MENU HORIZONTAL EN HAUT -->
         <Border BorderBrush="#CCCCCC"
                 BorderThickness="0,0,0,1"
                 Background="#F5F5F5">

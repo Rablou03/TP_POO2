@@ -13,8 +13,6 @@ namespace WPFClassificationGrainsDeBles
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            //var mainWindow = new View.MainWindow();
-            //mainWindow.Show();
         }
     }
 }

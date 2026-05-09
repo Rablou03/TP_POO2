@@ -1,0 +1,2209 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+\geometry{margin=2.5cm}
+
+% Configuration pour l'affichage du code C#
+\lstset{
+    language=C++,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{orange},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    frame=single,
+    breaklines=true,
+    captionpos=b,
+    showspaces=false,
+    showstringspaces=false,
+    tabsize=4
+}
+
+\newcommand{\reporttitle}{INF11207}
+\newcommand{\reportauthorOne}{RASANDIMANANA Tafita}
+\newcommand{\reportauthorTwo}{ATTA Fidèle}
+\newcommand{\reportProfessor}{Yacine Yaddaden, Ph. D.}
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{center}
+
+\includegraphics[width=7cm]{uqar}\\[1.5cm]
+
+\textbf{\textsc{\Large Programmation orientée objet II \\ \vspace{0.5cm} INF11207 (MS)}}\\[1.0cm]
+\textsc{\Large Université du Québec à Rimouski}\\[0.5cm]
+\textsc{\large Département de mathématiques, d'informatique et de génie}\\[0.95cm]
+
+\HRule \\[0.4cm]
+{ \huge \bfseries RAPPORT TP 2 \\ Classification automatique des grains de blé}\\[0.4cm]
+\HRule \\[1.5cm]
+
+\end{center}
+
+\begin{flushleft} \large
+\textit{\textsc{\textbf{Étudiant(e)(s) :}}}\\
+\reportauthorOne \\
+\reportauthorTwo \\[0.5cm]
+
+\textit{\textsc{\textbf{Professeur :}}}\\
+\reportProfessor
+\end{flushleft}
+
+\vfill
+
+\begin{center}
+\text{Date : 10 mai 2026}
+\end{center}
+
+\end{titlepage}
+
+\newpage
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+Pour optimiser l'expérience utilisateur de l'application de classification des grains, ce second projet pratique implique la fourniture d'une interface graphique complète pour l'outil. La précédente application console se transforme alors en une application interactive capable de charger des fichiers de données, de configurer le classificateur k-NN et d'afficher les résultats de façon claire.
+
+Afin de garantir la solidité et le suivi des classifications, les données issues des expériences sont archivées dans une base de données relationnelle à l'aide d'Entity Framework Core. De plus, une communication avec une API REST publique est intégrée pour enrichir l'application d'informations externes. Le projet entier est construit sur l'architecture MVVM (Modèle-Vue-ViewModel) et utilise les technologies Git, C\# et WPF.
+
+\newpage
+\section{Analyse du problème et cahier des charges}
+\subsection{Cahier des charges}
+Le projet répond aux exigences suivantes :
+\begin{itemize}
+\item Importation de données à partir d'un fichier CSV.
+\item Implémentation de l'algorithme KNN avec deux mesures de distance.
+\item Architecture orientée objet respectant les meilleures pratiques.
+\item Implémentation d'un système de persistance des données.
+\item Interface graphique pour la présentation des résultats.
+\item Gestion de version avec Git et GitHub.
+\end{itemize}
+
+\section{Gestion de version avec Git et GitHub}
+\label{sec:github}
+Pour assurer un travail collaboratif efficace et sécurisé, nous avons mis en place un workflow Git structuré.
+
+\subsection{Organisation du dépôt}
+Le dépôt GitHub contient tout le code source, la documentation et les ressources nécessaires au projet. Nous avons utilisé le même dépôt git que le TP1 avec la création d'un dossier TP2.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{image depot git.png}
+\caption{Capture d'écran du dépôt GitHub montrant la structure du projet}
+\label{fig:github}
+\end{figure}
+
+\subsection{Accès au code source}
+Le code source complet est disponible à l'adresse suivante :
+\begin{center}
+\url{https://github.com/Rablou03/TP_POO2.git}
+\end{center}
+
+\section{Présentation du code}
+Nous présentons notre architecture logicielle MVVM (Model-View-ViewModel) pour la réalisation du projet, ainsi que le contenu des différents dossiers et de chaque classe.
+
+\subsection{Image}
+Le dossier contient toutes les images .ico utilisées pour les icônes.
+
+\subsection{Migrations}
+
+\subsubsection{20260507065730 InitialCreate}
+Cette migration Entity Framework Core établit une table appelée "donnees" dans une base de données SQL Server.
+
+
+
+\paragraph{Code de la migration :}
+
+\begin{lstlisting}[caption={Migration InitialCreate.cs}, label=lst:migration]
+using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace WPFClassificationGrainsDeBles.Migrations
+{
+    public partial class InitialCreate : Migration
+    {
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.CreateTable(
+                name: "donnees",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    k = table.Column<int>(nullable: false),
+                    Distance = table.Column<double>(nullable: false),
+                    donnee_Tester = table.Column<string>(nullable: true),
+                    precision = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_donnees", x => x.Id);
+                });
+        }
+
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropTable(
+                name: "donnees");
+        }
+    }
+}
+\end{lstlisting}
+
+\subsubsection{20260507065730 InitialCreate}
+Cette migration Entity Framework Core autorise l'ajout d'une nouvelle colonne à une table existante, tout en préservant les données actuelles.
+
+\begin{lstlisting}[caption={Migration AjoutAuteur.cs}, label=lst:migration2]
+using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace WPFClassificationGrainsDeBles.Migrations
+{
+    public partial class AjoutAuteur : Migration
+    {
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddColumn<string>(
+                name: "AuteurNom",
+                table: "donnees",
+                nullable: true);
+        }
+
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "AuteurNom",
+                table: "donnees");
+        }
+    }
+}
+\end{lstlisting}
+
+\subsubsection{ClassificationGrainDeBlesContextModelSnapshot}
+
+\paragraph{Code :}
+
+\begin{lstlisting}[caption={ClassificationGrainDeBlesContextModelSnapshot.cs}, label=lst:snapshot]
+// <auto-generated />
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using WPFClassificationGrainsDeBles.Models;
+
+namespace WPFClassificationGrainsDeBles.Migrations
+{
+    [DbContext(typeof(ClassificationGrainDeBlesContext))]
+    partial class ClassificationGrainDeBlesContextModelSnapshot : ModelSnapshot
+    {
+        protected override void BuildModel(ModelBuilder modelBuilder)
+        {
+#pragma warning disable 612, 618
+            modelBuilder
+                .HasAnnotation("ProductVersion", "3.1.10")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", 
+                    SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("WPFClassificationGrainsDeBles.Models.Donnee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", 
+                            SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AuteurNom")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Distance")
+                        .HasColumnType("float");
+
+                    b.Property<string>("donnee_Tester")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("k")
+                        .HasColumnType("int");
+
+                    b.Property<string>("precision")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("donnees");
+                });
+#pragma warning restore 612, 618
+        }
+    }
+}
+\end{lstlisting}
+
+\subsection{Models}
+Les classes situées dans le dossier \texttt{Models} représentent les entités professionnelles de l'application, comprenant la structure des données liées aux grains de blé ainsi que les résultats de leur classification. NB: Ces codes ont été vu au TP1. Nous expliquons les nouveaux comme le classe ShareModel. 
+
+\subsubsection{ClassificationGrainDeBlesContext}
+
+\begin{lstlisting}[caption={Contexte de base de données ClassificationGrainDeBlesContext.cs}, label=lst:context]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    internal class ClassificationGrainDeBlesContext : DbContext
+    {
+        public DbSet<Models.Donnee> donnees { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
+        {
+            string connection_string = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
+            string database_name = "GrainsDB" +
+                ""; 
+            dbContextOptionsBuilder.UseSqlServer($"{connection_string}; " +
+                $"Database ={database_name};"); 
+        }
+    }
+}
+\end{lstlisting}
+\subsubsection{ClassifierKnn}
+
+\begin{lstlisting}[caption={Classe ClassifierKnn.cs}, label=lst:classifierknn]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class ClassifierKnn : IClassifier
+    {
+        IDistance distance;
+        EnsembleDonnees training;
+        int k;
+
+        public ClassifierKnn(int k, IDistance distance)
+        {
+            this.k = k;
+            this.distance = distance;
+        }
+
+        public void Entrainer(EnsembleDonnees donnees)
+        {
+            training = donnees;
+        }
+
+        public List<Voisin> ListeTousVoisin(double[] caracteristiques)
+        {
+            List<Voisin> liste = new List<Voisin>();
+
+            foreach (Echantillon e in training.ObtenirEchantillon())
+            {
+                double d = distance.Calculer(caracteristiques, e.Caracteristiques);
+                liste.Add(new Voisin(e, d));
+            }
+
+            return liste;
+        }
+
+        public List<Voisin> TrierListVoisinParDistance(List<Voisin> voisins)
+        {
+            if (voisins.Count <= 1)
+                return voisins;
+
+            Voisin pivot = voisins[0];
+
+            List<Voisin> plusPetits = new List<Voisin>();
+            List<Voisin> plusGrands = new List<Voisin>();
+
+            for (int i = 1; i < voisins.Count; i++)
+            {
+                if (voisins[i].Distance < pivot.Distance)
+                    plusPetits.Add(voisins[i]);
+                else
+                    plusGrands.Add(voisins[i]);
+            }
+
+            List<Voisin> resultat = new List<Voisin>();
+
+            resultat.AddRange(TrierListVoisinParDistance(plusPetits));
+            resultat.Add(pivot);
+            resultat.AddRange(TrierListVoisinParDistance(plusGrands));
+
+            return resultat;
+        }
+
+        public TypeDeGrain VoteMajoritaire(List<Voisin> voisins)
+        {
+            TypeDeGrain typeDuGrain = new TypeDeGrain();
+            int compteurKama = 0;
+            int compteurRosa = 0;
+            int compteurCanadian = 0;
+
+            foreach (var voisin in voisins)
+            {
+                if (voisin.Echantillon.Etiquette.ToString() == "Kama")
+                {
+                    compteurKama++;
+                }
+                if (voisin.Echantillon.Etiquette.ToString() == "Rosa")
+                {
+                    compteurRosa++;
+                }
+                if (voisin.Echantillon.Etiquette.ToString() == "Canadian")
+                {
+                    compteurCanadian++;
+                }
+            }
+            if (compteurKama >= compteurRosa && compteurKama >= compteurCanadian)
+                typeDuGrain = TypeDeGrain.Kama;
+
+            else if (compteurRosa >= compteurKama && compteurRosa >= compteurCanadian)
+                typeDuGrain = TypeDeGrain.Rosa;
+
+            else
+                typeDuGrain = TypeDeGrain.Canadian;
+
+            return typeDuGrain;
+
+        }
+
+        public TypeDeGrain Predire(Echantillon e)
+        {
+            List<Voisin> voisins = ListeTousVoisin(e.Caracteristiques);
+            List<Voisin> voisinsTries = TrierListVoisinParDistance(voisins);
+
+            List<Voisin> kVoisins = new List<Voisin>();
+            for (int i = 0; i < k; i++)
+            {
+                kVoisins.Add(voisinsTries[i]);
+            }
+
+            return VoteMajoritaire(kVoisins);
+        }
+    }
+}
+\end{lstlisting}
+
+\subsubsection{DataConverter}
+
+\begin{lstlisting}[caption={Classe DataConverter.cs}, label=lst:dataconverter]
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.IO;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class DataConverter  // Changé de Convert à DataConverter
+    {
+        public static List<Grain> ConversionListe(string nom_fichier)
+        {
+            List<Grain> grains = new List<Grain>();
+
+            if (!File.Exists(nom_fichier))
+            {
+                throw new FileNotFoundException($"Fichier non trouvé: {nom_fichier}");
+            }
+
+            string[] lignes = File.ReadAllLines(nom_fichier);
+            if (lignes.Length == 0) return grains;
+
+            string[] headers = lignes[0].Split(';');
+
+            int idxVariety = Array.IndexOf(headers, "variety");
+            int idxArea = Array.IndexOf(headers, "Area");
+            int idxPerimeter = Array.IndexOf(headers, "Perimeter");
+            int idxCompactness = Array.IndexOf(headers, "Compactness");
+            int idxKernelLength = Array.IndexOf(headers, "Kernel_Length");
+            int idxKernelWidth = Array.IndexOf(headers, "Kernel_Width");
+            int idxAsymmetry = Array.IndexOf(headers, "Asymmetry_Coefficient");
+            int idxGroove = Array.IndexOf(headers, "Groove_Length");
+
+            for (int i = 1; i < lignes.Length; i++)
+            {
+                string[] colonnes = lignes[i].Split(';');
+                if (colonnes.Length < 8) continue;
+
+                try
+                {
+                    var g = new Grain(
+                        (TypeDeGrain)Enum.Parse(typeof(TypeDeGrain), colonnes[idxVariety]),
+                        double.Parse(colonnes[idxArea], CultureInfo.InvariantCulture),
+                        double.Parse(colonnes[idxPerimeter], CultureInfo.InvariantCulture),
+                        double.Parse(colonnes[idxCompactness], CultureInfo.InvariantCulture),
+                        double.Parse(colonnes[idxKernelLength], CultureInfo.InvariantCulture),
+                        double.Parse(colonnes[idxKernelWidth], CultureInfo.InvariantCulture),
+                        double.Parse(colonnes[idxAsymmetry], CultureInfo.InvariantCulture),
+                        double.Parse(colonnes[idxGroove], CultureInfo.InvariantCulture)
+                    );
+                    grains.Add(g);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Erreur ligne {i}: {ex.Message}");
+                }
+            }
+
+            return grains;
+        }
+
+        public static void SaveEchantillon(List<Grain> grains, EnsembleDonnees ensemble)
+        {
+            if (grains == null || ensemble == null) return;
+
+            foreach (var g in grains)
+            {
+                double[] carac = new double[]
+                {
+                    g.Area, g.Perimeter, g.Compactness,
+                    g.LongueurNoyau, g.LargeurNoyau,
+                    g.AsymetryCoefficient, g.GrooveLength
+                };
+
+                ensemble.AjouterUnEchantillon(new Echantillon(carac, g.TypeDeGrain));
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+\subsubsection{DistanceEuclidienne}
+
+\begin{lstlisting}[caption={Classe DistanceEuclidienne.cs}, label=lst:distanceeuclidienne]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class DistanceEuclidienne : IDistance
+    {
+        public double Calculer(double[] a, double[] b)
+        {
+            double somme = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                somme += Math.Pow(a[i] - b[i], 2);
+            }
+            return Math.Sqrt(somme);
+        }
+    }
+}
+\end{lstlisting}
+
+\subsubsection{DistanceManhattan}
+
+\begin{lstlisting}[caption={Classe DistanceManhattan.cs}, label=lst:distancemanhattan]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class DistanceManhattan : IDistance
+    {
+        public double Calculer(double[] a, double[] b)
+        {
+            double somme = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                somme += Math.Abs(a[i] - b[i]);
+            }
+            return somme;
+        }
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Donnee}
+
+\begin{lstlisting}[caption={Classe Donnee.cs}, label=lst:donnee]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    internal class Donnee
+    {
+       
+       public int Id { get; set; }  
+
+        public int k {  get; set; }
+        public double Distance {  get; set; }
+        public string donnee_Tester {  get; set; }
+
+        public string precision {  get; set; }
+
+        public string AuteurNom { get; set; }  
+
+    }
+}
+\end{lstlisting}
+\subsubsection{Echantillon}
+
+\begin{lstlisting}[caption={Classe Echantillon.cs}, label=lst:echantillon]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class Echantillon
+    {
+        public double[] Caracteristiques { get; set; }
+        public TypeDeGrain Etiquette { get; set; }
+
+        public Echantillon(double[] caracteristiques, TypeDeGrain etiquette)
+        {
+            Caracteristiques = caracteristiques;
+            Etiquette = etiquette;
+        }
+    }
+}
+\end{lstlisting}
+
+\subsubsection{EnsembleDonnees}
+
+\begin{lstlisting}[caption={Classe EnsembleDonnees.cs}, label=lst:ensembledonnees]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class EnsembleDonnees
+    {
+        private List<Echantillon> echantillons = new List<Echantillon>();
+        public void AjouterUnEchantillon(Echantillon e)
+        {
+            echantillons.Add(e);
+        }
+
+        public void AjouterListEchantillon(List<Echantillon> echantillons)
+        {
+            foreach (Echantillon e in echantillons)
+            {
+                echantillons.Add(e);
+            }
+        }
+        public List<Echantillon> ObtenirEchantillon()
+        {
+            return echantillons;
+        }
+        public int Taille()
+        {
+            return echantillons.Count;
+        }
+    }
+}
+\end{lstlisting}
+
+\subsubsection{EvaluationPerformance}
+
+\begin{lstlisting}[caption={Classe EvaluationPerformance.cs}, label=lst:evaluationperformance]
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Documents;
+using System.IO;
+using System.Text.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class EvaluationPerformance
+    {
+        private readonly int[,] matrice;
+        private int total;
+        private int correct;
+
+        public EvaluationPerformance()
+        {
+            matrice = new int[3, 3];
+            total = 0;
+            correct = 0;
+        }
+
+        public void Evaluer(int k, IDistance distance, EnsembleDonnees train, EnsembleDonnees test)
+        {
+            ClassifierKnn classifier = new ClassifierKnn(k, distance);
+            classifier.Entrainer(train);
+
+            foreach (var e in test.ObtenirEchantillon())
+            {
+                TypeDeGrain reel = e.Etiquette;
+                TypeDeGrain predit = classifier.Predire(e);
+
+                if (reel == predit)
+                    correct++;
+
+                int ligne = GetIndex(reel);
+                int colonne = GetIndex(predit);
+
+                matrice[ligne, colonne]++;
+                total++;
+            }
+        }
+
+        public int GetIndex(TypeDeGrain type)
+        {
+            return type switch
+            {
+                TypeDeGrain.Kama => 0,
+                TypeDeGrain.Rosa => 1,
+                _ => 2 // Canadian
+            };
+        }
+
+        public double CalculerAccuracy()
+        {
+            if (total == 0) return 0;
+            return (double)correct / total;
+        }
+
+        // Version WPF : retourne un DataTable pour affichage dans un DataGrid
+        public DataTable ConstruireTableauWpf()
+        {
+            DataTable table = new DataTable();
+
+            table.Columns.Add("Réel \\ Prédit");
+            table.Columns.Add("Kama");
+            table.Columns.Add("Rosa");
+            table.Columns.Add("Canadian");
+
+            string[] labels = { "Kama", "Rosa", "Canadian" };
+
+            for (int i = 0; i < 3; i++)
+            {
+                table.Rows.Add(
+                    labels[i],
+                    matrice[i, 0],
+                    matrice[i, 1],
+                    matrice[i, 2]
+                );
+            }
+
+            return table;
+        }
+
+        public void SauvegarderJsonGlobal(string chemin, int k, IDistance typeDistance, EnsembleDonnees train, EnsembleDonnees test)
+        {
+            var matriceListe = new List<List<int>>();
+            for (int i = 0; i < 3; i++)
+            {
+                var ligne = new List<int>();
+                for (int j = 0; j < 3; j++)
+                    ligne.Add(matrice[i, j]);
+
+                matriceListe.Add(ligne);
+            }
+
+            var nouveauResultat = new
+            {
+                ParametresExecution = new
+                {
+                    k = k,
+                    distance = typeDistance.ToString(),
+                    date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                },
+                JeuxDeDonnees = new
+                {
+                    taille_train = train.Taille(),
+                    taille_test = test.Taille()
+                },
+                Evaluation = new
+                {
+                    accuracy = CalculerAccuracy(),
+                    matrice_confusion = matriceListe
+                }
+            };
+
+            List<object> listeResultats;
+
+            if (File.Exists(chemin))
+            {
+                string ancienJson = File.ReadAllText(chemin);
+                try
+                {
+                    listeResultats = JsonSerializer.Deserialize<List<object>>(ancienJson) ?? new List<object>();
+                }
+                catch
+                {
+                    listeResultats = new List<object>();
+                }
+            }
+            else
+            {
+                listeResultats = new List<object>();
+            }
+
+            listeResultats.Add(nouveauResultat);
+
+            string jsonFinal = JsonSerializer.Serialize(listeResultats,
+                new JsonSerializerOptions { WriteIndented = true });
+
+            File.WriteAllText(chemin, jsonFinal);
+
+            Console.WriteLine($"Fichier JSON mis à jour ici : {Path.GetFullPath(chemin)}");
+        }
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Grain}
+
+\begin{lstlisting}[caption={Classe Grain.cs}, label=lst:grain]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class Grain
+    {
+        TypeDeGrain typeDeGrain;
+        double area;
+        double perimeter;
+        double compactness;
+        double longueurNoyau;
+        double largeurNoyau;
+        double asymetryCoefficient;
+        double grooveLength;
+
+        public Grain(TypeDeGrain typeDeGrain, double area, double perimeter, double compactness, double longueurNoyau, double largeurNoyau, double asymetryCoefficient, double grooveLength)
+        {
+            this.typeDeGrain = typeDeGrain;
+            this.area = area;
+            this.perimeter = perimeter;
+            this.compactness = compactness;
+            this.longueurNoyau = longueurNoyau;
+            this.largeurNoyau = largeurNoyau;
+            this.asymetryCoefficient = asymetryCoefficient;
+            this.grooveLength = grooveLength;
+        }
+
+        public TypeDeGrain TypeDeGrain { get { return typeDeGrain; } set { typeDeGrain = value; } }
+        public double Area { get { return area; } set { area = value; } }
+        public double Perimeter { get { return perimeter; } set { perimeter = value; } }
+        public double Compactness { get { return compactness; } set { compactness = value; } }
+        public double LongueurNoyau { get { return longueurNoyau; } set { longueurNoyau = value; } }
+        public double LargeurNoyau { get { return largeurNoyau; } set { largeurNoyau = value; } }
+        public double AsymetryCoefficient { get { return asymetryCoefficient; } set { asymetryCoefficient = value; } }
+        public double GrooveLength { get { return grooveLength; } set { grooveLength = value; } }
+
+    }
+}
+\end{lstlisting}
+
+\subsubsection{IClassifier}
+
+\begin{lstlisting}[caption={Interface IClassifier.cs}, label=lst:iclassifier]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public interface IClassifier
+    {
+        void Entrainer(EnsembleDonnees data);
+        TypeDeGrain Predire(Echantillon e);
+    }
+}
+\end{lstlisting}
+
+\subsubsection{IDistance}
+
+\begin{lstlisting}[caption={Interface IClassifier.cs}, label=lst:iclassifier]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public interface IClassifier
+    {
+        void Entrainer(EnsembleDonnees data);
+        TypeDeGrain Predire(Echantillon e);
+    }
+}
+\end{lstlisting}
+
+\subsubsection{ShareModel}
+Dans l'architecture MVVM, cette classe SharedModel sert de modèle partagé. Elle regroupe les informations et l'état de l'application afin de les rendre disponibles pour les différents ViewModels.
+
+\begin{lstlisting}[caption={Classe SharedModel.cs}, label=lst:sharedmodel]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class SharedModel
+    {
+        public EnsembleDonnees TrainingData { get; set; } = new EnsembleDonnees();
+        public EnsembleDonnees TestData { get; set; } = new EnsembleDonnees();
+        public int K { get; set; } = 3;
+        public IDistance DistanceStrategy { get; set; }
+        public ClassifierKnn Classifier { get; set; }
+        public bool IsDataLoaded { get; set; } = false;
+
+        public SharedModel()
+        {
+            DistanceStrategy = new DistanceEuclidienne();
+        }
+
+        public void SetDistance(string distanceName)
+        {
+            if (distanceName == "Manhattan")
+                DistanceStrategy = new DistanceManhattan();
+            else
+                DistanceStrategy = new DistanceEuclidienne();
+        }
+
+        public string GetDistanceName()
+        {
+            return DistanceStrategy is DistanceManhattan ? "Manhattan" : "Euclidienne";
+        }
+
+        public void InitializeClassifier()
+        {
+            if (TrainingData != null && TrainingData.Taille() > 0)
+            {
+                Classifier = new ClassifierKnn(K, DistanceStrategy);
+                Classifier.Entrainer(TrainingData);
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+\subsubsection{TypeDeGrain}
+\begin{lstlisting}[caption={Enumération TypeDeGrain.cs}, label=lst:typedegrain]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public enum TypeDeGrain
+    {
+        Kama,
+        Rosa,
+        Canadian,
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Utilisateur}
+
+\begin{lstlisting}[caption={Classe Utilisateur et ReponseUtilisateurs.cs}, label=lst:utilisateur]
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class Utilisateur
+    {
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [JsonPropertyName("firstName")]
+        public string FirstName { get; set; }
+
+        [JsonPropertyName("lastName")]
+        public string LastName { get; set; }
+
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+       
+        public string NomComplet => $"{FirstName} {LastName}";
+    }
+
+    public class ReponseUtilisateurs
+    {
+        [JsonPropertyName("users")]
+        public List<Utilisateur> Users { get; set; }
+    }
+}
+\end{lstlisting}
+\subsubsection{Voisin}
+
+\begin{lstlisting}[caption={Classe Voisin.cs}, label=lst:voisin]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WPFClassificationGrainsDeBles.Models
+{
+    public class Voisin
+    {
+        public Echantillon Echantillon { get; set; }
+        public double Distance { get; set; }
+
+        public Voisin(Echantillon e, double d)
+        {
+            Echantillon = e;
+            Distance = d;
+        }
+    }
+}
+\end{lstlisting}
+
+
+\subsection{Services}
+Le dossier \texttt{Services} contient les classes responsables de la logique métier : implémentation de l'algorithme k-NN, calcul des distances, persistance des données et communication avec l'API REST.
+
+\subsubsection{UtilisateurService}
+
+Cette classe UtilisateurService est un service qui permet de récupérer des utilisateurs depuis une API REST externe https://dummyjson.com/.
+
+\begin{lstlisting}[caption={Service UtilisateurService.cs}, label=lst:utilisateurservice]
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
+using WPFClassificationGrainsDeBles.Models;
+
+namespace WPFClassificationGrainsDeBles.Services
+{
+    public class UtilisateurService
+    {
+        private readonly HttpClient _httpClient = new HttpClient();
+        private const string URL = "https://dummyjson.com/users";
+
+        public async Task<List<Utilisateur>> GetUtilisateursAsync()
+        {
+            try
+            {
+                string reponse = await _httpClient.GetStringAsync(URL);
+
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+
+                var resultat = JsonSerializer.Deserialize<ReponseUtilisateurs>(reponse, options);
+                return resultat?.Users ?? new List<Utilisateur>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Erreur lors de l'appel API : {ex.Message}");
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+\subsection{Views}
+Le dossier \texttt{Views} regroupe les fichiers XAML définissant l'interface utilisateur de l'application WPF.
+
+\subsubsection{MainWindow.xalm}
+Le fichier zaml est le fichier qui définit l'interface graphique de la fenêtre principale de l'application.
+
+\begin{lstlisting}[caption={Fichier MainWindow.xaml}, label=lst:mainwindow]
+<Window x:Class="WPFClassificationGrainsDeBles.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewmodels="clr-namespace:WPFClassificationGrainsDeBles.ViewModels"
+        Title="Classification des grains de blé - k-NN"
+        Height="800"
+        Width="1400"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <viewmodels:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- MENU HORIZONTAL EN HAUT -->
+        <Border BorderBrush="#CCCCCC"
+                BorderThickness="0,0,0,1"
+                Background="#F5F5F5">
+
+            <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                          VerticalScrollBarVisibility="Disabled">
+
+                <StackPanel Orientation="Horizontal" Margin="10,5">
+
+                    <!-- ACCUEIL -->
+                    <Button Command="{Binding NavigateHomeCommand}"
+                            Height="40"
+                            Width="130"
+                            Margin="5,0"
+                            ToolTip="Accueil">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="/Image/home-button_icon-icons.com_72700.ico"
+                                   Width="20" Height="20" Margin="0,0,5,0"/>
+                            <TextBlock Text="Accueil" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                               Width="1" Background="Gray" Margin="5,0"/>
+
+                    <!-- IMPORTER -->
+                    <Button Command="{Binding NavigateImportCommand}"
+                            Height="40" Width="130" Margin="5,0"
+                            ToolTip="Importer les données">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="/Image/import_120260.ico"
+                                   Width="20" Height="20" Margin="0,0,5,0"/>
+                            <TextBlock Text="Importer" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- CONFIGURER K -->
+                    <Button Command="{Binding NavigateKConfigCommand}"
+                            Height="40" Width="130" Margin="5,0"
+                            ToolTip="Choisir la valeur de k">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="/Image/3844439-gear-setting-settings-wheel_110294.ico"
+                                   Width="20" Height="20" Margin="0,0,5,0"/>
+                            <TextBlock Text="Configurer k" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- DISTANCE -->
+                    <Button Command="{Binding NavigateDistanceConfigCommand}"
+                            Height="40" Width="130" Margin="5,0"
+                            ToolTip="Choisir la distance">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="/Image/calculate_equals_icon_194844.ico"
+                                   Width="20" Height="20" Margin="0,0,5,0"/>
+                            <TextBlock Text="Distance" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                               Width="1" Background="Gray" Margin="5,0"/>
+
+                    <!-- ENTRAINER -->
+                    <Button Command="{Binding TrainCommand}"
+                            Height="40" Width="130" Margin="5,0"
+                            ToolTip="Entraîner le modèle">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="/Image/run_icon-icons.com_61189.ico"
+                                   Width="20" Height="20" Margin="0,0,5,0"/>
+                            <TextBlock Text="Entraîner" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- TESTER -->
+                    <Button Command="{Binding TestCommand}"
+                            Height="40" Width="130" Margin="5,0"
+                            ToolTip="Tester le modèle">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="/Image/PixelKit_0034_Waiting-for-Validation_37731.ico"
+                                   Width="20" Height="20" Margin="0,0,5,0"/>
+                            <TextBlock Text="Tester" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                               Width="1" Background="Gray" Margin="5,0"/>
+
+                    <!-- RESULTATS -->
+                    <Button Command="{Binding NavigateResultsCommand}"
+                            Height="40" Width="130" Margin="5,0"
+                            ToolTip="Voir les résultats">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="/Image/findings_icon-icons.com_67772.ico"
+                                   Width="20" Height="20" Margin="0,0,5,0"/>
+                            <TextBlock Text="Résultats" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- HISTORIQUE -->
+                    <Button Command="{Binding NavigateHistoryCommand}"
+                            Height="40" Width="130" Margin="5,0"
+                            ToolTip="Voir l'historique">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="/Image/archive_120061.ico"
+                                   Width="20" Height="20" Margin="0,0,5,0"/>
+                            <TextBlock Text="Historique" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                               Width="1" Background="Gray" Margin="5,0"/>
+
+                    <!-- QUITTER -->
+                    <Button Command="{Binding QuitCommand}"
+                            Height="40" Width="130" Margin="5,0"
+                            ToolTip="Quitter l'application">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="/Image/4213459-common-door-exit-logout-out-signout_115411.ico"
+                                   Width="20" Height="20" Margin="0,0,5,0"/>
+                            <TextBlock Text="Quitter" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <!-- CONTENU PRINCIPAL -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+
+            <StackPanel Margin="15">
+
+                <!-- EN-TÊTE -->
+                <Border Background="#E3F2FD" Padding="10" CornerRadius="5" Margin="0,0,0,15">
+                    <TextBlock Text="{Binding CurrentTitle}"
+                               FontSize="20" FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               Foreground="#1565C0"/>
+                </Border>
+
+                <!-- PAGE D'ACCUEIL -->
+                <Border Background="#E8F5E9" Padding="30" CornerRadius="10"
+                        Margin="0,0,0,15" Visibility="{Binding ShowWelcome}">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="Classification des grains de blé avec k-NN"
+                                   FontSize="18" HorizontalAlignment="Center"
+                                   Margin="0,10,0,0" Foreground="#1565C0"/>
+                        <TextBlock Text="Utilisez le menu ci-dessus pour naviguer dans l'application"
+                                   FontSize="14" HorizontalAlignment="Center"
+                                   Margin="0,20,0,0" Foreground="Gray"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- IMPORTATION -->
+                <GroupBox Header="1. Importer les données"
+                          Visibility="{Binding ShowImport}">
+                    <StackPanel Margin="10">
+
+                        <TextBlock Text="Fichier d'entraînement (train.csv):" FontWeight="Bold"/>
+                        <Grid Margin="0,5,0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="{Binding TrainPath}" IsReadOnly="True" Background="#F9F9F9"/>
+                            <Button Content="Parcourir" Command="{Binding BrowseTrainCommand}"
+                                    Grid.Column="1" Margin="5,0,0,0" Width="80" Height="30"/>
+                        </Grid>
+
+                        <TextBlock Text="Fichier de test (test.csv):" FontWeight="Bold" Margin="0,10,0,0"/>
+                        <Grid Margin="0,5,0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="{Binding TestPath}" IsReadOnly="True" Background="#F9F9F9"/>
+                            <Button Content="Parcourir" Command="{Binding BrowseTestCommand}"
+                                    Grid.Column="1" Margin="5,0,0,0" Width="80" Height="30"/>
+                        </Grid>
+
+                        <Button Content="Importer les données" Command="{Binding ImportCommand}"
+                                Height="40" Margin="0,10" FontWeight="Bold"
+                                Background="#4CAF50" Foreground="White"/>
+
+                        <TextBlock Text="Statut:" FontWeight="Bold" Margin="0,10,0,0"/>
+                        <Border Background="#F0F0F0" Padding="5" CornerRadius="3">
+                            <TextBlock Text="{Binding ImportStatus}" TextWrapping="Wrap" FontSize="11"/>
+                        </Border>
+
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- CONFIGURATION K -->
+                <GroupBox Header="2. Choisir la valeur de k"
+                          Visibility="{Binding ShowKConfig}" Margin="0,15,0,0">
+                    <StackPanel Margin="10">
+
+                        <TextBlock Text="Veuillez configurer k avant de choisir la distance"
+                                   FontWeight="Bold" Foreground="#1565C0"
+                                   HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="k = " FontSize="20" VerticalAlignment="Center" FontWeight="Bold"/>
+                            <TextBox Text="{Binding KValue, UpdateSourceTrigger=PropertyChanged}"
+                                     Width="80" Height="40" TextAlignment="Center"
+                                     FontSize="16" Margin="10,0"/>
+                        </StackPanel>
+
+                        <TextBlock Text="(valeur entre 1 et 30)" FontSize="12"
+                                   Foreground="Gray" HorizontalAlignment="Center" Margin="0,5"/>
+
+                        <Button Content="Valider k et continuer"
+                                Command="{Binding ValidateKAndContinueCommand}"
+                                Height="40" Width="200" Margin="0,15"
+                                HorizontalAlignment="Center"
+                                Background="#2196F3" Foreground="White" FontWeight="Bold"/>
+
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- DISTANCE -->
+                <GroupBox Header="3. Choisir la distance"
+                          Visibility="{Binding ShowDistanceConfig}" Margin="0,15,0,0">
+                    <StackPanel Margin="10">
+
+                        <TextBlock Text="Choisissez la distance pour la classification"
+                                   FontWeight="Bold" Foreground="#1565C0"
+                                   HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+                        <RadioButton Content="Euclidienne" IsChecked="{Binding IsEuclidienne}"
+                                     Margin="0,10" FontSize="14" GroupName="Distance"/>
+                        <RadioButton Content="Manhattan" IsChecked="{Binding IsManhattan}"
+                                     Margin="0,10" FontSize="14" GroupName="Distance"/>
+
+                        <Button Content="Valider la distance et continuer"
+                                Command="{Binding ValidateDistanceAndContinueCommand}"
+                                Height="40" Width="250" Margin="0,20,0,0"
+                                HorizontalAlignment="Center"
+                                Background="#FF9800" Foreground="White" FontWeight="Bold"/>
+
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- ENTRAINEMENT -->
+                <GroupBox Header="4. Entraîner le modèle"
+                          Visibility="{Binding ShowTrain}" Margin="0,15,0,0">
+                    <StackPanel Margin="10">
+
+                        <TextBlock Text="Configuration actuelle :" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <Border Background="#F0F0F0" Padding="10" CornerRadius="5" Margin="0,0,0,15">
+                            <TextBlock Text="{Binding CurrentConfigText}"
+                                       FontFamily="Consolas" FontSize="12"/>
+                        </Border>
+
+                        <Button Content="Entraîner le modèle" Command="{Binding TrainCommand}"
+                                Height="45" Margin="0,5"
+                                Background="#2196F3" Foreground="White"
+                                FontWeight="Bold" FontSize="14"/>
+
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- TEST -->
+                <GroupBox Header="5. Tester le modèle"
+                          Visibility="{Binding ShowTest}" Margin="0,15,0,0">
+                    <StackPanel Margin="10">
+
+                        <!-- SECTION AUTEUR -->
+                        <Border Background="#FFF8E1" Padding="10"
+                                CornerRadius="5" Margin="0,0,0,15"
+                                BorderBrush="#FFB300" BorderThickness="1">
+                            <StackPanel>
+
+                                <TextBlock Text="Choisir un auteur pour cette expérience"
+                                           FontWeight="Bold" Foreground="#E65100"
+                                           Margin="0,0,0,10"/>
+
+                                <Button Content="Charger les utilisateurs depuis l'API"
+                                        Command="{Binding ChargerUtilisateursCommand}"
+                                        Height="35" Width="260"
+                                        HorizontalAlignment="Left"
+                                        Background="#FF9800" Foreground="White"
+                                        FontWeight="Bold" Margin="0,0,0,10"/>
+
+                                <TextBlock Text="Sélectionner un auteur :"
+                                           FontWeight="Bold" Margin="0,0,0,5"/>
+
+                                <ComboBox ItemsSource="{Binding Utilisateurs}"
+                                          SelectedItem="{Binding UtilisateurSelectionne}"
+                                          DisplayMemberPath="NomComplet"
+                                          Width="300"
+                                          HorizontalAlignment="Left"
+                                          Height="30"
+                                          Margin="0,0,0,10"/>
+
+                                <TextBlock FontStyle="Italic" Foreground="#2E7D32">
+                                    <TextBlock.Text>
+                                        <Binding Path="UtilisateurSelectionne.NomComplet"
+                                                 StringFormat="✔ Auteur sélectionné : {0}"/>
+                                    </TextBlock.Text>
+                                </TextBlock>
+
+                            </StackPanel>
+                        </Border>
+
+                        <Button Content="Tester le modèle" Command="{Binding TestCommand}"
+                                Height="45" Margin="0,5"
+                                Background="#FF9800" Foreground="White"
+                                FontWeight="Bold" FontSize="14"/>
+
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- RESULTATS -->
+                <GroupBox Header="Résultats" Margin="0,15,0,0"
+                          Visibility="{Binding ShowResults}">
+                    <TextBox Text="{Binding ResultText}"
+                             TextWrapping="Wrap" FontFamily="Consolas"
+                             MinHeight="200" MaxHeight="300"
+                             VerticalScrollBarVisibility="Auto"
+                             IsReadOnly="True" Padding="10" Background="#FAFAFA"/>
+                </GroupBox>
+
+                <!-- HISTORIQUE -->
+                <GroupBox Header="Historique des expériences"
+                          Margin="0,15,0,15" Visibility="{Binding ShowHistory}">
+                    <ListBox ItemsSource="{Binding HistoriqueList}"
+                             MinHeight="150" MaxHeight="200"
+                             Margin="5" FontFamily="Consolas"/>
+                </GroupBox>
+
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Window>
+\end{lstlisting}
+\subsubsection{MainWindow.xaml.cs}
+
+\begin{lstlisting}[caption={Fichier MainWindow.xaml.cs}, label=lst:mainwindowcs]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using WPFClassificationGrainsDeBles.Services;
+
+namespace WPFClassificationGrainsDeBles.View
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            DataContext = new ViewModels.MainWindowViewModel();
+        }
+
+        private void ShowAboutDialog(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(
+                "Classification de Grains de Blé\n" +
+                "Algorithme k-NN (k plus proches voisins)\n\n" +
+                "Développé dans le cadre du cours POO2\n" +
+                "Université du Québec à Rimouski (UQAR)\n\n" +
+                "© 2026",
+                "À propos",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+        }
+    }
+}
+\end{lstlisting}
+
+\subsection{ViewModels}
+Le répertoire \texttt{ViewModels} renferme les classes qui établissent le lien entre les modèles et les vues, en accord avec l'architecture MVVM.
+
+\subsubsection{MainWindowViewModel.cs}
+
+Le MainWindowViewModel sert de centre névralgique à l'application. Il prend en charge toute la logique sans connaître la façon dont l'interface est conçue.
+
+Principales responsabilités :
+Il enregistre les informations suivantes : fichiers CSV téléchargés, valeur de k, sorte de distance, liste des utilisateurs API.
+
+Il gère la présentation : affiche ou masque les pages (Accueil, Importation, Configuration, etc.).
+
+Il réalise les tâches suivantes : l'importation des fichiers CSV, la formation du modèle, le test, et l'enregistrement dans la base de données.
+
+Il répond aux clics : chaque bouton du menu déclenche une méthode ici (Importer, Tester, Quitter...)
+
+Il interagit avec l'API : obtient les utilisateurs à partir de dummyjson.com.
+
+Il conserve les résultats : consigne chaque essai dans la base de données SQL Server avec le nom de l'auteur.
+
+Il conserve un historique : mémorise toutes les expériences effectuées.
+
+\begin{lstlisting}[caption={Fichier MainWindowViewModel.cs}, label=lst:mainwindowviewmodel]
+using System;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.IO;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
+using Microsoft.Win32;
+using WPFClassificationGrainsDeBles.Models;
+using WPFClassificationGrainsDeBles.Services;
+
+namespace WPFClassificationGrainsDeBles.ViewModels
+{
+    public class MainWindowViewModel : INotifyPropertyChanged
+    {
+        private readonly SharedModel _sharedModel = new SharedModel();
+        private readonly UtilisateurService _utilisateurService = new UtilisateurService();
+        private Utilisateur _utilisateurSelectionne;
+
+        public ObservableCollection<Utilisateur> Utilisateurs { get; set; } = new ObservableCollection<Utilisateur>();
+
+        public Utilisateur UtilisateurSelectionne
+        {
+            get => _utilisateurSelectionne;
+            set { _utilisateurSelectionne = value; OnPropertyChanged(); }
+        }
+
+        // Affichage de notre programme
+        private string _currentTitle = "Bienvenue sur l'application de Classification des grains de blé - k-NN";
+        private Visibility _showWelcome = Visibility.Visible;
+        private Visibility _showImport = Visibility.Collapsed;
+        private Visibility _showKConfig = Visibility.Collapsed;
+        private Visibility _showDistanceConfig = Visibility.Collapsed;
+        private Visibility _showTrain = Visibility.Collapsed;
+        private Visibility _showTest = Visibility.Collapsed;
+        private Visibility _showResults = Visibility.Collapsed;
+        private Visibility _showHistory = Visibility.Collapsed;
+        private string _importStatus = "Aucun fichier importé";
+        private string _resultText = "Les résultats s'afficheront dans cette section.";
+        private string _currentConfigText = "Aucune configuration";
+
+        // Déclaration des fichiers
+        private string _trainPath = "";
+        private string _testPath = "";
+
+        // Configuration distance avec k par defaut = 3
+        private int _kValue = 3;
+        private bool _isEuclidienne = true;
+        private bool _isManhattan = false;
+        private bool _kValidated = false;
+        private bool _distanceValidated = false;
+
+        // Historique
+        public ObservableCollection<string> HistoriqueList { get; set; } = new ObservableCollection<string>();
+
+        // Propriétés
+        public string CurrentTitle
+        {
+            get => _currentTitle;
+            set { _currentTitle = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowWelcome
+        {
+            get => _showWelcome;
+            set { _showWelcome = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowImport
+        {
+            get => _showImport;
+            set { _showImport = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowKConfig
+        {
+            get => _showKConfig;
+            set { _showKConfig = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowDistanceConfig
+        {
+            get => _showDistanceConfig;
+            set { _showDistanceConfig = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowTrain
+        {
+            get => _showTrain;
+            set { _showTrain = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowTest
+        {
+            get => _showTest;
+            set { _showTest = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowResults
+        {
+            get => _showResults;
+            set { _showResults = value; OnPropertyChanged(); }
+        }
+
+        public Visibility ShowHistory
+        {
+            get => _showHistory;
+            set { _showHistory = value; OnPropertyChanged(); }
+        }
+
+        public string ImportStatus
+        {
+            get => _importStatus;
+            set { _importStatus = value; OnPropertyChanged(); }
+        }
+
+        public string ResultText
+        {
+            get => _resultText;
+            set { _resultText = value; OnPropertyChanged(); }
+        }
+
+        public string CurrentConfigText
+        {
+            get => _currentConfigText;
+            set { _currentConfigText = value; OnPropertyChanged(); }
+        }
+
+        public string TrainPath
+        {
+            get => _trainPath;
+            set { _trainPath = value; OnPropertyChanged(); }
+        }
+
+        public string TestPath
+        {
+            get => _testPath;
+            set { _testPath = value; OnPropertyChanged(); }
+        }
+
+        public int KValue
+        {
+            get => _kValue;
+            set
+            {
+                if (value < 1) value = 1;
+                if (value > 30) value = 30;
+                _kValue = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsEuclidienne
+        {
+            get => _isEuclidienne;
+            set
+            {
+                _isEuclidienne = value;
+                if (value) _isManhattan = false;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsManhattan
+        {
+            get => _isManhattan;
+            set
+            {
+                _isManhattan = value;
+                if (value) _isEuclidienne = false;
+                OnPropertyChanged();
+            }
+        }
+
+        // Commandes
+        public ICommand BrowseTrainCommand { get; }
+        public ICommand BrowseTestCommand { get; }
+        public ICommand ImportCommand { get; }
+        public ICommand ValidateKAndContinueCommand { get; }
+        public ICommand ValidateDistanceAndContinueCommand { get; }
+        public ICommand TrainCommand { get; }
+        public ICommand TestCommand { get; }
+        public ICommand QuitCommand { get; }
+        public ICommand ChargerUtilisateursCommand { get; }
+
+        // Commandes de navigation
+        public ICommand NavigateHomeCommand { get; }
+        public ICommand NavigateImportCommand { get; }
+        public ICommand NavigateKConfigCommand { get; }
+        public ICommand NavigateDistanceConfigCommand { get; }
+        public ICommand NavigateResultsCommand { get; }
+        public ICommand NavigateHistoryCommand { get; }
+
+        // Constructeur
+        public MainWindowViewModel()
+        {
+            // Initialisation des commandes
+            BrowseTrainCommand = new RelayCommand(() => BrowseTrain());
+            BrowseTestCommand = new RelayCommand(() => BrowseTest());
+            ImportCommand = new RelayCommand(async () => await ImportData());
+            ValidateKAndContinueCommand = new RelayCommand(() => ValidateKAndContinue());
+            ValidateDistanceAndContinueCommand = new RelayCommand(() => ValidateDistanceAndContinue());
+            TrainCommand = new RelayCommand(() => Train());
+            TestCommand = new RelayCommand(() => Test());
+            QuitCommand = new RelayCommand(() => Application.Current.Shutdown());
+            ChargerUtilisateursCommand = new RelayCommand(async () => await ChargerUtilisateurs());
+
+            // Commandes de navigation
+            NavigateHomeCommand = new RelayCommand(() => ShowHome());
+            NavigateImportCommand = new RelayCommand(() => ShowImportSection());
+            NavigateKConfigCommand = new RelayCommand(() => ShowKConfigSection());
+            NavigateDistanceConfigCommand = new RelayCommand(() => ShowDistanceConfigSection());
+            NavigateResultsCommand = new RelayCommand(() => ShowResultsSection());
+            NavigateHistoryCommand = new RelayCommand(() => ShowHistorySection());
+        }
+
+        // Méthode chargement utilisateurs API
+        private async Task ChargerUtilisateurs()
+        {
+            try
+            {
+                var liste = await _utilisateurService.GetUtilisateursAsync();
+                Utilisateurs.Clear();
+                foreach (var u in liste)
+                    Utilisateurs.Add(u);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur chargement utilisateurs: {ex.Message}", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        // Méthodes de navigation
+        private void ShowHome()
+        {
+            ShowWelcome = Visibility.Visible;
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "Bienvenue sur l'application de Classification des grains de blé - k-NN";
+        }
+
+        private void ShowImportSection()
+        {
+            ShowWelcome = Visibility.Collapsed;
+            ShowImport = Visibility.Visible;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "1. Importer les données";
+        }
+
+        private void ShowKConfigSection()
+        {
+            ShowWelcome = Visibility.Collapsed;
+
+            if (!_sharedModel.IsDataLoaded)
+            {
+                MessageBox.Show("Veuillez d'abord importer les données.", "Information",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                ShowImportSection();
+                return;
+            }
+
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Visible;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "2. Configurer la valeur de k";
+        }
+
+        private void ShowDistanceConfigSection()
+        {
+            ShowWelcome = Visibility.Collapsed;
+
+            if (!_kValidated)
+            {
+                MessageBox.Show("Veuillez d'abord valider la valeur de k.", "Information",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                ShowKConfigSection();
+                return;
+            }
+
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Visible;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "3. Choisir la distance";
+        }
+
+        private void ShowTrainTestSections()
+        {
+            ShowWelcome = Visibility.Collapsed;
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Visible;
+            ShowTest = Visibility.Visible;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "4. Entraîner et 5. Tester le modèle";
+        }
+
+        private void ShowResultsSection()
+        {
+            ShowWelcome = Visibility.Collapsed;
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Visible;
+            ShowHistory = Visibility.Collapsed;
+            CurrentTitle = "Résultats de classification";
+        }
+
+        private void ShowHistorySection()
+        {
+            ShowWelcome = Visibility.Collapsed;
+            ShowImport = Visibility.Collapsed;
+            ShowKConfig = Visibility.Collapsed;
+            ShowDistanceConfig = Visibility.Collapsed;
+            ShowTrain = Visibility.Collapsed;
+            ShowTest = Visibility.Collapsed;
+            ShowResults = Visibility.Collapsed;
+            ShowHistory = Visibility.Visible;
+            CurrentTitle = "Historique des expériences";
+        }
+
+        private void BrowseTrain()
+        {
+            var dialog = new OpenFileDialog
+            {
+                Title = "Sélectionner le fichier train.csv",
+                Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*"
+            };
+            if (dialog.ShowDialog() == true)
+                TrainPath = dialog.FileName;
+        }
+
+        private void BrowseTest()
+        {
+            var dialog = new OpenFileDialog
+            {
+                Title = "Sélectionner le fichier test.csv",
+                Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*"
+            };
+            if (dialog.ShowDialog() == true)
+                TestPath = dialog.FileName;
+        }
+
+        private async System.Threading.Tasks.Task ImportData()
+        {
+            if (string.IsNullOrEmpty(TrainPath) || string.IsNullOrEmpty(TestPath))
+            {
+                ImportStatus = "Veuillez sélectionner les deux fichiers!";
+                return;
+            }
+
+            try
+            {
+                var trainGrains = DataConverter.ConversionListe(TrainPath);
+                _sharedModel.TrainingData = new EnsembleDonnees();
+                DataConverter.SaveEchantillon(trainGrains, _sharedModel.TrainingData);
+
+                var testGrains = DataConverter.ConversionListe(TestPath);
+                _sharedModel.TestData = new EnsembleDonnees();
+                DataConverter.SaveEchantillon(testGrains, _sharedModel.TestData);
+
+                _sharedModel.IsDataLoaded = true;
+                _sharedModel.InitializeClassifier();
+
+                ImportStatus = $"Succès: {_sharedModel.TrainingData.Taille()} train, {_sharedModel.TestData.Taille()} test";
+
+                _kValidated = false;
+                _distanceValidated = false;
+
+                ShowKConfigSection();
+            }
+            catch (Exception ex)
+            {
+                ImportStatus = $"Erreur: {ex.Message}";
+                _sharedModel.IsDataLoaded = false;
+            }
+        }
+
+        private void ValidateKAndContinue()
+        {
+            if (!_sharedModel.IsDataLoaded)
+            {
+                MessageBox.Show("Veuillez d'abord importer les données!", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowImportSection();
+                return;
+            }
+
+            _sharedModel.K = KValue;
+            _kValidated = true;
+            ResultText = $"k = {KValue} validé. Choisissez maintenant la distance.";
+            ShowDistanceConfigSection();
+        }
+
+        private void ValidateDistanceAndContinue()
+        {
+            if (!_sharedModel.IsDataLoaded)
+            {
+                MessageBox.Show("Veuillez d'abord importer les données!", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowImportSection();
+                return;
+            }
+
+            if (!_kValidated)
+            {
+                MessageBox.Show("Veuillez d'abord valider la valeur de k!", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowKConfigSection();
+                return;
+            }
+
+            string distance = IsEuclidienne ? "Euclidienne" : "Manhattan";
+            _sharedModel.SetDistance(distance);
+            _distanceValidated = true;
+
+            UpdateCurrentConfigText();
+            ShowTrainTestSections();
+            ResultText = $"Distance {distance} validée. Vous pouvez maintenant entraîner et tester.";
+        }
+
+        private void UpdateCurrentConfigText()
+        {
+            string distance = IsEuclidienne ? "Euclidienne" : "Manhattan";
+            CurrentConfigText = $"Configuration actuelle :\n" +
+                               $"   - k = {_sharedModel.K}\n" +
+                               $"   - Distance = {distance}\n" +
+                               $"   - Données d'entraînement = {_sharedModel.TrainingData?.Taille() ?? 0} échantillons\n" +
+                               $"   - Données de test = {_sharedModel.TestData?.Taille() ?? 0} échantillons";
+        }
+
+        private void Train()
+        {
+            if (!_sharedModel.IsDataLoaded)
+            {
+                MessageBox.Show("Veuillez d'abord importer les données!", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowImportSection();
+                return;
+            }
+
+            if (!_kValidated || !_distanceValidated)
+            {
+                MessageBox.Show("Veuillez d'abord configurer k et la distance!", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowKConfigSection();
+                return;
+            }
+
+            _sharedModel.InitializeClassifier();
+            ResultText = $"Modèle entraîné avec succès\n\n" +
+                        $"   - k = {_sharedModel.K}\n" +
+                        $"   - Distance = {_sharedModel.GetDistanceName()}\n" +
+                        $"   - Données d'entraînement = {_sharedModel.TrainingData.Taille()} échantillons\n\n" +
+                        $"Vous pouvez maintenant tester le modèle.";
+
+            MessageBox.Show("Entraînement terminé avec succès.", "Succès",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void Test()
+        {
+            if (!_sharedModel.IsDataLoaded)
+            {
+                MessageBox.Show("Veuillez d'abord importer les données.", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                ShowImportSection();
+                return;
+            }
+
+            if (_sharedModel.Classifier == null)
+            {
+                MessageBox.Show("Veuillez d'abord entraîner le modèle.", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (UtilisateurSelectionne == null)
+            {
+                MessageBox.Show("Veuillez sélectionner un auteur avant de tester.", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            try
+            {
+                var evaluation = new EvaluationPerformance();
+                evaluation.Evaluer(_sharedModel.K, _sharedModel.DistanceStrategy,
+                                   _sharedModel.TrainingData, _sharedModel.TestData);
+
+                double accuracy = evaluation.CalculerAccuracy() * 100;
+                string distanceName = _sharedModel.GetDistanceName();
+
+                SauvegarderDonnee(accuracy, distanceName);
+
+                string resultat = $"RÉSULTAT DU TEST\n" +
+                                 $"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
+                                 $"Paramètres du classifieur :\n" +
+                                 $"   • k = {_sharedModel.K}\n" +
+                                 $"   • Distance = {distanceName}\n" +
+                                 $"   • Données test = {_sharedModel.TestData.Taille()} échantillons\n\n" +
+                                 $"Précision (Accuracy) = {accuracy:F2}%\n" +
+                                 $"Auteur = {UtilisateurSelectionne.NomComplet}\n" +
+                                 $"Données sauvegardées dans la base\n" +
+                                 $"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
+
+                ResultText = resultat;
+
+                string dateStr = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                string historiqueEntry = $"{dateStr} | k={_sharedModel.K} | {distanceName} | Accuracy={accuracy:F2}% | Auteur={UtilisateurSelectionne.NomComplet}";
+                HistoriqueList.Insert(0, historiqueEntry);
+
+                string jsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "historique.json");
+                evaluation.SauvegarderJsonGlobal(jsonPath, _sharedModel.K, _sharedModel.DistanceStrategy,
+                                                  _sharedModel.TrainingData, _sharedModel.TestData);
+
+                ShowResultsSection();
+
+                MessageBox.Show($"Test terminé! Précision: {accuracy:F2}%", "Résultats",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                ResultText = $"Erreur lors du test: {ex.Message}";
+                MessageBox.Show($"Erreur lors du test: {ex.Message}", "Erreur",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void SauvegarderDonnee(double accuracy, string distanceName)
+        {
+            using (var context = new ClassificationGrainDeBlesContext())
+            {
+                var donnee = new Models.Donnee
+                {
+                    k = _sharedModel.K,
+                    Distance = accuracy,
+                    donnee_Tester = Path.GetFileName(TestPath),
+                    precision = $"{accuracy:F2}%",
+                    AuteurNom = UtilisateurSelectionne?.NomComplet ?? "Anonyme"
+                };
+
+                context.donnees.Add(donnee);
+                context.SaveChanges();
+            }
+        }
+
+        // INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+}
+\end{lstlisting}
+
+
+\subsubsection{RelayCommand.cs}
+
+\begin{lstlisting}[caption={Classe RelayCommand.cs}, label=lst:relaycommand]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+
+namespace WPFClassificationGrainsDeBles.ViewModels
+{
+    public class RelayCommand : ICommand
+    {
+        private readonly Action<object> _executeWithParam;
+        private readonly Action _executeWithoutParam;
+        private readonly Func<object, bool> _canExecute;
+
+        // Constructeur avec paramètre object
+        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
+        {
+            _executeWithParam = execute ?? throw new ArgumentNullException(nameof(execute));
+            _canExecute = canExecute;
+        }
+
+        // Constructeur sans paramètre
+        public RelayCommand(Action execute, Func<bool> canExecute = null)
+        {
+            _executeWithoutParam = execute ?? throw new ArgumentNullException(nameof(execute));
+            if (canExecute != null)
+                _canExecute = (p) => canExecute();
+        }
+
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return _canExecute == null || _canExecute(parameter);
+        }
+
+        public void Execute(object parameter)
+        {
+            if (_executeWithParam != null)
+                _executeWithParam(parameter);
+            else if (_executeWithoutParam != null)
+                _executeWithoutParam();
+        }
+    }
+}
+\end{lstlisting}
+
+\subsection{Classe Converters.cs}
+La classe \texttt{Converters} fournit des convertisseurs de valeurs personnalisés pour le databinding dans l'interface WPF.
+
+\begin{lstlisting}[caption={Classe Converters.cs}, label=lst:converters]
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Data;
+
+namespace WPFClassificationGrainsDeBles
+{
+    public class BoolToVisibilityConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value is bool boolValue)
+                return boolValue ? Visibility.Visible : Visibility.Collapsed;
+            return Visibility.Collapsed;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class ZeroToVisibilityConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value is int count)
+                return count == 0 ? Visibility.Visible : Visibility.Collapsed;
+            return Visibility.Visible;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class StringToBoolConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return value?.ToString() == parameter?.ToString();
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return (bool)value ? parameter?.ToString() : null;
+        }
+    }
+}
+\end{lstlisting}
+
+\subsection{App.xaml.cs}
+Ce code représente la classe de démarrage pour l'application WPF. Elle constitue l'entrée principale de l'application.
+
+\begin{lstlisting}[caption={Fichier App.xaml.cs}, label=lst:app]
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+
+namespace WPFClassificationGrainsDeBles
+{
+    public partial class App : Application
+    {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+        }
+    }
+}
+\end{lstlisting}
+\newpage
+\section{Conclusion}
+Ce projet a permis de développer une application complète de classification de grains de blé avec une interface graphique WPF respectant l'architecture MVVM, la persistance des données via Entity Framework Core et l'intégration d'une API REST publique.
+
+\end{document}
